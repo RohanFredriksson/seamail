@@ -1,0 +1,173 @@
+<!--
+  Cmail "torture" fixture.
+  Deliberately packs together CSS/HTML features known to behave
+  differently across real email clients: tables/nested tables, inline
+  styles, <style> blocks, media queries, flexbox, CSS grid, background
+  images, border-radius, "web" fonts (declared but unavailable, to test
+  fallback behaviour without a network dependency), inline SVG, images,
+  links, max-width, padding/margins, responsive behaviour, and dark-mode
+  CSS. Every environment's differing treatment of these features is what
+  the P0 renderer experiment is trying to expose.
+-->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cmail Torture Fixture</title>
+<style>
+  :root { color-scheme: light dark; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+    font-family: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  .wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 16px;
+    background: #ffffff;
+  }
+
+  .hero {
+    border-radius: 12px;
+    background-image: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 24px;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .flex-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .flex-row .card {
+    flex: 1;
+    border-radius: 8px;
+    background: #f7f7f7;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 16px;
+  }
+  .grid div {
+    background: #eef3ff;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  table.layout {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+  }
+  table.layout td {
+    padding: 8px;
+    vertical-align: top;
+  }
+  table.nested {
+    width: 100%;
+    border: 1px solid #ccc;
+  }
+  table.nested td {
+    padding: 6px;
+    font-size: 12px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .badge {
+    display: inline-block;
+    border-radius: 999px;
+    background: #ffedd5;
+    color: #9a3412;
+    padding: 2px 10px;
+    font-size: 11px;
+  }
+
+  @media (max-width: 480px) {
+    .flex-row { flex-direction: column; }
+    .grid { grid-template-columns: 1fr; }
+    .wrapper { padding: 8px; }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body { background: #111111; }
+    .wrapper { background: #1c1c1c; color: #f0f0f0; }
+    .flex-row .card { background: #2a2a2a; border-color: #333; color: #eee; }
+    .grid div { background: #202b45; color: #dbe6ff; }
+    table.nested td { border-color: #333; color: #ddd; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrapper">
+
+    <div class="hero">
+      <h1 style="margin: 0 0 8px 0; font-size: 22px;">Cmail Torture Test</h1>
+      <p style="margin: 0;">Same HTML. Three environments. Meaningful differences.</p>
+    </div>
+
+    <div class="flex-row">
+      <div class="card">
+        <strong>Flexbox card</strong>
+        <p style="margin: 4px 0 0 0; font-size: 12px;">Uses display:flex + gap.</p>
+      </div>
+      <div class="card">
+        <strong>Border radius</strong>
+        <p style="margin: 4px 0 0 0; font-size: 12px;">Rounded corners test.</p>
+      </div>
+      <div class="card">
+        <span class="badge">NEW</span>
+        <p style="margin: 4px 0 0 0; font-size: 12px;">Pill-shaped badge.</p>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div>Grid cell A</div>
+      <div>Grid cell B</div>
+      <div>Grid cell C</div>
+      <div>Grid cell D</div>
+    </div>
+
+    <table class="layout">
+      <tr>
+        <td style="width: 50%;">
+          <table class="nested">
+            <tr><td><strong>Nested table</strong></td></tr>
+            <tr><td>Row one, inline-styled text.</td></tr>
+            <tr><td><a href="https://example.com" style="color:#2575fc;">A test link</a></td></tr>
+          </table>
+        </td>
+        <td style="width: 50%;">
+          <svg width="120" height="80" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+            <rect width="120" height="80" rx="10" fill="#6a11cb"/>
+            <circle cx="60" cy="40" r="20" fill="#ffffff"/>
+          </svg>
+        </td>
+      </tr>
+    </table>
+
+    <div style="margin-top: 16px; text-align: center;">
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg=="
+        width="200" height="40" alt="banner"
+        style="border-radius: 6px; display:block; margin: 0 auto;">
+    </div>
+
+    <p style="font-size: 11px; color: #888; text-align:center; margin-top: 16px;">
+      Rendered by Cmail. This fixture intentionally mixes fragile CSS/HTML features.
+    </p>
+
+  </div>
+</body>
+</html>

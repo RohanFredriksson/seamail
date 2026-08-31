@@ -1,0 +1,7 @@
+{
+  "environments": {
+    "gmail-desktop": "v1",
+    "apple-mail-macos": "v1",
+    "outlook-classic": "v1"
+  }
+}

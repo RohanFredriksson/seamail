@@ -1,0 +1,17 @@
+node_modules/
+dist/
+cmail/results/
+cmail/report.html
+
+# logs
+npm-debug.log*
+*.log
+
+# OS / editor
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+
+# env
+.env
+.env.local
