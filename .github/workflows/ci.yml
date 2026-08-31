@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npx playwright install --with-deps chromium webkit
+
+      - run: npm run typecheck
+
+      - run: npm run lint
+
+      - run: npm run format:check
+
+      - run: npm test
+
+      - name: Run Cmail against fixtures
+        run: npm run cmail -- test
+
+      - name: Upload Cmail report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cmail-report
+          path: |
+            cmail/report.html
+            cmail/results
+          if-no-files-found: ignore
+          retention-days: 14
