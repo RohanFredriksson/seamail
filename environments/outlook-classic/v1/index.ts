@@ -48,14 +48,12 @@ function stripAtMediaBlocks(css: string): string {
   // Remove top-level @media {...} blocks (single level of nested braces is
   // sufficient for our fixtures; Outlook ignores media queries entirely).
   let result = "";
-  let depth = 0;
-  let mediaDepth = -1;
+  const depth = 0;
   let i = 0;
   while (i < css.length) {
     if (css.startsWith("@media", i) && depth === 0) {
-      mediaDepth = 0;
       // consume until matching closing brace of the @media block
-      let j = css.indexOf("{", i);
+      const j = css.indexOf("{", i);
       if (j === -1) break;
       let d = 1;
       let k = j + 1;
@@ -132,8 +130,8 @@ class OutlookClassicV1 implements CmailEnvironment {
     root.querySelectorAll("svg").forEach((el) => {
       const placeholder = parse(
         '<div style="border:1px dashed #999;background:#eee;color:#999;' +
-          'display:inline-block;text-align:center;font-family:\'Times New Roman\',serif;' +
-          'font-size:11px;width:100px;height:60px;line-height:60px;">[svg unsupported]</div>'
+          "display:inline-block;text-align:center;font-family:'Times New Roman',serif;" +
+          'font-size:11px;width:100px;height:60px;line-height:60px;">[svg unsupported]</div>',
       );
       el.replaceWith(placeholder);
     });
@@ -160,7 +158,7 @@ class OutlookClassicV1 implements CmailEnvironment {
       body.setAttribute(
         "style",
         `${body.getAttribute("style") ?? ""};max-width:${FIXED_WIDTH}px;margin:0 auto;` +
-          `font-family:'Times New Roman',serif;`
+          `font-family:'Times New Roman',serif;`,
       );
     }
 

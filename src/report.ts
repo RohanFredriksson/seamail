@@ -15,9 +15,7 @@ export async function generateReport(outputDir: string, summary: RunSummary): Pr
       const rel = (p: string) => path.relative(outputDir, p);
       const statusClass = r.status;
       const diffCell =
-        r.status === "fail"
-          ? `<img src="${rel(r.diffPath ?? r.actualPath)}" width="200">`
-          : "";
+        r.status === "fail" ? `<img src="${rel(r.diffPath ?? r.actualPath)}" width="200">` : "";
       return `
         <tr class="${statusClass}">
           <td>${r.email}</td>

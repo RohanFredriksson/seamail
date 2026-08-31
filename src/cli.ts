@@ -49,10 +49,10 @@ function printSummary(summary: RunSummary): void {
     console.log(pc.red(`  ${summary.failed} visual regression(s) detected`));
     console.log("");
     for (const r of summary.results.filter((x) => x.status === "fail")) {
-      const pct = r.dimensionMismatch ? "dimension mismatch" : `${(r.diffRatio! * 100).toFixed(2)}% pixels differ`;
-      console.log(
-        `  ${pc.red("✗")} ${r.email} / ${r.environment} / ${r.variant} - ${pct}`
-      );
+      const pct = r.dimensionMismatch
+        ? "dimension mismatch"
+        : `${(r.diffRatio! * 100).toFixed(2)}% pixels differ`;
+      console.log(`  ${pc.red("✗")} ${r.email} / ${r.environment} / ${r.variant} - ${pct}`);
       console.log(`      expected: ${path.relative(process.cwd(), r.snapshotPath)}`);
       console.log(`      actual:   ${path.relative(process.cwd(), r.actualPath)}`);
       if (r.diffPath) console.log(`      diff:     ${path.relative(process.cwd(), r.diffPath)}`);
@@ -99,7 +99,8 @@ program
     }
     console.log(`Report available at: ${reportPath}`);
     const open = await import("node:child_process");
-    const cmd = process.platform === "darwin" ? "open" : process.platform === "win32" ? "start" : "xdg-open";
+    const cmd =
+      process.platform === "darwin" ? "open" : process.platform === "win32" ? "start" : "xdg-open";
     open.spawn(cmd, [reportPath], { stdio: "ignore", detached: true }).unref();
   });
 
@@ -129,7 +130,7 @@ program
     const nameColWidth = Math.max(...featureList.map((f) => f.length), 10);
 
     console.log(
-      "  " + "Feature".padEnd(nameColWidth) + "  " + perEnv.map((e) => e.name).join("  |  ")
+      "  " + "Feature".padEnd(nameColWidth) + "  " + perEnv.map((e) => e.name).join("  |  "),
     );
     for (const feature of featureList) {
       const cells = perEnv.map((e) => (e.caps[feature] ?? "unknown").padEnd(11));
@@ -144,6 +145,6 @@ program
   });
 
 program.parseAsync(process.argv).catch((err) => {
-  console.error(pc.red(err instanceof Error ? err.stack ?? err.message : String(err)));
+  console.error(pc.red(err instanceof Error ? (err.stack ?? err.message) : String(err)));
   process.exitCode = 1;
 });

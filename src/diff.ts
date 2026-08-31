@@ -17,7 +17,7 @@ export interface DiffResult {
 export function compareScreenshots(
   expected: Buffer,
   actual: Buffer,
-  threshold: number
+  threshold: number,
 ): DiffResult {
   const expectedPng = PNG.sync.read(expected);
   const actualPng = PNG.sync.read(actual);
@@ -35,14 +35,9 @@ export function compareScreenshots(
 
   const { width, height } = expectedPng;
   const diffPng = new PNG({ width, height });
-  const diffPixelCount = pixelmatch(
-    expectedPng.data,
-    actualPng.data,
-    diffPng.data,
-    width,
-    height,
-    { threshold: 0.1 }
-  );
+  const diffPixelCount = pixelmatch(expectedPng.data, actualPng.data, diffPng.data, width, height, {
+    threshold: 0.1,
+  });
   const totalPixels = width * height;
   const diffRatio = diffPixelCount / totalPixels;
 

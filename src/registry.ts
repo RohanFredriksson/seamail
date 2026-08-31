@@ -32,13 +32,13 @@ export function parseEnvironmentSpec(spec: string, lockedVersion?: string): Reso
   const entry = REGISTRY[base];
   if (!entry) {
     throw new Error(
-      `Unknown environment "${base}". Known environments: ${Object.keys(REGISTRY).join(", ")}`
+      `Unknown environment "${base}". Known environments: ${Object.keys(REGISTRY).join(", ")}`,
     );
   }
   const version = explicitVersion ?? lockedVersion ?? entry.default;
   if (!entry.versions.includes(version)) {
     throw new Error(
-      `Unknown version "${version}" for environment "${base}". Available: ${entry.versions.join(", ")}`
+      `Unknown version "${version}" for environment "${base}". Available: ${entry.versions.join(", ")}`,
     );
   }
   return { base, version, full: `${base}@${version}` };
@@ -56,10 +56,8 @@ export function listKnownEnvironments(): string[] {
 
 /** Dynamically imports and instantiates the concrete environment implementation. */
 export async function loadEnvironment(ref: ResolvedEnvironmentRef): Promise<CmailEnvironment> {
-  const modulePath = new URL(
-    `../environments/${ref.base}/${ref.version}/index.ts`,
-    import.meta.url
-  ).href;
+  const modulePath = new URL(`../environments/${ref.base}/${ref.version}/index.ts`, import.meta.url)
+    .href;
   const mod = (await import(modulePath)) as EnvironmentModule;
   return mod.create();
 }

@@ -8,12 +8,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { glob } from "glob";
 import type { CmailConfig } from "./config.js";
-import {
-  parseEnvironmentSpec,
-  loadEnvironment,
-  defaultVersionFor,
-  type ResolvedEnvironmentRef,
-} from "./registry.js";
+import { parseEnvironmentSpec, loadEnvironment, type ResolvedEnvironmentRef } from "./registry.js";
 import { readLockfile, writeLockfile, type CmailLock } from "./lockfile.js";
 import { compareScreenshots } from "./diff.js";
 import { emailSlug, readIfExists, writeFile, snapshotName } from "./snapshot.js";
@@ -47,7 +42,7 @@ export interface RunOptions {
 export async function runTests(
   config: CmailConfig,
   configDir: string,
-  options: RunOptions
+  options: RunOptions,
 ): Promise<RunSummary> {
   const outputDir = path.resolve(configDir, config.outputDir ?? "cmail");
   const snapshotsDir = path.join(outputDir, "snapshots");
@@ -56,7 +51,7 @@ export async function runTests(
 
   const lock = (await readLockfile(lockPath)) ?? { environments: {} };
   const refs: ResolvedEnvironmentRef[] = config.environments.map((spec) =>
-    parseEnvironmentSpec(spec, lock.environments[spec.split("@")[0]])
+    parseEnvironmentSpec(spec, lock.environments[spec.split("@")[0]]),
   );
 
   // Pin any newly-seen environments into the lockfile (minimal lockfile behaviour).
@@ -119,7 +114,7 @@ export async function runTests(
             const diff = compareScreenshots(
               existingSnapshot,
               screenshot,
-              config.diffThreshold ?? 0.01
+              config.diffThreshold ?? 0.01,
             );
 
             let diffPath: string | undefined;

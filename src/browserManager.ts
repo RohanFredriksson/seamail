@@ -23,10 +23,7 @@ export async function getWebkit(): Promise<Browser> {
 }
 
 export async function closeAllBrowsers(): Promise<void> {
-  await Promise.all([
-    chromiumBrowser?.close(),
-    webkitBrowser?.close(),
-  ]);
+  await Promise.all([chromiumBrowser?.close(), webkitBrowser?.close()]);
   chromiumBrowser = null;
   webkitBrowser = null;
 }

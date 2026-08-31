@@ -28,7 +28,5 @@ export async function writeFile(filePath: string, data: Buffer): Promise<void> {
 }
 
 export function emailSlug(emailPath: string): string {
-  return path
-    .basename(emailPath, path.extname(emailPath))
-    .replace(/[^a-zA-Z0-9_-]/g, "-");
+  return path.basename(emailPath, path.extname(emailPath)).replace(/[^a-zA-Z0-9_-]/g, "-");
 }
