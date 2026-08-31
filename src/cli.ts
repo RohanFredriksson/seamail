@@ -110,7 +110,10 @@ program
   .option("-c, --config <path>", "path to cmail.config.ts", "cmail.config.ts")
   .action(async (opts: { config: string }) => {
     const { config, configDir } = await loadConfig(opts.config);
-    const lock = (await readLockfile(path.join(configDir, "cmail.lock"))) ?? { environments: {} };
+    const lock = (await readLockfile(path.join(configDir, "cmail.lock"))) ?? {
+      lockfileVersion: 1,
+      environments: {},
+    };
 
     console.log("");
     console.log(pc.bold("Cmail capability inspection"));
@@ -120,7 +123,7 @@ program
     const perEnv: Array<{ name: string; fidelity: string; caps: Record<string, string> }> = [];
 
     for (const spec of config.environments) {
-      const ref = parseEnvironmentSpec(spec, lock.environments[spec.split("@")[0]]);
+      const ref = parseEnvironmentSpec(spec, lock.environments[spec.split("@")[0]]?.version);
       const env = await loadEnvironment(ref);
       Object.keys(env.capabilities).forEach((f) => features.add(f));
       perEnv.push({ name: ref.full, fidelity: env.metadata.fidelity, caps: env.capabilities });

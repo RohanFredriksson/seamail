@@ -1,7 +1,23 @@
 {
+  "lockfileVersion": 1,
   "environments": {
-    "gmail-desktop": "v1",
-    "apple-mail-macos": "v1",
-    "outlook-classic": "v1"
+    "gmail-desktop": {
+      "version": "v1",
+      "engine": "chromium",
+      "engineVersion": "151.0.7922.34",
+      "playwrightVersion": "1.62.1"
+    },
+    "apple-mail-macos": {
+      "version": "v1",
+      "engine": "webkit",
+      "engineVersion": "26.5",
+      "playwrightVersion": "1.62.1"
+    },
+    "outlook-classic": {
+      "version": "v1",
+      "engine": "simulated-dom",
+      "engineVersion": null,
+      "playwrightVersion": null
+    }
   }
 }

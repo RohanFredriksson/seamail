@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
-import { readLockfile, writeLockfile, type CmailLock } from "../src/lockfile.js";
+import { readLockfile, writeLockfile, LOCKFILE_VERSION, type CmailLock } from "../src/lockfile.js";
 
 describe("lockfile", () => {
   let tmpDir: string | undefined;
@@ -21,7 +21,17 @@ describe("lockfile", () => {
   it("round-trips a written lockfile", async () => {
     tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "cmail-lock-"));
     const lockPath = path.join(tmpDir, "nested", "cmail.lock");
-    const lock: CmailLock = { environments: { "gmail-desktop": "v1" } };
+    const lock: CmailLock = {
+      lockfileVersion: LOCKFILE_VERSION,
+      environments: {
+        "gmail-desktop": {
+          version: "v1",
+          engine: "chromium",
+          engineVersion: "131.0.6778.33",
+          playwrightVersion: "1.47.0",
+        },
+      },
+    };
 
     await writeLockfile(lockPath, lock);
     const result = await readLockfile(lockPath);

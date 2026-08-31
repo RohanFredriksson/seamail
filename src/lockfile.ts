@@ -1,13 +1,30 @@
 /**
- * Minimal lockfile: pins each environment name to an exact immutable
- * version so that repeated runs stay reproducible even if the registry's
- * "default" version for an environment changes in a future Cmail release.
+ * Cmail lockfile: pins each environment name to an exact immutable version
+ * plus the renderer identity/version it ran with last time, so that a
+ * project tested today doesn't unexpectedly render differently next month
+ * because the registry default or an installed renderer changed underneath
+ * it. The lockfile is only ever read/written by Cmail itself (via the test
+ * runner) - it is not meant to be hand-edited.
  */
 import fs from "node:fs/promises";
 import path from "node:path";
 
+export const LOCKFILE_VERSION = 1;
+
+export interface EnvironmentLockEntry {
+  /** Immutable Cmail environment version, e.g. "v1". */
+  version: string;
+  /** Underlying rendering engine, for reproducibility auditing. */
+  engine: "chromium" | "webkit" | "simulated-dom";
+  /** Actual browser engine version last observed, e.g. "131.0.6778.33". Null for simulated engines. */
+  engineVersion: string | null;
+  /** Installed Playwright package version last observed. Null for simulated engines. */
+  playwrightVersion: string | null;
+}
+
 export interface CmailLock {
-  environments: Record<string, string>; // base name -> version, e.g. "gmail-desktop": "v1"
+  lockfileVersion: number;
+  environments: Record<string, EnvironmentLockEntry>;
 }
 
 export async function readLockfile(lockPath: string): Promise<CmailLock | null> {
@@ -22,5 +39,6 @@ export async function readLockfile(lockPath: string): Promise<CmailLock | null> 
 
 export async function writeLockfile(lockPath: string, lock: CmailLock): Promise<void> {
   await fs.mkdir(path.dirname(lockPath), { recursive: true });
-  await fs.writeFile(lockPath, JSON.stringify(lock, null, 2) + "\n", "utf8");
+  const withVersion: CmailLock = { ...lock, lockfileVersion: LOCKFILE_VERSION };
+  await fs.writeFile(lockPath, JSON.stringify(withVersion, null, 2) + "\n", "utf8");
 }

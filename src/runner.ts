@@ -9,10 +9,16 @@ import path from "node:path";
 import { glob } from "glob";
 import type { CmailConfig } from "./config.js";
 import { parseEnvironmentSpec, loadEnvironment, type ResolvedEnvironmentRef } from "./registry.js";
-import { readLockfile, writeLockfile, type CmailLock } from "./lockfile.js";
+import {
+  readLockfile,
+  writeLockfile,
+  LOCKFILE_VERSION,
+  type CmailLock,
+  type EnvironmentLockEntry,
+} from "./lockfile.js";
 import { compareScreenshots } from "./diff.js";
 import { emailSlug, readIfExists, writeFile, snapshotName } from "./snapshot.js";
-import { closeAllBrowsers } from "./browserManager.js";
+import { closeAllBrowsers, getEngineVersions } from "./browserManager.js";
 import type { RenderConditions } from "./types.js";
 
 export interface TestCaseResult {
@@ -49,21 +55,27 @@ export async function runTests(
   const resultsDir = path.join(outputDir, "results");
   const lockPath = path.join(configDir, "cmail.lock");
 
-  const lock = (await readLockfile(lockPath)) ?? { environments: {} };
+  const lock: CmailLock = (await readLockfile(lockPath)) ?? {
+    lockfileVersion: LOCKFILE_VERSION,
+    environments: {},
+  };
   const refs: ResolvedEnvironmentRef[] = config.environments.map((spec) =>
-    parseEnvironmentSpec(spec, lock.environments[spec.split("@")[0]]),
+    parseEnvironmentSpec(spec, lock.environments[spec.split("@")[0]]?.version),
   );
 
-  // Pin any newly-seen environments into the lockfile (minimal lockfile behaviour).
   let lockChanged = false;
-  for (const ref of refs) {
-    if (!lock.environments[ref.base]) {
-      lock.environments[ref.base] = ref.version;
+  function pinEnvironment(base: string, entry: EnvironmentLockEntry): void {
+    const existing = lock.environments[base];
+    if (
+      !existing ||
+      existing.version !== entry.version ||
+      existing.engine !== entry.engine ||
+      existing.engineVersion !== entry.engineVersion ||
+      existing.playwrightVersion !== entry.playwrightVersion
+    ) {
+      lock.environments[base] = entry;
       lockChanged = true;
     }
-  }
-  if (lockChanged) {
-    await writeLockfile(lockPath, lock satisfies CmailLock);
   }
 
   const emailPaths = await glob(config.emails, { cwd: configDir, absolute: true });
@@ -77,6 +89,14 @@ export async function runTests(
     for (const ref of refs) {
       const env = await loadEnvironment(ref);
       await env.prepare();
+
+      const { engine } = env.metadata;
+      const { engineVersion, playwrightVersion } =
+        engine === "simulated-dom"
+          ? { engineVersion: null, playwrightVersion: null }
+          : await getEngineVersions(engine);
+      pinEnvironment(ref.base, { version: ref.version, engine, engineVersion, playwrightVersion });
+
       try {
         for (const emailPath of emailPaths) {
           const html = await fs.readFile(emailPath, "utf8");
@@ -142,6 +162,9 @@ export async function runTests(
     }
   } finally {
     await closeAllBrowsers();
+    if (lockChanged) {
+      await writeLockfile(lockPath, lock);
+    }
   }
 
   const passed = results.filter((r) => r.status === "pass").length;
