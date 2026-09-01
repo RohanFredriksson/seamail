@@ -125,10 +125,10 @@ limitation) is the correct safe baseline until this is designed properly.
 ## Milestone 10 — Documentation
 
 - [x] README: what it is, install, quick start, fixtures, environments table, out-of-scope
-- [ ] Configuration reference (all `cmail.config.ts` options)
+- [x] Configuration reference (all `cmail.config.ts` options) — README "Configuration reference" section
 - [ ] CI usage doc (example workflow for consumers, not just this repo's own CI)
 - [ ] Supported platforms doc
-- [ ] Limitations doc (simulations ≠ real clients, screenshots ≠ pixel-perfect proof)
+- [x] Limitations doc (simulations ≠ real clients, screenshots ≠ pixel-perfect proof) — README "Limitations" section
 - [ ] Troubleshooting doc (beyond the WebKit/Fedora note)
 - [ ] Contributing / environment development guide
 
@@ -145,7 +145,7 @@ limitation) is the correct safe baseline until this is designed properly.
 ## Suggested next 5 concrete tasks (highest leverage toward Alpha)
 
 1. ~~Add `cmail list`~~ — done.
-2. Write the Limitations + Configuration Reference docs (Milestone 10) — required before any external user.
+2. ~~Write the Limitations + Configuration Reference docs~~ — done (see Milestone 10): README now has "Configuration reference" and "Limitations" sections.
 3. ~~Audit error paths and add friendly messages~~ — done (see Milestone 5).
 4. ~~Decide and document the external-resource/network policy~~ — done (see Milestone 9): JS disabled, live network blocked, documented in README.
 5. Flip `package.json` to publishable (`private: false`, license, verify `bin`

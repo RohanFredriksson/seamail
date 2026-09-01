@@ -80,6 +80,37 @@ npm run cmail -- inspect   # print known capability support per environment
 npm run cmail -- list      # list all available environments
 ```
 
+All commands accept `-c, --config <path>` (default `cmail.config.ts`) and the
+top-level `-v, --verbose` flag (show full error stack traces).
+
+## Configuration reference
+
+`cmail.config.ts` must export a default config built with `defineConfig()`
+(see [src/config.ts](src/config.ts)):
+
+```ts
+import { defineConfig } from "./src/config.js";
+
+export default defineConfig({
+  emails: "fixtures/torture/*.html",
+  environments: ["gmail-desktop", "apple-mail-macos", "outlook-classic"],
+  variants: ["light", "dark"],
+  outputDir: "cmail",
+  diffThreshold: 0.001,
+});
+```
+
+| Field | Type | Required | Default | Meaning |
+|---|---|---|---|---|
+| `emails` | `string` | yes | - | Glob (relative to the config file) matching input email HTML files, e.g. `"emails/*.html"`. Must match at least one file. |
+| `environments` | `string[]` | yes | - | Environment names to test against, optionally pinned to a version with `name@version` (e.g. `"gmail-desktop@v1"`). Unversioned names resolve via `cmail.lock`, falling back to each environment's current default version. Run `cmail list` to see all known names. |
+| `variants` | `("light" \| "dark")[]` | no | `["light"]` | Colour-scheme conditions to render each email x environment under. Every environment renders once per variant (`imagesEnabled` is currently always `true`; there is no config field for it yet). |
+| `outputDir` | `string` | no | `"cmail"` | Directory (relative to the config file) where `snapshots/`, `results/`, and `report.html` are written. |
+| `diffThreshold` | `number` (0-1) | no | `0.001` | Maximum proportion of differing pixels before a comparison is reported as a regression (`fail`). |
+
+Invalid values in any of these fields raise a `CmailError` naming the exact
+problem field instead of failing later with an unrelated error.
+
 ## Fixtures
 
 - `fixtures/torture/torture.html` - deliberately difficult fixture (nested
@@ -110,6 +141,36 @@ Practical implication: fixtures must be self-contained. Reference images as
 `data:` URIs or inline SVG rather than remote URLs; remote `<a href>` links
 are fine (never navigated), but remote `<img src>`/`background-image`/
 `@font-face`/`@import` will simply not load.
+
+## Limitations
+
+Be explicit with yourself and your team about what Cmail does and does not
+prove:
+
+- **Simulations are not real clients.** `outlook-classic@v1` is an explicit
+  behavioural simulation (CSS/HTML rewriting + Chromium as a drawing
+  surface) - it is not the real Word/Outlook rendering engine, which cannot
+  be run headlessly. Its `fidelity: "simulated"` label (surfaced by `cmail
+  inspect`/`cmail list`) exists specifically so this isn't mistaken for a
+  guarantee. Even the `"high"` fidelity Chromium/WebKit environments
+  approximate each client's known sanitisation rules in code - they are not
+  pulling those rules from the real client at runtime.
+- **A passing screenshot comparison is not proof of pixel-perfect real-world
+  rendering.** It proves the output hasn't regressed relative to your own
+  previously accepted baseline for that specific environment representation.
+- **Cmail host platform ≠ target client platform.** Cmail runs wherever
+  Node + Playwright run (e.g. Linux, macOS, Windows), but that only affects
+  where the *tooling* runs - `apple-mail-macos@v1` can be (and normally is)
+  tested from Linux/Windows, because the environment is a WebKit-based
+  representation, not the literal macOS Mail.app.
+- **No live network / no remote images.** See "Security & resource policy"
+  above - emails that rely on remotely-hosted images/fonts/stylesheets will
+  render with those resources missing. There's real value in supporting
+  this (opt-in, cached) later; see `docs/roadmap.md` Milestone 9.
+- **Only tested on Linux so far.** macOS/Windows are intended targets but not
+  yet verified in CI.
+- **Only 3 environments today**, all desktop. No mobile clients (Gmail
+  Mobile, Apple Mail iOS) yet.
 
 ## Out of scope for this PoC
 
