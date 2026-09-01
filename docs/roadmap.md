@@ -112,6 +112,16 @@ CI-compatible exit codes, basic reporting, docs. Not 1.0.
 - [ ] Filesystem access from rendered HTML not separately audited (relies on
       Playwright/Chromium's own sandboxing; no explicit Cmail-level check)
 
+**Post-alpha, opt-in only:** real-world emails very commonly source images
+from external URLs (ESP/CDN-hosted), and blocking them by default means
+Cmail can't test a large share of realistic emails out of the box. There is
+real value in eventually supporting this, but it must be opt-in (e.g. a
+config flag) and ideally backed by a fetch-once-then-cache-locally model
+(similar in spirit to the lockfile) rather than always-live network, to
+avoid reintroducing flakiness/non-determinism and a dependency on third-party
+uptime. Not required for Alpha — current default (block + document as a
+limitation) is the correct safe baseline until this is designed properly.
+
 ## Milestone 10 — Documentation
 
 - [x] README: what it is, install, quick start, fixtures, environments table, out-of-scope
