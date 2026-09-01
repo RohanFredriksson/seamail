@@ -20,6 +20,7 @@ import { compareScreenshots } from "./diff.js";
 import { emailSlug, readIfExists, writeFile, snapshotName } from "./snapshot.js";
 import { closeAllBrowsers, getEngineVersions } from "./browserManager.js";
 import type { RenderConditions } from "./types.js";
+import { CmailError } from "./errors.js";
 
 export interface TestCaseResult {
   email: string;
@@ -80,7 +81,7 @@ export async function runTests(
 
   const emailPaths = await glob(config.emails, { cwd: configDir, absolute: true });
   if (emailPaths.length === 0) {
-    throw new Error(`No email files matched pattern "${config.emails}" in ${configDir}`);
+    throw new CmailError(`No email files matched pattern "${config.emails}" in ${configDir}`);
   }
 
   const results: TestCaseResult[] = [];

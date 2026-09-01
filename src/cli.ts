@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Cmail CLI: `cmail test`, `cmail open`, `cmail inspect`.
+ * Cmail CLI: `cmail test`, `cmail open`, `cmail inspect`, `cmail list`.
  */
 import path from "node:path";
 import { Command } from "commander";
@@ -11,10 +11,14 @@ import { generateReport } from "./report.js";
 import { parseEnvironmentSpec, loadEnvironment, listAllEnvironmentRefs } from "./registry.js";
 import { readLockfile } from "./lockfile.js";
 import { closeAllBrowsers } from "./browserManager.js";
+import { CmailError } from "./errors.js";
 import fs from "node:fs/promises";
 
 const program = new Command();
-program.name("cmail").description("Local-first HTML email rendering & visual regression testing");
+program
+  .name("cmail")
+  .description("Local-first HTML email rendering & visual regression testing")
+  .option("-v, --verbose", "show full error stack traces", false);
 
 function printSummary(summary: RunSummary): void {
   const byEnv = new Map<string, { pass: number; fail: number; nw: number }>();
@@ -164,6 +168,18 @@ program
   });
 
 program.parseAsync(process.argv).catch((err) => {
-  console.error(pc.red(err instanceof Error ? (err.stack ?? err.message) : String(err)));
+  const verbose = program.opts().verbose === true;
+  if (err instanceof CmailError) {
+    console.error(pc.red(`✗ ${err.message}`));
+  } else {
+    const message = err instanceof Error ? err.message : String(err);
+    console.error(pc.red(`✗ Unexpected error: ${message}`));
+    if (!verbose) console.error(pc.dim("  Rerun with --verbose for a full stack trace."));
+  }
+  if (verbose) {
+    for (let cur: unknown = err; cur instanceof Error; cur = cur.cause) {
+      console.error(pc.dim(cur.stack ?? cur.message));
+    }
+  }
   process.exitCode = 1;
 });

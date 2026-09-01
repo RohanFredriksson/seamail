@@ -8,6 +8,7 @@
  */
 import fs from "node:fs/promises";
 import path from "node:path";
+import { CmailError } from "./errors.js";
 
 export const LOCKFILE_VERSION = 1;
 
@@ -30,8 +31,15 @@ export interface CmailLock {
 export async function readLockfile(lockPath: string): Promise<CmailLock | null> {
   try {
     const raw = await fs.readFile(lockPath, "utf8");
-    return JSON.parse(raw) as CmailLock;
+    try {
+      return JSON.parse(raw) as CmailLock;
+    } catch {
+      throw new CmailError(
+        `Could not parse lockfile at "${lockPath}" as JSON. It may be corrupted - delete it to have Cmail regenerate it.`,
+      );
+    }
   } catch (err) {
+    if (err instanceof CmailError) throw err;
     if ((err as NodeJS.ErrnoException).code === "ENOENT") return null;
     throw err;
   }

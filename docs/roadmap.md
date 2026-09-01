@@ -67,11 +67,17 @@ CI-compatible exit codes, basic reporting, docs. Not 1.0.
 
 - [x] Human-readable pass/fail summary grouped by environment
 - [ ] Machine-readable output (JSON/JUnit) — not implemented
-- [ ] User-facing error handling pass: invalid config, missing email file,
-      unsupported environment/version, browser launch failure, missing
-      snapshot, unsupported condition, environment-can't-run-on-host — need
-      audit; currently likely raw exceptions in most failure paths
-- [ ] `--verbose`/debug mode for raw stack traces vs. default friendly errors
+- [x] User-facing error handling pass: invalid config, missing email file,
+      unsupported environment/version, browser launch failure, corrupt
+      lockfile now raise a `CmailError` (`src/errors.ts`) with an actionable
+      message instead of a raw stack (config validation in `config.ts`,
+      registry lookups in `registry.ts`, browser launch in
+      `browserManager.ts`, lockfile parsing in `lockfile.ts`). Missing
+      snapshot and unsupported condition at runtime (non-TS callers) still
+      need a look.
+- [x] `--verbose`/debug mode: default prints a short red message + hint;
+      `--verbose` prints the full `CmailError`/cause chain of stack traces
+      (`src/cli.ts`)
 
 ## Milestone 6 — Local reporting
 
@@ -125,9 +131,7 @@ CI-compatible exit codes, basic reporting, docs. Not 1.0.
 
 1. ~~Add `cmail list`~~ — done.
 2. Write the Limitations + Configuration Reference docs (Milestone 10) — required before any external user.
-3. Audit error paths and add friendly messages for the 5–6 most likely failure
-   modes (missing config, missing fixture, unsupported env, browser launch
-   failure) — Milestone 5.
+3. ~~Audit error paths and add friendly messages~~ — done (see Milestone 5).
 4. Decide and document the external-resource/network policy (Milestone 9) —
    currently an open security question, cheap to decide now, expensive to
    change after users depend on either behavior.

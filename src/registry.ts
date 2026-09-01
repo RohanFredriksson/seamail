@@ -4,6 +4,7 @@
  * Cmail resolves environments by name through this module.
  */
 import type { CmailEnvironment } from "./types.js";
+import { CmailError } from "./errors.js";
 
 export interface EnvironmentModule {
   create(): CmailEnvironment;
@@ -31,13 +32,13 @@ export function parseEnvironmentSpec(spec: string, lockedVersion?: string): Reso
   const [base, explicitVersion] = spec.split("@");
   const entry = REGISTRY[base];
   if (!entry) {
-    throw new Error(
-      `Unknown environment "${base}". Known environments: ${Object.keys(REGISTRY).join(", ")}`,
+    throw new CmailError(
+      `Unknown environment "${base}". Known environments: ${Object.keys(REGISTRY).join(", ")}. Run "cmail list" to see details.`,
     );
   }
   const version = explicitVersion ?? lockedVersion ?? entry.default;
   if (!entry.versions.includes(version)) {
-    throw new Error(
+    throw new CmailError(
       `Unknown version "${version}" for environment "${base}". Available: ${entry.versions.join(", ")}`,
     );
   }
