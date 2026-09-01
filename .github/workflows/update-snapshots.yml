@@ -1,0 +1,32 @@
+name: Update Snapshots
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-snapshots:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npx playwright install --with-deps chromium webkit
+
+      - name: Regenerate snapshots on this runner's environment
+        run: npm run seamail -- test --update
+
+      - name: Commit updated snapshots
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add seamail/snapshots
+          git diff --cached --quiet && echo "No snapshot changes" || git commit -m "chore: regenerate snapshots on CI runner"
+          git push
