@@ -135,7 +135,7 @@ export async function runTests(
             const diff = compareScreenshots(
               existingSnapshot,
               screenshot,
-              config.diffThreshold ?? 0.01,
+              config.diffThreshold ?? 0.005,
             );
 
             let diffPath: string | undefined;

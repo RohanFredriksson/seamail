@@ -99,7 +99,7 @@ export default defineConfig({
   environments: ["gmail-desktop", "apple-mail-macos", "outlook-classic"],
   variants: ["light", "dark"],
   outputDir: "seamail",
-  diffThreshold: 0.001,
+  diffThreshold: 0.005,
 });
 ```
 
@@ -109,7 +109,7 @@ export default defineConfig({
 | `environments` | `string[]` | yes | - | Environment names to test against, optionally pinned to a version with `name@version` (e.g. `"gmail-desktop@v1"`). Unversioned names resolve via `seamail.lock`, falling back to each environment's current default version. Run `seamail list` to see all known names. |
 | `variants` | `("light" \| "dark")[]` | no | `["light"]` | Colour-scheme conditions to render each email x environment under. Every environment renders once per variant (`imagesEnabled` is currently always `true`; there is no config field for it yet). |
 | `outputDir` | `string` | no | `"seamail"` | Directory (relative to the config file) where `snapshots/`, `results/`, and `report.html` are written. |
-| `diffThreshold` | `number` (0-1) | no | `0.001` | Maximum proportion of differing pixels before a comparison is reported as a regression (`fail`). |
+| `diffThreshold` | `number` (0-1) | no | `0.005` | Maximum proportion of differing pixels before a comparison is reported as a regression (`fail`). |
 
 Invalid values in any of these fields raise a `SeamailError` naming the exact
 problem field instead of failing later with an unrelated error.

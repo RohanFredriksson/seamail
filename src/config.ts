@@ -23,7 +23,7 @@ export function defineConfig(config: SeamailConfig): SeamailConfig {
     ...config,
     variants: config.variants ?? ["light"],
     outputDir: config.outputDir ?? "seamail",
-    diffThreshold: config.diffThreshold ?? 0.001,
+    diffThreshold: config.diffThreshold ?? 0.005,
   };
 }
 
