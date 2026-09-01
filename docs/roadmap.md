@@ -147,7 +147,12 @@ limitation) is the correct safe baseline until this is designed properly.
       `README.md`, `LICENSE`) — verified via `npm pack` tarball contents
       (fixtures/tests/docs/scripts/config correctly excluded)
 - [x] Versioning policy documented in README ("Versioning" section, semver, Seamail version vs. environment version distinction)
-- [ ] Actual npm publish process/CI (e.g. `npm publish` on tag) not set up yet — no evidence of a publish workflow
+- [x] Automated publish workflow (`.github/workflows/publish.yml`): triggers
+      on `v*` tag push, runs full check suite (typecheck/lint/format/test/
+      fixtures), verifies the tag matches `package.json` version, then
+      `npm publish --provenance` via npm's OIDC **trusted publishing** (no
+      `NPM_TOKEN` secret — the package must be configured with this repo's
+      workflow as a trusted publisher on npmjs.com first).
 
 ---
 
@@ -157,6 +162,6 @@ limitation) is the correct safe baseline until this is designed properly.
 2. ~~Write the Limitations + Configuration Reference docs~~ — done (see Milestone 10): README now has "Configuration reference" and "Limitations" sections.
 3. ~~Audit error paths and add friendly messages~~ — done (see Milestone 5).
 4. ~~Decide and document the external-resource/network policy~~ — done (see Milestone 9): JS disabled, live network blocked, documented in README.
-5. ~~Flip `package.json` to publishable~~ — done (see Milestone 11). Remaining
-   before an actual public release: set up an `npm publish` process (manual
-   or CI-driven).
+5. ~~Flip `package.json` to publishable~~ — done (see Milestone 11).
+6. ~~Set up an npm publish process~~ — done: `.github/workflows/publish.yml`
+   publishes on `v*` tag push after the full check suite passes.
