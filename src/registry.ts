@@ -54,6 +54,13 @@ export function listKnownEnvironments(): string[] {
   return Object.keys(REGISTRY);
 }
 
+/** All known environment@version refs, e.g. ["gmail-desktop@v1", ...]. */
+export function listAllEnvironmentRefs(): ResolvedEnvironmentRef[] {
+  return Object.entries(REGISTRY).flatMap(([base, entry]) =>
+    entry.versions.map((version) => ({ base, version, full: `${base}@${version}` })),
+  );
+}
+
 /** Dynamically imports and instantiates the concrete environment implementation. */
 export async function loadEnvironment(ref: ResolvedEnvironmentRef): Promise<CmailEnvironment> {
   const modulePath = new URL(`../environments/${ref.base}/${ref.version}/index.ts`, import.meta.url)

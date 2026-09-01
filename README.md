@@ -77,6 +77,7 @@ Other commands:
 ```bash
 npm run cmail -- open      # open the local static HTML report
 npm run cmail -- inspect   # print known capability support per environment
+npm run cmail -- list      # list all available environments
 ```
 
 ## Fixtures

@@ -8,7 +8,7 @@ import pc from "picocolors";
 import { loadConfig } from "./config.js";
 import { runTests, type RunSummary } from "./runner.js";
 import { generateReport } from "./report.js";
-import { parseEnvironmentSpec, loadEnvironment } from "./registry.js";
+import { parseEnvironmentSpec, loadEnvironment, listAllEnvironmentRefs } from "./registry.js";
 import { readLockfile } from "./lockfile.js";
 import { closeAllBrowsers } from "./browserManager.js";
 import fs from "node:fs/promises";
@@ -102,6 +102,22 @@ program
     const cmd =
       process.platform === "darwin" ? "open" : process.platform === "win32" ? "start" : "xdg-open";
     open.spawn(cmd, [reportPath], { stdio: "ignore", detached: true }).unref();
+  });
+
+program
+  .command("list")
+  .description("List all available Cmail environments")
+  .action(async () => {
+    console.log("");
+    console.log(pc.bold("Available Cmail environments"));
+    console.log("");
+    for (const ref of listAllEnvironmentRefs()) {
+      const env = await loadEnvironment(ref);
+      const { client, platform, fidelity, engine, description } = env.metadata;
+      console.log(`  ${pc.bold(ref.full)} ${pc.dim(`(${client}/${platform}, ${engine}, fidelity=${fidelity})`)}`);
+      console.log(`      ${description}`);
+    }
+    console.log("");
   });
 
 program
