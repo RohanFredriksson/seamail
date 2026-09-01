@@ -1,4 +1,4 @@
 /**
- * Public package entry point for consumers writing `cmail.config.ts`.
+ * Public package entry point for consumers writing `seamail.config.ts`.
  */
-export { defineConfig, type CmailConfig, type LoadedConfig } from "./config.js";
+export { defineConfig, type SeamailConfig as SeamailConfig, type LoadedConfig } from "./config.js";

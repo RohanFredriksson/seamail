@@ -1,7 +1,7 @@
 /**
- * Core abstractions for Cmail environments.
+ * Core abstractions for Seamail environments.
  *
- * A "Cmail environment" is a versioned, reproducible representation of a
+ * A "Seamail environment" is a versioned, reproducible representation of a
  * real-world email rendering environment (client + platform + version).
  * The test runner talks to every environment through this interface only -
  * it never knows whether an environment uses Chromium, WebKit, or a
@@ -16,7 +16,7 @@ export interface EnvironmentMetadata {
   client: string;
   /** Platform the client runs on, e.g. "desktop", "macos", "ios". */
   platform: string;
-  /** Immutable version of this Cmail representation, e.g. "v1". */
+  /** Immutable version of this Seamail representation, e.g. "v1". */
   version: string;
   /** Full resolved identifier, e.g. "gmail-desktop@v1". */
   name: string;
@@ -62,7 +62,7 @@ export interface RenderResult {
  * Chromium-backed, WebKit-backed, and pure-simulation environments all
  * implement this same interface.
  */
-export interface CmailEnvironment {
+export interface SeamailEnvironment {
   readonly metadata: EnvironmentMetadata;
   readonly device: DeviceConfig;
   readonly capabilities: CapabilityMap;
@@ -81,4 +81,4 @@ export interface CmailEnvironment {
 }
 
 /** A factory that builds one environment instance for a given version. */
-export type EnvironmentFactory = () => CmailEnvironment;
+export type EnvironmentFactory = () => SeamailEnvironment;

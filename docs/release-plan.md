@@ -1,13 +1,13 @@
-CMAIL — POST-PoC DEVELOPMENT AND RELEASE PLAN
+SEAMAIL — POST-PoC DEVELOPMENT AND RELEASE PLAN
 
 DOCUMENT PURPOSE
 
-The Cmail proof of concept has been successfully completed.
+The Seamail proof of concept has been successfully completed.
 
 The PoC established that the core technical premise is viable:
 
 - HTML emails can be rendered locally.
-- Multiple rendering strategies can be represented as Cmail environments.
+- Multiple rendering strategies can be represented as Seamail environments.
 - Different environments can produce meaningful rendering differences.
 - Environment implementations can be hidden behind a common abstraction.
 - Rendered output can be captured as screenshots.
@@ -18,7 +18,7 @@ The project should now transition from "technical experiment" into "developer to
 
 This document defines the next development phase and the path toward an initial public release.
 
-The objective is NOT to immediately build the entire long-term Cmail vision.
+The objective is NOT to immediately build the entire long-term Seamail vision.
 
 The objective is to build a small, reliable, installable developer tool that developers can actually use in real projects.
 
@@ -33,7 +33,7 @@ The architecture has demonstrated that:
 
 Email source
 ->
-Cmail environment
+Seamail environment
 ->
 Environment-specific processing
 ->
@@ -92,7 +92,7 @@ Internal development:
 Make the architecture robust.
 
 Alpha:
-Let technically capable developers experiment with Cmail.
+Let technically capable developers experiment with Seamail.
 
 Beta:
 Make the interface stable enough for real projects.
@@ -126,7 +126,7 @@ Tasks:
 - Establish build scripts.
 - Establish package boundaries where appropriate.
 
-The architecture should make it possible to change an environment implementation without changing the Cmail test runner.
+The architecture should make it possible to change an environment implementation without changing the Seamail test runner.
 
 ================================================== 4. DEFINE THE PUBLIC API BEFORE EXPANDING FEATURES
 ==================================================
@@ -152,7 +152,7 @@ The initial command set should be small.
 
 Required:
 
-cmail test
+seamail test
 
 Purpose:
 
@@ -160,7 +160,7 @@ Run email rendering tests.
 
 Required:
 
-cmail test --update
+seamail test --update
 
 Purpose:
 
@@ -168,7 +168,7 @@ Create or update snapshots.
 
 Recommended:
 
-cmail open
+seamail open
 
 Purpose:
 
@@ -176,7 +176,7 @@ Open the local test report.
 
 Potential:
 
-cmail list
+seamail list
 
 Purpose:
 
@@ -184,7 +184,7 @@ List available environments.
 
 Potential:
 
-cmail inspect
+seamail inspect
 
 Purpose:
 
@@ -192,18 +192,18 @@ Show environment capabilities and compatibility information.
 
 Potential:
 
-cmail init
+seamail init
 
 Purpose:
 
-Create a basic Cmail configuration in an existing project.
+Create a basic Seamail configuration in an existing project.
 
 Do not implement every command immediately.
 
 The minimum release candidate should make:
 
-cmail test
-cmail test --update
+seamail test
+seamail test --update
 
 excellent.
 
@@ -250,7 +250,7 @@ outlook-classic
 
 An environment represents a real-world target.
 
-A version represents a Cmail representation of that target.
+A version represents a Seamail representation of that target.
 
 For example:
 
@@ -275,7 +275,7 @@ Each environment version should define:
 
 - target client
 - target platform
-- Cmail environment version
+- Seamail environment version
 - rendering engine
 - rendering engine version
 - compatibility rules
@@ -293,7 +293,7 @@ Do not silently alter an existing environment version.
 ================================================== 9. LOCKFILE
 ==================================================
 
-Implement a real Cmail lockfile.
+Implement a real Seamail lockfile.
 
 The lockfile should pin:
 
@@ -304,7 +304,7 @@ The lockfile should pin:
 
 The purpose is that a project tested today should not unexpectedly render differently next month because an environment changed.
 
-The lockfile should be generated or updated through Cmail rather than requiring manual editing.
+The lockfile should be generated or updated through Seamail rather than requiring manual editing.
 
 Do not build a complex package manager.
 
@@ -315,7 +315,7 @@ The lockfile should simply provide deterministic resolution.
 
 Create a formal environment registry.
 
-The registry should allow Cmail to answer:
+The registry should allow Seamail to answer:
 
 - What environments exist?
 - What versions exist?
@@ -325,13 +325,13 @@ The registry should allow Cmail to answer:
 - What fidelity level does it have?
 - What conditions does it support?
 
-The registry is likely to become one of Cmail's most important pieces of infrastructure.
+The registry is likely to become one of Seamail's most important pieces of infrastructure.
 
 Do not make the first registry overly complicated.
 
 A local/static registry is sufficient initially.
 
-The architecture should eventually allow the registry to be distributed with or alongside Cmail.
+The architecture should eventually allow the registry to be distributed with or alongside Seamail.
 
 ================================================== 11. INITIAL ENVIRONMENT SET
 ==================================================
@@ -391,7 +391,7 @@ The environment provides compatibility information without claiming to reproduce
 
 These labels should appear in developer-facing documentation and potentially in reports.
 
-This prevents Cmail from making misleading claims.
+This prevents Seamail from making misleading claims.
 
 ================================================== 13. COMPATIBILITY RULES
 ==================================================
@@ -425,11 +425,11 @@ Environment:
 ================================================== 14. TEST THE ENVIRONMENTS THEMSELVES
 ==================================================
 
-Cmail needs two levels of testing.
+Seamail needs two levels of testing.
 
-LEVEL 1 — CMAIL TESTS
+LEVEL 1 — SEAMAIL TESTS
 
-These test that the Cmail system works correctly.
+These test that the Seamail system works correctly.
 
 Examples:
 
@@ -488,7 +488,7 @@ Do not overcomplicate the comparison algorithm before real-world testing demonst
 ================================================== 16. VISUAL DIFF DESIGN
 ==================================================
 
-The diff output should become one of Cmail's strongest developer experiences.
+The diff output should become one of Seamail's strongest developer experiences.
 
 When a test fails, the developer should immediately understand:
 
@@ -542,15 +542,15 @@ Human-readable output is the first priority.
 ================================================== 18. CI/CD
 ==================================================
 
-Cmail's ability to run in CI is a primary product requirement.
+Seamail's ability to run in CI is a primary product requirement.
 
 The following workflow should eventually work without special integration:
 
 install dependencies
-run cmail test
+run seamail test
 receive success/failure
 
-Cmail should not require a hosted service to perform its basic tests.
+Seamail should not require a hosted service to perform its basic tests.
 
 Important CI considerations:
 
@@ -665,7 +665,7 @@ Determine:
 
 The developer experience should be predictable.
 
-If an environment cannot run on the current host, Cmail should provide a clear error explaining why.
+If an environment cannot run on the current host, Seamail should provide a clear error explaining why.
 
 Do not silently fall back to a different rendering engine if doing so would invalidate reproducibility.
 
@@ -686,13 +686,13 @@ Determine which environments are actually possible on each host.
 
 The architecture should distinguish:
 
-Cmail host platform
+Seamail host platform
 
 from:
 
 Target email environment platform.
 
-For example, a developer running Cmail on Linux may still be testing an Apple Mail representation.
+For example, a developer running Seamail on Linux may still be testing an Apple Mail representation.
 
 This distinction is important.
 
@@ -703,7 +703,7 @@ Turn internal errors into useful developer messages.
 
 Examples of errors that need clear handling:
 
-- invalid Cmail configuration
+- invalid Seamail configuration
 - missing email file
 - unsupported environment
 - environment version unavailable
@@ -734,7 +734,7 @@ Documentation becomes a release requirement.
 
 At minimum document:
 
-- what Cmail is
+- what Seamail is
 - installation
 - quick start
 - configuration
@@ -757,19 +757,19 @@ The quick-start workflow should be extremely short.
 ================================================== 26. DOCUMENT THE LIMITATIONS
 ==================================================
 
-Cmail should be explicit about what it does not guarantee.
+Seamail should be explicit about what it does not guarantee.
 
 Especially:
 
 - simulations are not identical to real clients
 - browser-based approximations may differ from proprietary clients
 - email clients can change behaviour
-- environment versions are Cmail representations
+- environment versions are Seamail representations
 - screenshots are not necessarily proof of pixel-perfect real-world rendering
 
 Do not market the system as "perfect email rendering."
 
-The strength of Cmail is reproducibility and developer workflow.
+The strength of Seamail is reproducibility and developer workflow.
 
 ================================================== 27. ENVIRONMENT CONTRIBUTION MODEL
 ==================================================
@@ -797,19 +797,19 @@ Simply establish a clean internal contribution model.
 ================================================== 28. PACKAGE AND DISTRIBUTION STRATEGY
 ==================================================
 
-Cmail should eventually be installable as a normal developer dependency.
+Seamail should eventually be installable as a normal developer dependency.
 
 The likely primary distribution mechanism is npm.
 
-The package should provide the cmail executable.
+The package should provide the seamail executable.
 
 The developer experience should eventually resemble:
 
-install Cmail
+install Seamail
 initialize/configure
-run cmail test
+run seamail test
 
-Avoid requiring developers to clone the Cmail repository.
+Avoid requiring developers to clone the Seamail repository.
 
 Before publishing publicly, ensure:
 
@@ -824,7 +824,7 @@ Before publishing publicly, ensure:
 ================================================== 29. VERSIONING POLICY
 ==================================================
 
-Cmail itself should use semantic versioning once the public API stabilizes.
+Seamail itself should use semantic versioning once the public API stabilizes.
 
 Before 1.0, breaking changes are acceptable but should still be documented.
 
@@ -839,11 +839,11 @@ New functionality that remains backwards compatible.
 Patch:
 Bug fixes and compatibility corrections that do not change the public contract.
 
-Environment versions are separate from Cmail versions.
+Environment versions are separate from Seamail versions.
 
 Do not confuse:
 
-Cmail 1.2.0
+Seamail 1.2.0
 
 with:
 
@@ -904,7 +904,7 @@ The primary questions during Alpha should be:
 
 Do not primarily measure success by GitHub stars.
 
-Measure whether developers can integrate Cmail into a real email project.
+Measure whether developers can integrate Seamail into a real email project.
 
 ================================================== 32. BETA OBJECTIVES
 ==================================================
@@ -958,7 +958,7 @@ Do not introduce concurrency that makes rendering flaky.
 ================================================== 34. PARALLEL EXECUTION
 ==================================================
 
-Eventually Cmail should support parallel environment rendering.
+Eventually Seamail should support parallel environment rendering.
 
 For example:
 
@@ -1016,7 +1016,7 @@ claims a particular behaviour, a fixture should verify it.
 
 If that behaviour changes, the environment should either:
 
-- remain unchanged if the change is a bug fix to Cmail implementation, or
+- remain unchanged if the change is a bug fix to Seamail implementation, or
 - become a new environment version if the representation intentionally changes.
 
 This is essential to preserving reproducibility.
@@ -1024,7 +1024,7 @@ This is essential to preserving reproducibility.
 ================================================== 37. SECURITY
 ==================================================
 
-Because Cmail renders HTML supplied by developers, treat email input as potentially unsafe.
+Because Seamail renders HTML supplied by developers, treat email input as potentially unsafe.
 
 The renderer architecture should consider:
 
@@ -1061,7 +1061,7 @@ Email rendering often depends on:
 
 This creates reproducibility problems.
 
-Cmail should eventually have an explicit model for external resources.
+Seamail should eventually have an explicit model for external resources.
 
 For the initial release, determine a predictable policy.
 
@@ -1081,7 +1081,7 @@ Do not release 1.0 until the following are true.
 
 INSTALLATION
 
-- Cmail installs cleanly.
+- Seamail installs cleanly.
 - The CLI is available after installation.
 - Supported platforms are documented.
 
@@ -1131,7 +1131,7 @@ Avoid major distractions.
 
 Do not build:
 
-- hosted Cmail
+- hosted Seamail
 - user accounts
 - subscriptions
 - billing
@@ -1147,7 +1147,7 @@ Do not build:
 
 These may eventually become products or features.
 
-They are not necessary to prove Cmail as a developer tool.
+They are not necessary to prove Seamail as a developer tool.
 
 ================================================== 41. POTENTIAL FUTURE FEATURES
 ==================================================
@@ -1188,7 +1188,7 @@ The product should not compete purely on the number of email clients supported.
 
 The deeper differentiator is:
 
-Cmail provides reproducible, versioned email rendering environments that developers can run locally and in CI.
+Seamail provides reproducible, versioned email rendering environments that developers can run locally and in CI.
 
 The core promise is:
 
@@ -1227,7 +1227,7 @@ Formalize environment metadata and versioning.
 
 STEP 4
 
-Implement the Cmail lockfile.
+Implement the Seamail lockfile.
 
 STEP 5
 
@@ -1263,7 +1263,7 @@ Test across supported host platforms.
 
 STEP 13
 
-Package Cmail for npm distribution.
+Package Seamail for npm distribution.
 
 STEP 14
 
@@ -1291,7 +1291,7 @@ Freeze the public API.
 
 STEP 20
 
-Release Cmail 1.0.
+Release Seamail 1.0.
 
 ================================================== 44. THE FIRST IMMEDIATE MILESTONE
 ==================================================
@@ -1300,7 +1300,7 @@ Do not attempt to complete the entire release plan immediately.
 
 The first milestone after the PoC should be:
 
-"Cmail Developer Preview"
+"Seamail Developer Preview"
 
 The Developer Preview should transform the PoC into a clean, repeatable repository that a second developer can clone and use without understanding the internals.
 
@@ -1309,7 +1309,7 @@ Success means:
 Clone repository
 -> install
 -> configure an email
--> run cmail test
+-> run seamail test
 -> see results
 -> update snapshots
 -> make a change
@@ -1325,7 +1325,7 @@ The first public release should be intentionally modest.
 
 A good initial promise is:
 
-"Run your email rendering tests locally across reproducible Cmail environments."
+"Run your email rendering tests locally across reproducible Seamail environments."
 
 Do not promise:
 
@@ -1350,7 +1350,7 @@ EMAIL SOURCE
 
     ->
 
-CMAIL TEST RUNNER
+SEAMAIL TEST RUNNER
 
     ->
 
@@ -1433,12 +1433,12 @@ The next major goal is not "more email clients."
 
 The next major goal is:
 
-Turn the successful Cmail PoC into a reliable developer workflow that another developer can install, understand, integrate into a real email project, and trust in CI.
+Turn the successful Seamail PoC into a reliable developer workflow that another developer can install, understand, integrate into a real email project, and trust in CI.
 
 The ultimate test of this phase is:
 
-A developer who has never seen the Cmail source code should be able to install Cmail, configure their email project, run a test, understand a rendering failure, update a snapshot intentionally, and commit Cmail into their CI pipeline.
+A developer who has never seen the Seamail source code should be able to install Seamail, configure their email project, run a test, understand a rendering failure, update a snapshot intentionally, and commit Seamail into their CI pipeline.
 
-Once that workflow is reliable, Cmail is no longer merely a successful PoC.
+Once that workflow is reliable, Seamail is no longer merely a successful PoC.
 
 It is a real developer product.

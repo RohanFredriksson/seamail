@@ -1,4 +1,4 @@
-# Cmail Roadmap — Path to Initial Release
+# Seamail Roadmap — Path to Initial Release
 
 Tracking checklist derived from [release-plan.md](./release-plan.md). Status
 reflects the repo as of 2026-09-01. Update checkboxes as work lands; keep
@@ -11,7 +11,7 @@ CI-compatible exit codes, basic reporting, docs. Not 1.0.
 ## Milestone 0 — Developer Preview (harden the PoC)
 
 - [x] CLI separated from core (`src/cli.ts` vs `runner.ts`/`registry.ts`/etc.)
-- [x] Environments separated from runner (`environments/*/v1/index.ts` + `CmailEnvironment` interface)
+- [x] Environments separated from runner (`environments/*/v1/index.ts` + `SeamailEnvironment` interface)
 - [x] Snapshot logic separated from rendering (`src/snapshot.ts`, `src/diff.ts`)
 - [x] Config parsing separated from execution (`src/config.ts`)
 - [x] TypeScript project config (`tsconfig.json`, `npm run typecheck`)
@@ -20,7 +20,7 @@ CI-compatible exit codes, basic reporting, docs. Not 1.0.
 - [x] Unit tests (`tests/*.test.ts` for diff/lockfile/registry/snapshot)
 - [x] Environment/fixture-level tests (`tests/environments/*.test.ts`, Level 2)
 - [x] CI workflow (`.github/workflows/ci.yml`)
-- [x] Clone → install → configure → `cmail test` → update → regress → inspect
+- [x] Clone → install → configure → `seamail test` → update → regress → inspect
       workflow works end-to-end (verified per repo memory)
 
 **Milestone 0 status: complete.**
@@ -28,9 +28,9 @@ CI-compatible exit codes, basic reporting, docs. Not 1.0.
 ## Milestone 1 — Public API definition
 
 - [x] CLI commands defined: `test`, `test --update`, `open`, `inspect`, `list`
-- [x] `cmail list` (list available environments) — implemented
-- [ ] `cmail init` (scaffold config in existing project) — not implemented
-- [x] Config API with sensible defaults (`cmail.config.ts`, `defineConfig`)
+- [x] `seamail list` (list available environments) — implemented
+- [ ] `seamail init` (scaffold config in existing project) — not implemented
+- [x] Config API with sensible defaults (`seamail.config.ts`, `defineConfig`)
 - [x] Environment identifier scheme (`name@version`, e.g. `gmail-desktop@v1`)
 - [x] Environment metadata (`client`, `platform`, `version`, `fidelity`,
       `engine`, `description` in `src/types.ts`)
@@ -39,9 +39,9 @@ CI-compatible exit codes, basic reporting, docs. Not 1.0.
 ## Milestone 2 — Environment & lockfile formalization
 
 - [x] `FidelityLevel` type (`exact`/`high`/`simulated`/`analytical`) + documented per-env in README table
-- [x] Capability map per environment (`CapabilityMap`, surfaced via `cmail inspect`)
+- [x] Capability map per environment (`CapabilityMap`, surfaced via `seamail inspect`)
 - [x] Conditions modeled as env+condition, not separate envs (`RenderConditions`: colorScheme, imagesEnabled)
-- [x] Lockfile pins environment versions (`cmail.lock`, `src/lockfile.ts`), auto-created
+- [x] Lockfile pins environment versions (`seamail.lock`, `src/lockfile.ts`), auto-created
 - [ ] Lockfile also pins renderer/engine versions (currently only env version, not e.g. Playwright/browser build) — confirm if needed for repro
 - [x] Registry resolves `name@version` -> implementation (`src/registry.ts`)
 - [ ] Compatibility rules documented as data (not just code) per environment — currently implicit in `process()` implementations, not separately declared/testable metadata
@@ -69,19 +69,19 @@ CI-compatible exit codes, basic reporting, docs. Not 1.0.
 - [ ] Machine-readable output (JSON/JUnit) — not implemented
 - [x] User-facing error handling pass: invalid config, missing email file,
       unsupported environment/version, browser launch failure, corrupt
-      lockfile now raise a `CmailError` (`src/errors.ts`) with an actionable
+      lockfile now raise a `SeamailError` (`src/errors.ts`) with an actionable
       message instead of a raw stack (config validation in `config.ts`,
       registry lookups in `registry.ts`, browser launch in
       `browserManager.ts`, lockfile parsing in `lockfile.ts`). Missing
       snapshot and unsupported condition at runtime (non-TS callers) still
       need a look.
 - [x] `--verbose`/debug mode: default prints a short red message + hint;
-      `--verbose` prints the full `CmailError`/cause chain of stack traces
+      `--verbose` prints the full `SeamailError`/cause chain of stack traces
       (`src/cli.ts`)
 
 ## Milestone 6 — Local reporting
 
-- [x] Static HTML report generated locally (`src/report.ts`, `cmail open`)
+- [x] Static HTML report generated locally (`src/report.ts`, `seamail open`)
 - [x] Report shows expected/actual/diff per result (verify field coverage)
 - [ ] Confirm report includes environment metadata (fidelity/engine) — check `report.ts`
 
@@ -110,11 +110,11 @@ CI-compatible exit codes, basic reporting, docs. Not 1.0.
       script-injection surface for untrusted fixture HTML
 - [x] Documented in README ("Security & resource policy" section)
 - [ ] Filesystem access from rendered HTML not separately audited (relies on
-      Playwright/Chromium's own sandboxing; no explicit Cmail-level check)
+      Playwright/Chromium's own sandboxing; no explicit Seamail-level check)
 
 **Post-alpha, opt-in only:** real-world emails very commonly source images
 from external URLs (ESP/CDN-hosted), and blocking them by default means
-Cmail can't test a large share of realistic emails out of the box. There is
+Seamail can't test a large share of realistic emails out of the box. There is
 real value in eventually supporting this, but it must be opt-in (e.g. a
 config flag) and ideally backed by a fetch-once-then-cache-locally model
 (similar in spirit to the lockfile) rather than always-live network, to
@@ -125,7 +125,7 @@ limitation) is the correct safe baseline until this is designed properly.
 ## Milestone 10 — Documentation
 
 - [x] README: what it is, install, quick start, fixtures, environments table, out-of-scope
-- [x] Configuration reference (all `cmail.config.ts` options) — README "Configuration reference" section
+- [x] Configuration reference (all `seamail.config.ts` options) — README "Configuration reference" section
 - [ ] CI usage doc (example workflow for consumers, not just this repo's own CI)
 - [ ] Supported platforms doc
 - [x] Limitations doc (simulations ≠ real clients, screenshots ≠ pixel-perfect proof) — README "Limitations" section
@@ -136,24 +136,24 @@ limitation) is the correct safe baseline until this is designed properly.
 
 - [x] `package.json` flipped to publishable (`private` removed, `"license": "MIT"` added)
 - [x] `LICENSE` file added (MIT)
-- [x] Verified `bin/cmail.mjs` works installed as a real dependency: `npm pack`
-      -> installed tarball into a scratch project -> `npx cmail list` and a
-      full `cmail test -u` render/snapshot succeeded. Found and fixed two real
+- [x] Verified `bin/seamail.mjs` works installed as a real dependency: `npm pack`
+      -> installed tarball into a scratch project -> `npx seamail list` and a
+      full `seamail test -u` render/snapshot succeeded. Found and fixed two real
       bugs in the process: `tsx` was a devDependency but is required at
-      runtime by `bin/cmail.mjs` (moved to `dependencies`), and there was no
+      runtime by `bin/seamail.mjs` (moved to `dependencies`), and there was no
       package entry point for consumers to `import { defineConfig } from
-      "cmail"` (added `src/index.ts` + `main`/`exports` in `package.json`)
+      "seamail"` (added `src/index.ts` + `main`/`exports` in `package.json`)
 - [x] `files` allowlist in `package.json` (`bin`, `src`, `environments`,
       `README.md`, `LICENSE`) — verified via `npm pack` tarball contents
       (fixtures/tests/docs/scripts/config correctly excluded)
-- [x] Versioning policy documented in README ("Versioning" section, semver, Cmail version vs. environment version distinction)
+- [x] Versioning policy documented in README ("Versioning" section, semver, Seamail version vs. environment version distinction)
 - [ ] Actual npm publish process/CI (e.g. `npm publish` on tag) not set up yet — no evidence of a publish workflow
 
 ---
 
 ## Suggested next 5 concrete tasks (highest leverage toward Alpha)
 
-1. ~~Add `cmail list`~~ — done.
+1. ~~Add `seamail list`~~ — done.
 2. ~~Write the Limitations + Configuration Reference docs~~ — done (see Milestone 10): README now has "Configuration reference" and "Limitations" sections.
 3. ~~Audit error paths and add friendly messages~~ — done (see Milestone 5).
 4. ~~Decide and document the external-resource/network policy~~ — done (see Milestone 9): JS disabled, live network blocked, documented in README.

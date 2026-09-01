@@ -1,5 +1,5 @@
 /**
- * Minimal local, static HTML report (`cmail open`). No server, no database -
+ * Minimal local, static HTML report (`seamail open`). No server, no database -
  * just a generated HTML file that links to the expected/actual/diff PNGs
  * already written to disk by the runner.
  */
@@ -34,7 +34,7 @@ export async function generateReport(outputDir: string, summary: RunSummary): Pr
 <html>
 <head>
 <meta charset="utf-8">
-<title>Cmail Report</title>
+<title>Seamail Report</title>
 <style>
   body { font-family: -apple-system, Segoe UI, Arial, sans-serif; margin: 24px; color: #111; }
   h1 { margin-bottom: 4px; }
@@ -51,7 +51,7 @@ export async function generateReport(outputDir: string, summary: RunSummary): Pr
 </style>
 </head>
 <body>
-  <h1>Cmail Report</h1>
+  <h1>Seamail Report</h1>
   <div class="summary">
     ${summary.passed} passed, ${summary.failed} failed, ${summary.created} new snapshots
   </div>

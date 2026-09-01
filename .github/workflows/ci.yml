@@ -28,16 +28,16 @@ jobs:
 
       - run: npm test
 
-      - name: Run Cmail against fixtures
-        run: npm run cmail -- test
+      - name: Run Seamail against fixtures
+        run: npm run seamail -- test
 
-      - name: Upload Cmail report
+      - name: Upload Seamail report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: cmail-report
+          name: seamail-report
           path: |
-            cmail/report.html
-            cmail/results
+            seamail/report.html
+            seamail/results
           if-no-files-found: ignore
           retention-days: 14

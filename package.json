@@ -1,17 +1,23 @@
 {
-  "name": "cmail",
+  "name": "seamail",
   "version": "0.1.0",
   "description": "Local-first developer tool for testing how HTML emails render across reproducible email rendering environments.",
   "type": "module",
   "license": "MIT",
   "bin": {
-    "cmail": "./bin/cmail.mjs"
+    "seamail": "bin/seamail.mjs"
   },
   "main": "./src/index.ts",
   "exports": "./src/index.ts",
-  "files": ["bin", "src", "environments", "README.md", "LICENSE"],
+  "files": [
+    "bin",
+    "src",
+    "environments",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
-    "cmail": "node ./bin/cmail.mjs",
+    "seamail": "node ./bin/seamail.mjs",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",

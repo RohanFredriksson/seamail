@@ -1,19 +1,19 @@
 /**
- * Cmail lockfile: pins each environment name to an exact immutable version
+ * Seamail lockfile: pins each environment name to an exact immutable version
  * plus the renderer identity/version it ran with last time, so that a
  * project tested today doesn't unexpectedly render differently next month
  * because the registry default or an installed renderer changed underneath
- * it. The lockfile is only ever read/written by Cmail itself (via the test
+ * it. The lockfile is only ever read/written by Seamail itself (via the test
  * runner) - it is not meant to be hand-edited.
  */
 import fs from "node:fs/promises";
 import path from "node:path";
-import { CmailError } from "./errors.js";
+import { SeamailError } from "./errors.js";
 
 export const LOCKFILE_VERSION = 1;
 
 export interface EnvironmentLockEntry {
-  /** Immutable Cmail environment version, e.g. "v1". */
+  /** Immutable Seamail environment version, e.g. "v1". */
   version: string;
   /** Underlying rendering engine, for reproducibility auditing. */
   engine: "chromium" | "webkit" | "simulated-dom";
@@ -23,30 +23,30 @@ export interface EnvironmentLockEntry {
   playwrightVersion: string | null;
 }
 
-export interface CmailLock {
+export interface SeamailLock {
   lockfileVersion: number;
   environments: Record<string, EnvironmentLockEntry>;
 }
 
-export async function readLockfile(lockPath: string): Promise<CmailLock | null> {
+export async function readLockfile(lockPath: string): Promise<SeamailLock | null> {
   try {
     const raw = await fs.readFile(lockPath, "utf8");
     try {
-      return JSON.parse(raw) as CmailLock;
+      return JSON.parse(raw) as SeamailLock;
     } catch {
-      throw new CmailError(
-        `Could not parse lockfile at "${lockPath}" as JSON. It may be corrupted - delete it to have Cmail regenerate it.`,
+      throw new SeamailError(
+        `Could not parse lockfile at "${lockPath}" as JSON. It may be corrupted - delete it to have Seamail regenerate it.`,
       );
     }
   } catch (err) {
-    if (err instanceof CmailError) throw err;
+    if (err instanceof SeamailError) throw err;
     if ((err as NodeJS.ErrnoException).code === "ENOENT") return null;
     throw err;
   }
 }
 
-export async function writeLockfile(lockPath: string, lock: CmailLock): Promise<void> {
+export async function writeLockfile(lockPath: string, lock: SeamailLock): Promise<void> {
   await fs.mkdir(path.dirname(lockPath), { recursive: true });
-  const withVersion: CmailLock = { ...lock, lockfileVersion: LOCKFILE_VERSION };
+  const withVersion: SeamailLock = { ...lock, lockfileVersion: LOCKFILE_VERSION };
   await fs.writeFile(lockPath, JSON.stringify(withVersion, null, 2) + "\n", "utf8");
 }

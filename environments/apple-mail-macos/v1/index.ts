@@ -10,7 +10,7 @@
 import type { Browser, Page } from "playwright";
 import { getWebkit, newSecurePage } from "../../../src/browserManager.js";
 import type {
-  CmailEnvironment,
+  SeamailEnvironment,
   DeviceConfig,
   CapabilityMap,
   RenderConditions,
@@ -18,7 +18,7 @@ import type {
   EnvironmentMetadata,
 } from "../../../src/types.js";
 
-class AppleMailMacosV1 implements CmailEnvironment {
+class AppleMailMacosV1 implements SeamailEnvironment {
   readonly metadata: EnvironmentMetadata = {
     client: "apple-mail",
     platform: "macos",
@@ -78,6 +78,6 @@ class AppleMailMacosV1 implements CmailEnvironment {
   async dispose(): Promise<void> {}
 }
 
-export function create(): CmailEnvironment {
+export function create(): SeamailEnvironment {
   return new AppleMailMacosV1();
 }

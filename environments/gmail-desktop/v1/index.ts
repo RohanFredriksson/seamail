@@ -11,7 +11,7 @@ import { parse } from "node-html-parser";
 import type { Browser, Page } from "playwright";
 import { getChromium, newSecurePage } from "../../../src/browserManager.js";
 import type {
-  CmailEnvironment,
+  SeamailEnvironment,
   DeviceConfig,
   CapabilityMap,
   RenderConditions,
@@ -21,7 +21,7 @@ import type {
 
 const UNSUPPORTED_PROPERTIES = ["position", "behavior", "-moz-binding"];
 
-class GmailDesktopV1 implements CmailEnvironment {
+class GmailDesktopV1 implements SeamailEnvironment {
   readonly metadata: EnvironmentMetadata = {
     client: "gmail",
     platform: "desktop",
@@ -105,6 +105,6 @@ class GmailDesktopV1 implements CmailEnvironment {
   }
 }
 
-export function create(): CmailEnvironment {
+export function create(): SeamailEnvironment {
   return new GmailDesktopV1();
 }

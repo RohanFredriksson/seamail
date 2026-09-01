@@ -5,7 +5,7 @@
  */
 import { createRequire } from "node:module";
 import { chromium, webkit, type Browser, type Page } from "playwright";
-import { CmailError } from "./errors.js";
+import { SeamailError } from "./errors.js";
 
 const require = createRequire(import.meta.url);
 const PLAYWRIGHT_VERSION: string = (require("playwright/package.json") as { version: string })
@@ -20,7 +20,7 @@ async function launch(engine: "chromium" | "webkit"): Promise<Browser> {
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
     if (message.includes("Executable doesn't exist")) {
-      throw new CmailError(
+      throw new SeamailError(
         `${engine} browser is not installed. Run "npx playwright install ${engine}" and try again. ` +
           (engine === "webkit"
             ? "On unsupported Linux distros you may also need ./scripts/fix-webkit-linux-deps.sh."
@@ -29,13 +29,13 @@ async function launch(engine: "chromium" | "webkit"): Promise<Browser> {
       );
     }
     if (engine === "webkit" && /libicudata|libjpeg|shared librar/i.test(message)) {
-      throw new CmailError(
+      throw new SeamailError(
         `webkit failed to launch due to missing/incompatible system libraries (common on ` +
           `unsupported Linux distros like Fedora). Run ./scripts/fix-webkit-linux-deps.sh and try again.`,
         { cause: err },
       );
     }
-    throw new CmailError(`Failed to launch ${engine}: ${message}`, { cause: err });
+    throw new SeamailError(`Failed to launch ${engine}: ${message}`, { cause: err });
   }
 }
 
@@ -62,7 +62,7 @@ export interface SecurePageOptions {
 }
 
 /**
- * Opens a page with Cmail's default security/reproducibility policy: no
+ * Opens a page with Seamail's default security/reproducibility policy: no
  * JavaScript execution (real email clients never run script in a message),
  * and no live external network requests (only data:/blob:/about: content is
  * rendered) so that snapshot tests never depend on the network and never

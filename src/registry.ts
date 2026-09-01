@@ -1,13 +1,13 @@
 /**
  * The environment registry: the only place that knows the on-disk layout of
  * `environments/<client-platform>/<version>/index.ts`. Everything else in
- * Cmail resolves environments by name through this module.
+ * Seamail resolves environments by name through this module.
  */
-import type { CmailEnvironment } from "./types.js";
-import { CmailError } from "./errors.js";
+import type { SeamailEnvironment } from "./types.js";
+import { SeamailError } from "./errors.js";
 
 export interface EnvironmentModule {
-  create(): CmailEnvironment;
+  create(): SeamailEnvironment;
 }
 
 // Statically known environments for the PoC. A future version could scan
@@ -32,13 +32,13 @@ export function parseEnvironmentSpec(spec: string, lockedVersion?: string): Reso
   const [base, explicitVersion] = spec.split("@");
   const entry = REGISTRY[base];
   if (!entry) {
-    throw new CmailError(
-      `Unknown environment "${base}". Known environments: ${Object.keys(REGISTRY).join(", ")}. Run "cmail list" to see details.`,
+    throw new SeamailError(
+      `Unknown environment "${base}". Known environments: ${Object.keys(REGISTRY).join(", ")}. Run "seamail list" to see details.`,
     );
   }
   const version = explicitVersion ?? lockedVersion ?? entry.default;
   if (!entry.versions.includes(version)) {
-    throw new CmailError(
+    throw new SeamailError(
       `Unknown version "${version}" for environment "${base}". Available: ${entry.versions.join(", ")}`,
     );
   }
@@ -63,7 +63,7 @@ export function listAllEnvironmentRefs(): ResolvedEnvironmentRef[] {
 }
 
 /** Dynamically imports and instantiates the concrete environment implementation. */
-export async function loadEnvironment(ref: ResolvedEnvironmentRef): Promise<CmailEnvironment> {
+export async function loadEnvironment(ref: ResolvedEnvironmentRef): Promise<SeamailEnvironment> {
   const modulePath = new URL(`../environments/${ref.base}/${ref.version}/index.ts`, import.meta.url)
     .href;
   const mod = (await import(modulePath)) as EnvironmentModule;

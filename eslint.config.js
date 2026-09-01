@@ -13,7 +13,7 @@ export default tseslint.config(
     },
   },
   {
-    ignores: ["dist/**", "cmail/**", "node_modules/**"],
+    ignores: ["dist/**", "seamail/**", "node_modules/**"],
   },
   eslintConfigPrettier,
 );

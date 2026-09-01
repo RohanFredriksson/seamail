@@ -7,20 +7,20 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { glob } from "glob";
-import type { CmailConfig } from "./config.js";
+import type { SeamailConfig } from "./config.js";
 import { parseEnvironmentSpec, loadEnvironment, type ResolvedEnvironmentRef } from "./registry.js";
 import {
   readLockfile,
   writeLockfile,
   LOCKFILE_VERSION,
-  type CmailLock,
+  type SeamailLock,
   type EnvironmentLockEntry,
 } from "./lockfile.js";
 import { compareScreenshots } from "./diff.js";
 import { emailSlug, readIfExists, writeFile, snapshotName } from "./snapshot.js";
 import { closeAllBrowsers, getEngineVersions } from "./browserManager.js";
 import type { RenderConditions } from "./types.js";
-import { CmailError } from "./errors.js";
+import { SeamailError } from "./errors.js";
 
 export interface TestCaseResult {
   email: string;
@@ -47,16 +47,16 @@ export interface RunOptions {
 }
 
 export async function runTests(
-  config: CmailConfig,
+  config: SeamailConfig,
   configDir: string,
   options: RunOptions,
 ): Promise<RunSummary> {
-  const outputDir = path.resolve(configDir, config.outputDir ?? "cmail");
+  const outputDir = path.resolve(configDir, config.outputDir ?? "seamail");
   const snapshotsDir = path.join(outputDir, "snapshots");
   const resultsDir = path.join(outputDir, "results");
-  const lockPath = path.join(configDir, "cmail.lock");
+  const lockPath = path.join(configDir, "seamail.lock");
 
-  const lock: CmailLock = (await readLockfile(lockPath)) ?? {
+  const lock: SeamailLock = (await readLockfile(lockPath)) ?? {
     lockfileVersion: LOCKFILE_VERSION,
     environments: {},
   };
@@ -81,7 +81,7 @@ export async function runTests(
 
   const emailPaths = await glob(config.emails, { cwd: configDir, absolute: true });
   if (emailPaths.length === 0) {
-    throw new CmailError(`No email files matched pattern "${config.emails}" in ${configDir}`);
+    throw new SeamailError(`No email files matched pattern "${config.emails}" in ${configDir}`);
   }
 
   const results: TestCaseResult[] = [];

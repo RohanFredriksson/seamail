@@ -1,7 +1,7 @@
 node_modules/
 dist/
-cmail/results/
-cmail/report.html
+seamail/results/
+seamail/report.html
 
 # logs
 npm-debug.log*

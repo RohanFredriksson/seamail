@@ -9,7 +9,7 @@
 # Safe to re-run. Only needed once per `playwright install` of webkit.
 set -euo pipefail
 
-SHIM_DIR="${CMAIL_WEBKIT_LIBSHIM:-$HOME/.cache/cmail/webkit-libshim}"
+SHIM_DIR="${SEAMAIL_WEBKIT_LIBSHIM:-$HOME/.cache/seamail/webkit-libshim}"
 mkdir -p "$SHIM_DIR"
 
 WEBKIT_DIR="$(find "$HOME/.cache/ms-playwright" -maxdepth 1 -iname "webkit-*" | head -1)"

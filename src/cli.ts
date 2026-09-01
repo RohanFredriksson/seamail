@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Cmail CLI: `cmail test`, `cmail open`, `cmail inspect`, `cmail list`.
+ * Seamail CLI: `seamail test`, `seamail open`, `seamail inspect`, `seamail list`.
  */
 import path from "node:path";
 import { Command } from "commander";
@@ -11,12 +11,12 @@ import { generateReport } from "./report.js";
 import { parseEnvironmentSpec, loadEnvironment, listAllEnvironmentRefs } from "./registry.js";
 import { readLockfile } from "./lockfile.js";
 import { closeAllBrowsers } from "./browserManager.js";
-import { CmailError } from "./errors.js";
+import { SeamailError } from "./errors.js";
 import fs from "node:fs/promises";
 
 const program = new Command();
 program
-  .name("cmail")
+  .name("seamail")
   .description("Local-first HTML email rendering & visual regression testing")
   .option("-v, --verbose", "show full error stack traces", false);
 
@@ -32,7 +32,7 @@ function printSummary(summary: RunSummary): void {
   }
 
   console.log("");
-  console.log(pc.bold("Cmail"));
+  console.log(pc.bold("Seamail"));
   console.log("");
   for (const [env, counts] of byEnv) {
     if (counts.fail > 0) {
@@ -71,14 +71,14 @@ function printSummary(summary: RunSummary): void {
 program
   .command("test")
   .description("Render configured emails against configured environments and check for regressions")
-  .option("-c, --config <path>", "path to cmail.config.ts", "cmail.config.ts")
+  .option("-c, --config <path>", "path to seamail.config.ts", "seamail.config.ts")
   .option("-u, --update", "write new baseline snapshots instead of comparing", false)
   .action(async (opts: { config: string; update: boolean }) => {
     const { config, configDir } = await loadConfig(opts.config);
     const summary = await runTests(config, configDir, { update: opts.update });
     printSummary(summary);
 
-    const outputDir = path.resolve(configDir, config.outputDir ?? "cmail");
+    const outputDir = path.resolve(configDir, config.outputDir ?? "seamail");
     const reportPath = await generateReport(outputDir, summary);
     console.log(pc.dim(`  Report: ${path.relative(process.cwd(), reportPath)}`));
     console.log("");
@@ -89,15 +89,15 @@ program
 program
   .command("open")
   .description("Open the last generated local HTML report")
-  .option("-c, --config <path>", "path to cmail.config.ts", "cmail.config.ts")
+  .option("-c, --config <path>", "path to seamail.config.ts", "seamail.config.ts")
   .action(async (opts: { config: string }) => {
     const { config, configDir } = await loadConfig(opts.config);
-    const outputDir = path.resolve(configDir, config.outputDir ?? "cmail");
+    const outputDir = path.resolve(configDir, config.outputDir ?? "seamail");
     const reportPath = path.join(outputDir, "report.html");
     try {
       await fs.access(reportPath);
     } catch {
-      console.log(pc.red(`No report found at ${reportPath}. Run "cmail test" first.`));
+      console.log(pc.red(`No report found at ${reportPath}. Run "seamail test" first.`));
       process.exitCode = 1;
       return;
     }
@@ -110,10 +110,10 @@ program
 
 program
   .command("list")
-  .description("List all available Cmail environments")
+  .description("List all available Seamail environments")
   .action(async () => {
     console.log("");
-    console.log(pc.bold("Available Cmail environments"));
+    console.log(pc.bold("Available Seamail environments"));
     console.log("");
     for (const ref of listAllEnvironmentRefs()) {
       const env = await loadEnvironment(ref);
@@ -127,16 +127,16 @@ program
 program
   .command("inspect")
   .description("Show known CSS/HTML capability support for each configured environment")
-  .option("-c, --config <path>", "path to cmail.config.ts", "cmail.config.ts")
+  .option("-c, --config <path>", "path to seamail.config.ts", "seamail.config.ts")
   .action(async (opts: { config: string }) => {
     const { config, configDir } = await loadConfig(opts.config);
-    const lock = (await readLockfile(path.join(configDir, "cmail.lock"))) ?? {
+    const lock = (await readLockfile(path.join(configDir, "seamail.lock"))) ?? {
       lockfileVersion: 1,
       environments: {},
     };
 
     console.log("");
-    console.log(pc.bold("Cmail capability inspection"));
+    console.log(pc.bold("Seamail capability inspection"));
     console.log("");
 
     const features = new Set<string>();
@@ -169,7 +169,7 @@ program
 
 program.parseAsync(process.argv).catch((err) => {
   const verbose = program.opts().verbose === true;
-  if (err instanceof CmailError) {
+  if (err instanceof SeamailError) {
     console.error(pc.red(`✗ ${err.message}`));
   } else {
     const message = err instanceof Error ? err.message : String(err);

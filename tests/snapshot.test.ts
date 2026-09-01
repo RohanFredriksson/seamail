@@ -31,13 +31,13 @@ describe("snapshot filesystem helpers", () => {
   });
 
   it("readIfExists returns null for a missing file", async () => {
-    tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "cmail-snap-"));
+    tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "seamail-snap-"));
     const result = await readIfExists(path.join(tmpDir, "missing.png"));
     expect(result).toBeNull();
   });
 
   it("writeFile creates parent directories and readIfExists reads them back", async () => {
-    tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "cmail-snap-"));
+    tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "seamail-snap-"));
     const filePath = path.join(tmpDir, "nested", "dir", "out.png");
     const data = Buffer.from([1, 2, 3]);
 
@@ -48,7 +48,7 @@ describe("snapshot filesystem helpers", () => {
   });
 
   it("ensureDir creates a directory that does not yet exist", async () => {
-    tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "cmail-snap-"));
+    tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "seamail-snap-"));
     const dir = path.join(tmpDir, "a", "b", "c");
 
     await ensureDir(dir);
