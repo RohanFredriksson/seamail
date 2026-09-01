@@ -134,11 +134,20 @@ limitation) is the correct safe baseline until this is designed properly.
 
 ## Milestone 11 — Packaging & distribution
 
-- [ ] `package.json` currently `"private": true` — must flip before publishing
-- [ ] License field/file missing
-- [ ] Verify `bin/cmail.mjs` works when installed as a dependency (not just via `npm run cmail`)
-- [ ] Decide npm publish process, `.npmignore`/`files` allowlist
-- [ ] Versioning policy doc (semver once public API stabilizes)
+- [x] `package.json` flipped to publishable (`private` removed, `"license": "MIT"` added)
+- [x] `LICENSE` file added (MIT)
+- [x] Verified `bin/cmail.mjs` works installed as a real dependency: `npm pack`
+      -> installed tarball into a scratch project -> `npx cmail list` and a
+      full `cmail test -u` render/snapshot succeeded. Found and fixed two real
+      bugs in the process: `tsx` was a devDependency but is required at
+      runtime by `bin/cmail.mjs` (moved to `dependencies`), and there was no
+      package entry point for consumers to `import { defineConfig } from
+      "cmail"` (added `src/index.ts` + `main`/`exports` in `package.json`)
+- [x] `files` allowlist in `package.json` (`bin`, `src`, `environments`,
+      `README.md`, `LICENSE`) — verified via `npm pack` tarball contents
+      (fixtures/tests/docs/scripts/config correctly excluded)
+- [x] Versioning policy documented in README ("Versioning" section, semver, Cmail version vs. environment version distinction)
+- [ ] Actual npm publish process/CI (e.g. `npm publish` on tag) not set up yet — no evidence of a publish workflow
 
 ---
 
@@ -148,6 +157,6 @@ limitation) is the correct safe baseline until this is designed properly.
 2. ~~Write the Limitations + Configuration Reference docs~~ — done (see Milestone 10): README now has "Configuration reference" and "Limitations" sections.
 3. ~~Audit error paths and add friendly messages~~ — done (see Milestone 5).
 4. ~~Decide and document the external-resource/network policy~~ — done (see Milestone 9): JS disabled, live network blocked, documented in README.
-5. Flip `package.json` to publishable (`private: false`, license, verify `bin`
-   works from a tarball install) — unblocks everything else being moot until
-   Cmail is actually installable outside this repo.
+5. ~~Flip `package.json` to publishable~~ — done (see Milestone 11). Remaining
+   before an actual public release: set up an `npm publish` process (manual
+   or CI-driven).

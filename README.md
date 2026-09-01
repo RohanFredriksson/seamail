@@ -172,6 +172,20 @@ prove:
 - **Only 3 environments today**, all desktop. No mobile clients (Gmail
   Mobile, Apple Mail iOS) yet.
 
+## Versioning
+
+Cmail uses semantic versioning (`MAJOR.MINOR.PATCH`). Before 1.0, breaking
+changes may land in minor releases (still documented in release notes).
+After 1.0: MAJOR = breaking CLI/config/environment-identifier changes, MINOR
+= backwards-compatible functionality, PATCH = fixes with no contract change.
+Environment versions (e.g. `gmail-desktop@v2`) are versioned independently
+of the Cmail package version - a Cmail patch release never implies an
+environment behaviour change, and vice versa.
+
+## License
+
+[MIT](LICENSE)
+
 ## Out of scope for this PoC
 
 No hosted service, accounts, database, remote dashboard, dozens of email
