@@ -62,4 +62,85 @@ describe("outlook-classic@v1 process()", () => {
     const out = await env.process("<html><body>hi</body></html>", conditions);
     expect(out).toMatch(/max-width:600px/);
   });
+
+  it("reveals [if mso] conditional comment content", async () => {
+    const env = create();
+    const out = await env.process(
+      "<html><body><!--[if mso]><p>mso only</p><![endif]--></body></html>",
+      conditions,
+    );
+    expect(out).toContain("mso only");
+  });
+
+  it("reveals [if gte mso 9] conditional comment content", async () => {
+    const env = create();
+    const out = await env.process(
+      "<html><body><!--[if gte mso 9]><p>mso 9+</p><![endif]--></body></html>",
+      conditions,
+    );
+    expect(out).toContain("mso 9+");
+  });
+
+  it("strips [if !mso] conditional comment content (plain form)", async () => {
+    const env = create();
+    const out = await env.process(
+      "<html><body><!--[if !mso]><p>not mso</p><![endif]--></body></html>",
+      conditions,
+    );
+    expect(out).not.toContain("not mso");
+  });
+
+  it("strips [if !mso] content wrapped in the downlevel-revealed <!--> trick", async () => {
+    const env = create();
+    const out = await env.process(
+      "<html><body><!--[if !mso]><!--><p>not mso</p><!--<![endif]--></body></html>",
+      conditions,
+    );
+    expect(out).not.toContain("not mso");
+  });
+
+  it("approximates a v:roundrect bulletproof button as a rounded, filled link", async () => {
+    const env = create();
+    const out = await env.process(
+      '<html><body><!--[if mso]>' +
+        '<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="https://example.com" ' +
+        'style="height:40px;width:200px;" arcsize="10%" fillcolor="#2575fc" strokecolor="#2575fc">' +
+        '<w:anchorlock/><center>Shop now</center></v:roundrect><![endif]-->' +
+        "</body></html>",
+      conditions,
+    );
+    expect(out).toContain("Shop now");
+    expect(out).toContain('href="https://example.com"');
+    expect(out).toMatch(/background-color:#2575fc/);
+    expect(out).toMatch(/border-radius:4px/);
+    expect(out).not.toContain("v:roundrect");
+  });
+
+  it("approximates a v:rect + v:fill VML background as a plain background-image div", async () => {
+    const env = create();
+    const out = await env.process(
+      '<html><body><!--[if mso]>' +
+        '<v:rect xmlns:v="urn:schemas-microsoft-com:vml" style="width:600px;height:200px;">' +
+        '<v:fill type="tile" src="https://example.com/bg.png" color="#6a11cb"/>' +
+        '<v:textbox inset="0,0,0,0"><p>Overlay text</p></v:textbox>' +
+        "</v:rect><![endif]-->" +
+        "</body></html>",
+      conditions,
+    );
+    expect(out).toContain("Overlay text");
+    expect(out).toMatch(/background-image:url\(https:\/\/example\.com\/bg\.png\)/);
+    expect(out).not.toContain("v:rect");
+    expect(out).not.toContain("v:fill");
+  });
+
+  it("unwraps unrecognised VML/Word tags while keeping their content", async () => {
+    const env = create();
+    const out = await env.process(
+      '<html><body><!--[if mso]><v:shape><v:textbox><p>fallback text</p></v:textbox></v:shape><![endif]--></body></html>',
+      conditions,
+    );
+    expect(out).toContain("fallback text");
+    expect(out).not.toMatch(/<\/?v:/);
+    expect(out).not.toMatch(/<\/?w:/);
+  });
 });
