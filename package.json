@@ -1,6 +1,6 @@
 {
   "name": "seamail",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Local-first developer tool for testing how HTML emails render across reproducible email rendering environments.",
   "type": "module",
   "license": "MIT",
