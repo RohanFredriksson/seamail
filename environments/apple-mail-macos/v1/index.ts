@@ -8,7 +8,7 @@
  * different rendering behaviour from the Chromium-backed environments.
  */
 import type { Browser, Page } from "playwright";
-import { getWebkit } from "../../../src/browserManager.js";
+import { getWebkit, newSecurePage } from "../../../src/browserManager.js";
 import type {
   CmailEnvironment,
   DeviceConfig,
@@ -60,15 +60,13 @@ class AppleMailMacosV1 implements CmailEnvironment {
 
   async render(processedHtml: string, conditions: RenderConditions): Promise<RenderResult> {
     if (!this.browser) throw new Error("apple-mail-macos@v1 not prepared");
-    const page: Page = await this.browser.newPage({
+    const page: Page = await newSecurePage(this.browser, {
       viewport: this.device.viewport,
       deviceScaleFactor: this.device.deviceScaleFactor,
       colorScheme: conditions.colorScheme,
+      blockImages: !conditions.imagesEnabled,
     });
     try {
-      if (!conditions.imagesEnabled) {
-        await page.route("**/*.{png,jpg,jpeg,gif,webp,svg}", (route) => route.abort());
-      }
       await page.setContent(processedHtml, { waitUntil: "networkidle" });
       const screenshot = await page.screenshot({ fullPage: true });
       return { screenshot, processedHtml };

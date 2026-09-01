@@ -89,6 +89,28 @@ npm run cmail -- list      # list all available environments
 - `fixtures/basic/basic.html` - a plain, well-behaved table-based email
   used to sanity check the base pipeline.
 
+## Security & resource policy
+
+Every environment renders through a shared "secure page" default
+(`src/browserManager.ts`):
+
+- **No JavaScript execution.** Real email clients never run script in a
+  message, so pages are opened with `javaScriptEnabled: false`.
+- **No live network requests.** Any `http(s)://` request (images, fonts,
+  stylesheets, XHR/fetch) is aborted. Only inline/embedded content
+  (`data:` URIs, inline `<style>`, etc.) is rendered. This keeps rendering
+  deterministic (no dependency on network availability or remote content
+  that can change between runs) and means fixture HTML never leaks to, or
+  triggers requests against, third-party hosts (e.g. tracking pixels).
+- The `imagesEnabled` render condition (used for light/dark + images-off
+  variants) is layered on top of this: when `false`, all image requests
+  (including `data:` image URIs) are aborted regardless of source.
+
+Practical implication: fixtures must be self-contained. Reference images as
+`data:` URIs or inline SVG rather than remote URLs; remote `<a href>` links
+are fine (never navigated), but remote `<img src>`/`background-image`/
+`@font-face`/`@import` will simply not load.
+
 ## Out of scope for this PoC
 
 No hosted service, accounts, database, remote dashboard, dozens of email

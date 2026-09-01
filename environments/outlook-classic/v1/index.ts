@@ -17,7 +17,7 @@
  */
 import { parse } from "node-html-parser";
 import type { Browser, Page } from "playwright";
-import { getChromium } from "../../../src/browserManager.js";
+import { getChromium, newSecurePage } from "../../../src/browserManager.js";
 import type {
   CmailEnvironment,
   DeviceConfig,
@@ -305,25 +305,14 @@ class OutlookClassicV1 implements CmailEnvironment {
 
   async render(processedHtml: string, conditions: RenderConditions): Promise<RenderResult> {
     if (!this.browser) throw new Error("outlook-classic@v1 not prepared");
-    const page: Page = await this.browser.newPage({
+    const page: Page = await newSecurePage(this.browser, {
       viewport: this.device.viewport,
       deviceScaleFactor: this.device.deviceScaleFactor,
       // Outlook classic does not support dark mode / prefers-color-scheme.
       colorScheme: "light",
+      blockImages: !conditions.imagesEnabled,
     });
     try {
-      // Outlook does not download background images at all.
-      await page.route("**/*.{png,jpg,jpeg,gif,webp,svg}", (route) => {
-        const url = route.request().url();
-        // Still allow plain <img> content images through; background-image
-        // declarations were already stripped from CSS above.
-        void url;
-        if (!conditions.imagesEnabled) {
-          route.abort();
-        } else {
-          route.continue();
-        }
-      });
       await page.setContent(processedHtml, { waitUntil: "networkidle" });
       const screenshot = await page.screenshot({ fullPage: true });
       return { screenshot, processedHtml };

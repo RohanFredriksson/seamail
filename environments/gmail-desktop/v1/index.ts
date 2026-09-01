@@ -9,7 +9,7 @@
  */
 import { parse } from "node-html-parser";
 import type { Browser, Page } from "playwright";
-import { getChromium } from "../../../src/browserManager.js";
+import { getChromium, newSecurePage } from "../../../src/browserManager.js";
 import type {
   CmailEnvironment,
   DeviceConfig,
@@ -85,15 +85,13 @@ class GmailDesktopV1 implements CmailEnvironment {
 
   async render(processedHtml: string, conditions: RenderConditions): Promise<RenderResult> {
     if (!this.browser) throw new Error("gmail-desktop@v1 not prepared");
-    const page: Page = await this.browser.newPage({
+    const page: Page = await newSecurePage(this.browser, {
       viewport: this.device.viewport,
       deviceScaleFactor: this.device.deviceScaleFactor,
       colorScheme: conditions.colorScheme,
+      blockImages: !conditions.imagesEnabled,
     });
     try {
-      if (!conditions.imagesEnabled) {
-        await page.route("**/*.{png,jpg,jpeg,gif,webp,svg}", (route) => route.abort());
-      }
       await page.setContent(processedHtml, { waitUntil: "networkidle" });
       const screenshot = await page.screenshot({ fullPage: true });
       return { screenshot, processedHtml };

@@ -4,7 +4,7 @@
  * borrow pages from here, so the runner controls process lifecycle centrally.
  */
 import { createRequire } from "node:module";
-import { chromium, webkit, type Browser } from "playwright";
+import { chromium, webkit, type Browser, type Page } from "playwright";
 import { CmailError } from "./errors.js";
 
 const require = createRequire(import.meta.url);
@@ -51,6 +51,43 @@ export async function getWebkit(): Promise<Browser> {
     webkitBrowser = await launch("webkit");
   }
   return webkitBrowser;
+}
+
+export interface SecurePageOptions {
+  viewport: { width: number; height: number };
+  deviceScaleFactor?: number;
+  colorScheme: "light" | "dark";
+  /** Simulate the email client's "images blocked" preview state. */
+  blockImages?: boolean;
+}
+
+/**
+ * Opens a page with Cmail's default security/reproducibility policy: no
+ * JavaScript execution (real email clients never run script in a message),
+ * and no live external network requests (only data:/blob:/about: content is
+ * rendered) so that snapshot tests never depend on the network and never
+ * leak fixture content to remote hosts. See docs/roadmap.md Milestone 9.
+ */
+export async function newSecurePage(browser: Browser, opts: SecurePageOptions): Promise<Page> {
+  const page = await browser.newPage({
+    viewport: opts.viewport,
+    deviceScaleFactor: opts.deviceScaleFactor,
+    colorScheme: opts.colorScheme,
+    javaScriptEnabled: false,
+  });
+  await page.route("**/*", (route) => {
+    const request = route.request();
+    if (/^https?:\/\//i.test(request.url())) {
+      route.abort();
+      return;
+    }
+    if (opts.blockImages && request.resourceType() === "image") {
+      route.abort();
+      return;
+    }
+    route.continue();
+  });
+  return page;
 }
 
 /** Resolves the actual installed engine + Playwright versions for lockfile pinning. */

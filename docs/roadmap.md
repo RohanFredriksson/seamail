@@ -101,11 +101,16 @@ CI-compatible exit codes, basic reporting, docs. Not 1.0.
 
 ## Milestone 9 — Security & external resources
 
-- [ ] Explicit policy for external network requests during rendering
-      (block/allow/mock/configurable) — no evidence of network blocking today;
-      Playwright pages likely allow outbound requests by default
-- [ ] Explicit policy for JS execution / filesystem access from rendered HTML
-- [ ] Document these decisions (currently undocumented)
+- [x] Explicit policy for external network requests during rendering: all
+      `http(s)://` requests are aborted by default (`newSecurePage` in
+      `src/browserManager.ts`, used by all 3 environments) — fixture-local
+      resources only (`data:` URIs etc.), no live network, no opt-in yet
+- [x] Explicit policy for JS execution: disabled for all environments
+      (`javaScriptEnabled: false`) — matches real email clients, closes a
+      script-injection surface for untrusted fixture HTML
+- [x] Documented in README ("Security & resource policy" section)
+- [ ] Filesystem access from rendered HTML not separately audited (relies on
+      Playwright/Chromium's own sandboxing; no explicit Cmail-level check)
 
 ## Milestone 10 — Documentation
 
@@ -132,9 +137,7 @@ CI-compatible exit codes, basic reporting, docs. Not 1.0.
 1. ~~Add `cmail list`~~ — done.
 2. Write the Limitations + Configuration Reference docs (Milestone 10) — required before any external user.
 3. ~~Audit error paths and add friendly messages~~ — done (see Milestone 5).
-4. Decide and document the external-resource/network policy (Milestone 9) —
-   currently an open security question, cheap to decide now, expensive to
-   change after users depend on either behavior.
+4. ~~Decide and document the external-resource/network policy~~ — done (see Milestone 9): JS disabled, live network blocked, documented in README.
 5. Flip `package.json` to publishable (`private: false`, license, verify `bin`
    works from a tarball install) — unblocks everything else being moot until
    Cmail is actually installable outside this repo.
