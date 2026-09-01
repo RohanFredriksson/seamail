@@ -86,4 +86,3 @@ export async function loadConfig(configPath: string): Promise<LoadedConfig> {
   validateConfig(mod.default, configPath);
   return { config: mod.default, configDir: path.dirname(absolute) };
 }
-

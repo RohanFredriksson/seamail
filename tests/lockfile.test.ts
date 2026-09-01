@@ -2,7 +2,12 @@ import fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
-import { readLockfile, writeLockfile, LOCKFILE_VERSION, type SeamailLock } from "../src/lockfile.js";
+import {
+  readLockfile,
+  writeLockfile,
+  LOCKFILE_VERSION,
+  type SeamailLock,
+} from "../src/lockfile.js";
 
 describe("lockfile", () => {
   let tmpDir: string | undefined;

@@ -102,10 +102,10 @@ describe("outlook-classic@v1 process()", () => {
   it("approximates a v:roundrect bulletproof button as a rounded, filled link", async () => {
     const env = create();
     const out = await env.process(
-      '<html><body><!--[if mso]>' +
+      "<html><body><!--[if mso]>" +
         '<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="https://example.com" ' +
         'style="height:40px;width:200px;" arcsize="10%" fillcolor="#2575fc" strokecolor="#2575fc">' +
-        '<w:anchorlock/><center>Shop now</center></v:roundrect><![endif]-->' +
+        "<w:anchorlock/><center>Shop now</center></v:roundrect><![endif]-->" +
         "</body></html>",
       conditions,
     );
@@ -119,7 +119,7 @@ describe("outlook-classic@v1 process()", () => {
   it("approximates a v:rect + v:fill VML background as a plain background-image div", async () => {
     const env = create();
     const out = await env.process(
-      '<html><body><!--[if mso]>' +
+      "<html><body><!--[if mso]>" +
         '<v:rect xmlns:v="urn:schemas-microsoft-com:vml" style="width:600px;height:200px;">' +
         '<v:fill type="tile" src="https://example.com/bg.png" color="#6a11cb"/>' +
         '<v:textbox inset="0,0,0,0"><p>Overlay text</p></v:textbox>' +
@@ -136,7 +136,7 @@ describe("outlook-classic@v1 process()", () => {
   it("unwraps unrecognised VML/Word tags while keeping their content", async () => {
     const env = create();
     const out = await env.process(
-      '<html><body><!--[if mso]><v:shape><v:textbox><p>fallback text</p></v:textbox></v:shape><![endif]--></body></html>',
+      "<html><body><!--[if mso]><v:shape><v:textbox><p>fallback text</p></v:textbox></v:shape><![endif]--></body></html>",
       conditions,
     );
     expect(out).toContain("fallback text");

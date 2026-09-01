@@ -118,7 +118,9 @@ program
     for (const ref of listAllEnvironmentRefs()) {
       const env = await loadEnvironment(ref);
       const { client, platform, fidelity, engine, description } = env.metadata;
-      console.log(`  ${pc.bold(ref.full)} ${pc.dim(`(${client}/${platform}, ${engine}, fidelity=${fidelity})`)}`);
+      console.log(
+        `  ${pc.bold(ref.full)} ${pc.dim(`(${client}/${platform}, ${engine}, fidelity=${fidelity})`)}`,
+      );
       console.log(`      ${description}`);
     }
     console.log("");

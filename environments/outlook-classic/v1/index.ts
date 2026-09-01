@@ -104,10 +104,7 @@ function resolveMsoConditionals(html: string): string {
   // bare (non-comment) [if !mso] form, used inside VML markup - hidden in Outlook.
   out = out.replace(/<!\[if\s+!\s*mso\]>([\s\S]*?)<!\[endif\]>/gi, "");
   // [if mso] / [if gte mso N] / [if lte mso N] - revealed in Outlook.
-  out = out.replace(
-    /<!--\[if\s+(?:gte|lte)\s+mso(?:\s+\d+)?\]>([\s\S]*?)<!\[endif\]-->/gi,
-    "$1",
-  );
+  out = out.replace(/<!--\[if\s+(?:gte|lte)\s+mso(?:\s+\d+)?\]>([\s\S]*?)<!\[endif\]-->/gi, "$1");
   out = out.replace(/<!--\[if\s+mso(?:\s+\d+)?\]>([\s\S]*?)<!\[endif\]-->/gi, "$1");
   // bare (non-comment) [if mso] form - revealed in Outlook.
   out = out.replace(/<!\[if\s+(?:gte|lte)\s+mso(?:\s+\d+)?\]>([\s\S]*?)<!\[endif\]>/gi, "$1");
@@ -199,9 +196,8 @@ function approximateVmlShapes(html: string): string {
     /<v:roundrect\b([^>]*)>([\s\S]*?)<\/v:roundrect>/gi,
     (_m, attrs: string, inner: string) => approximateRoundRect(attrs, inner),
   );
-  out = out.replace(
-    /<v:rect\b([^>]*)>([\s\S]*?)<\/v:rect>/gi,
-    (_m, attrs: string, inner: string) => approximateFillRect(attrs, inner),
+  out = out.replace(/<v:rect\b([^>]*)>([\s\S]*?)<\/v:rect>/gi, (_m, attrs: string, inner: string) =>
+    approximateFillRect(attrs, inner),
   );
 
   // Unwrap any remaining paired v:* tags, keeping their inner content.
