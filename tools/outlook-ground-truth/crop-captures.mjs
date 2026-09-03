@@ -45,7 +45,9 @@ async function main() {
     const png = PNG.sync.read(raw);
 
     if (png.width < CROP.x + CROP.width || png.height < CROP.y + CROP.height) {
-      console.warn(`Skipping ${file}: ${png.width}x${png.height} is smaller than expected crop region`);
+      console.warn(
+        `Skipping ${file}: ${png.width}x${png.height} is smaller than expected crop region`,
+      );
       skipped++;
       continue;
     }

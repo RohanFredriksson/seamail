@@ -30,7 +30,7 @@ function renderFixture(gimmick) {
   const safeTitle = escapeHtml(gimmick.title);
 
   const template = FIXTURE_TEMPLATES[gimmick.slug] || {
-    body: `<div style="background:#f1f5f9;padding:12px;border:1px solid #cbd5e1;font-weight:bold;">Isolated test fixture for ${safeTitle} (${gimmick.slug})</div>`
+    body: `<div style="background:#f1f5f9;padding:12px;border:1px solid #cbd5e1;font-weight:bold;">Isolated test fixture for ${safeTitle} (${gimmick.slug})</div>`,
   };
 
   const headAdditions = template.head ? `\n    ${template.head}` : "";

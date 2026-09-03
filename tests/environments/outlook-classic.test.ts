@@ -182,7 +182,7 @@ describe("outlook-classic@v1 process()", () => {
   it("strips width/height (and min-/max- variants) on plain divs but keeps them on tables/img", async () => {
     const env = create();
     const out = await env.process(
-      '<html><body>' +
+      "<html><body>" +
         '<div style="width:180px;height:60px;min-width:10px;max-width:150px;border:1px solid #000;">div</div>' +
         '<table style="width:300px;"><tr><td style="width:50px;">cell</td></tr></table>' +
         '<img src="x.png" style="width:100px;height:80px;"/>' +
@@ -199,7 +199,7 @@ describe("outlook-classic@v1 process()", () => {
   it("drops the ENTIRE inline style attribute for display:flex or position:absolute/relative elements", async () => {
     const env = create();
     const out = await env.process(
-      '<html><body>' +
+      "<html><body>" +
         '<div style="display:flex;background:#f1f5f9;padding:10px;">flex</div>' +
         '<div style="position:relative;width:200px;background:#f1f5f9;">' +
         '<div style="position:absolute;top:10px;left:30px;background:#2563eb;">abs</div>' +
@@ -270,10 +270,7 @@ describe("outlook-classic@v1 process()", () => {
 
   it("strips the hidden attribute so content renders normally", async () => {
     const env = create();
-    const out = await env.process(
-      "<html><body><div hidden>Secret</div></body></html>",
-      conditions,
-    );
+    const out = await env.process("<html><body><div hidden>Secret</div></body></html>", conditions);
     expect(out).not.toContain("hidden");
     expect(out).toContain("Secret");
   });
@@ -289,7 +286,7 @@ describe("outlook-classic@v1 process()", () => {
         '<input type="checkbox"/>' +
         '<input type="radio" checked/>' +
         '<input type="text" value="Sample" style="border:1px solid #000;"/>' +
-        '<textarea>Some content</textarea>' +
+        "<textarea>Some content</textarea>" +
         "<select><option>A</option><option selected>B</option></select>" +
         "</body></html>",
       conditions,

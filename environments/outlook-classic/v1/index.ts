@@ -311,7 +311,8 @@ function stripSizingOnNonTableElements(inline: string, tagName: string): string 
 // `position:relative` lose their ENTIRE inline style attribute in real
 // Outlook, not just the unsupported declaration - a more severe behaviour
 // than simple per-property stripping.
-const WHOLE_STYLE_DROP_TRIGGER_RE = /display\s*:\s*(?:inline-)?flex\b|position\s*:\s*(?:absolute|relative)\b/i;
+const WHOLE_STYLE_DROP_TRIGGER_RE =
+  /display\s*:\s*(?:inline-)?flex\b|position\s*:\s*(?:absolute|relative)\b/i;
 
 // HTML5 semantic sectioning elements don't get their default `display:block`
 // UA-stylesheet treatment from Word - they render as unknown/inline elements.
@@ -335,7 +336,8 @@ const SEMANTIC_BLOCK_ELEMENTS = new Set([
  * ignored. This also naturally handles native CSS nesting (`&`), since a
  * nested rule's flattened selector is never a single simple selector.
  */
-const SIMPLE_SELECTOR_RE = /^[a-zA-Z][a-zA-Z0-9]*$|^\.[a-zA-Z_-][a-zA-Z0-9_-]*$|^#[a-zA-Z_-][a-zA-Z0-9_-]*$/;
+const SIMPLE_SELECTOR_RE =
+  /^[a-zA-Z][a-zA-Z0-9]*$|^\.[a-zA-Z_-][a-zA-Z0-9_-]*$|^#[a-zA-Z_-][a-zA-Z0-9_-]*$/;
 
 function isSimpleSelector(selector: string): boolean {
   return SIMPLE_SELECTOR_RE.test(selector.trim());
