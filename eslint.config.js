@@ -13,6 +13,17 @@ export default tseslint.config(
     },
   },
   {
+    files: ["**/*.mjs"],
+    languageOptions: {
+      globals: {
+        console: "readonly",
+        process: "readonly",
+        fetch: "readonly",
+        URL: "readonly",
+      },
+    },
+  },
+  {
     ignores: ["dist/**", "seamail/**", "node_modules/**"],
   },
   eslintConfigPrettier,
