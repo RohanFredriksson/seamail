@@ -28,13 +28,23 @@ import type {
 } from "../../../src/types.js";
 
 // Declarations the Word rendering engine is known to ignore or mishandle.
+// NOTE: order matters for property names that are substrings of one another
+// (e.g. "-webkit-filter"/"filter", "-webkit-mask-image"/"mask-image") - the
+// more specific/prefixed variant must be stripped first, otherwise stripping
+// the shorter name first would match inside the longer one and leave a
+// dangling prefix fragment behind (this exact bug previously affected
+// `transform` incorrectly eating `text-transform`, see the lookbehind below).
 const STRIPPED_DECLARATIONS: RegExp[] = [
   /display\s*:\s*(inline-)?flex\s*;?/gi,
   /display\s*:\s*(inline-)?grid\s*;?/gi,
+  /display\s*:\s*inline-block\s*;?/gi,
   /border-radius\s*:[^;]+;?/gi,
+  /border-(?:start|end)-(?:start|end)-radius\s*:[^;]+;?/gi,
   /box-shadow\s*:[^;]+;?/gi,
   /background-image\s*:[^;]+;?/gi,
-  /transform\s*:[^;]+;?/gi,
+  // negative lookbehind so this doesn't also eat `text-transform` (Word DOES
+  // support text-transform - stripping it was a confirmed bug).
+  /(?<!text-)transform\s*:[^;]+;?/gi,
   /gap\s*:[^;]+;?/gi,
   /backdrop-filter\s*:[^;]+;?/gi,
   /grid-template-columns\s*:[^;]+;?/gi,
@@ -43,21 +53,59 @@ const STRIPPED_DECLARATIONS: RegExp[] = [
   /flex\s*:[^;]+;?/gi,
   /justify-content\s*:[^;]+;?/gi,
   /align-items\s*:[^;]+;?/gi,
+  /animation(?:-[a-z-]+)?\s*:[^;]+;?/gi,
+  /accent-color\s*:[^;]+;?/gi,
+  /caption-side\s*:[^;]+;?/gi,
+  /clip-path\s*:[^;]+;?/gi,
+  /-webkit-filter\s*:[^;]+;?/gi,
+  /filter\s*:[^;]+;?/gi,
+  /-webkit-mask-image\s*:[^;]+;?/gi,
+  /mask-image\s*:[^;]+;?/gi,
+  /mix-blend-mode\s*:[^;]+;?/gi,
+  /opacity\s*:[^;]+;?/gi,
+  /outline(?:-color|-style|-width|-offset)?\s*:[^;]+;?/gi,
+  /text-decoration-color\s*:[^;]+;?/gi,
+  /text-decoration-style\s*:[^;]+;?/gi,
+  /text-shadow\s*:[^;]+;?/gi,
+  /-webkit-text-emphasis(?:-[a-z-]+)?\s*:[^;]+;?/gi,
+  /text-emphasis(?:-[a-z-]+)?\s*:[^;]+;?/gi,
+  /visibility\s*:[^;]+;?/gi,
+  /writing-mode\s*:[^;]+;?/gi,
+  /text-orientation\s*:[^;]+;?/gi,
+  /border-image(?:-[a-z-]+)?\s*:[^;]+;?/gi,
+  // CSS logical (block/inline axis) box-model properties - Word ignores all
+  // of these regardless of physical direction, treat as one broad category.
+  /(?:min-|max-)?(?:block|inline)-size\s*:[^;]+;?/gi,
+  /border-(?:block|inline)(?:-start|-end)?(?:-color|-style|-width)?\s*:[^;]+;?/gi,
+  /margin-(?:block|inline)(?:-start|-end)?\s*:[^;]+;?/gi,
+  /padding-(?:block|inline)(?:-start|-end)?\s*:[^;]+;?/gi,
+  /inset(?:-block|-inline)?(?:-start|-end)?\s*:[^;]+;?/gi,
+  // Colour/gradient functions Word can't evaluate, wherever they appear in a
+  // value (e.g. inside a `background:` shorthand, not just `background-image`).
+  /[a-z-]+\s*:\s*[^;]*(?:linear-gradient|radial-gradient|conic-gradient|light-dark\(|oklch\(|rgba\()[^;]*;?/gi,
+  // CSS Custom Properties are entirely unresolved by Word.
+  /--[a-z][a-z0-9-]*\s*:[^;]+;?/gi,
+  /[a-z-]+\s*:\s*[^;]*var\(--[^;]*\)[^;]*;?/gi,
 ];
 
 const FIXED_WIDTH = 600;
 
-function stripAtMediaBlocks(css: string): string {
-  // Remove top-level @media {...} blocks (single level of nested braces is
-  // sufficient for our fixtures; Outlook ignores media queries entirely).
+function stripBalancedAtRuleBlocks(css: string, atRuleNames: RegExp): string {
+  // Remove top-level @-rule {...} blocks, correctly balancing any braces
+  // nested inside (e.g. @keyframes has nested `from {}`/`to {}` blocks, which
+  // a simple non-nested regex like /@foo\s*\{[^}]*\}/ can't handle).
   let result = "";
-  const depth = 0;
   let i = 0;
   while (i < css.length) {
-    if (css.startsWith("@media", i) && depth === 0) {
-      // consume until matching closing brace of the @media block
+    const rest = css.slice(i);
+    const match = atRuleNames.exec(rest);
+    if (match && match.index === 0) {
       const j = css.indexOf("{", i);
-      if (j === -1) break;
+      if (j === -1) {
+        result += css[i];
+        i++;
+        continue;
+      }
       let d = 1;
       let k = j + 1;
       while (k < css.length && d > 0) {
@@ -74,12 +122,33 @@ function stripAtMediaBlocks(css: string): string {
   return result;
 }
 
+function stripAtMediaBlocks(css: string): string {
+  return stripBalancedAtRuleBlocks(css, /^@media\b/i);
+}
+
+function stripAtKeyframesBlocks(css: string): string {
+  return stripBalancedAtRuleBlocks(css, /^@(?:-webkit-|-moz-|-o-)?keyframes\b/i);
+}
+
 function stripFontFaceBlocks(css: string): string {
   return css.replace(/@font-face\s*\{[^}]*\}/gi, "");
 }
 
+// Real Outlook drops the WHOLE `text-decoration` shorthand when it carries
+// extra style/color extensions (e.g. `underline double #e11d48`), but DOES
+// honour a plain single-keyword form (`underline`/`line-through`/`none`).
+function normalizeTextDecoration(css: string): string {
+  return css.replace(/text-decoration(?!-)\s*:\s*([^;]+);?/gi, (_match, value: string) => {
+    const trimmed = value.trim();
+    if (/^(?:underline|line-through|overline|none)$/i.test(trimmed)) {
+      return `text-decoration:${trimmed.toLowerCase()};`;
+    }
+    return "";
+  });
+}
+
 function stripProperties(css: string): string {
-  let out = css;
+  let out = normalizeTextDecoration(css);
   for (const decl of STRIPPED_DECLARATIONS) {
     out = out.replace(decl, "");
   }
@@ -212,6 +281,181 @@ function approximateVmlShapes(html: string): string {
   return out;
 }
 
+// Sizing (width/height and their min-/max- variants) on plain block elements
+// is not reliably honoured by real Outlook - it collapses to content size
+// regardless of value syntax. Tables/cells and images DO honour it reliably.
+const SIZING_SAFE_TAGS = new Set([
+  "table",
+  "td",
+  "th",
+  "tr",
+  "thead",
+  "tbody",
+  "tfoot",
+  "col",
+  "colgroup",
+  "img",
+]);
+
+// Negative lookbehind so this only matches a bare `width`/`height` (with an
+// optional min-/max- prefix), not the tail end of an unrelated property like
+// `border-width`/`column-width`/`outline-width`.
+const SIZING_PROPS_RE = /(?<![a-z-])(?:min-|max-)?(?:width|height)\s*:[^;]+;?/gi;
+
+function stripSizingOnNonTableElements(inline: string, tagName: string): string {
+  if (SIZING_SAFE_TAGS.has(tagName.toLowerCase())) return inline;
+  return inline.replace(SIZING_PROPS_RE, "");
+}
+
+// Elements using `display:flex`/`inline-flex` or `position:absolute`/
+// `position:relative` lose their ENTIRE inline style attribute in real
+// Outlook, not just the unsupported declaration - a more severe behaviour
+// than simple per-property stripping.
+const WHOLE_STYLE_DROP_TRIGGER_RE = /display\s*:\s*(?:inline-)?flex\b|position\s*:\s*(?:absolute|relative)\b/i;
+
+// HTML5 semantic sectioning elements don't get their default `display:block`
+// UA-stylesheet treatment from Word - they render as unknown/inline elements.
+const SEMANTIC_BLOCK_ELEMENTS = new Set([
+  "header",
+  "footer",
+  "article",
+  "section",
+  "aside",
+  "nav",
+  "main",
+  "figure",
+  "figcaption",
+]);
+
+/**
+ * Real Outlook's CSS selector matching is extremely primitive: only a
+ * single simple type/class/ID selector is honoured. Combinators (`+`, `>`,
+ * `~`), attribute selectors, the universal selector, pseudo-classes/
+ * elements, and even compound/chained class selectors (`.a.b.c`) are all
+ * ignored. This also naturally handles native CSS nesting (`&`), since a
+ * nested rule's flattened selector is never a single simple selector.
+ */
+const SIMPLE_SELECTOR_RE = /^[a-zA-Z][a-zA-Z0-9]*$|^\.[a-zA-Z_-][a-zA-Z0-9_-]*$|^#[a-zA-Z_-][a-zA-Z0-9_-]*$/;
+
+function isSimpleSelector(selector: string): boolean {
+  return SIMPLE_SELECTOR_RE.test(selector.trim());
+}
+
+// Strips any nested `{ ... }` blocks from a rule body (CSS nesting is
+// unsupported), keeping only the flat declarations around them.
+function stripNestedBlocks(body: string): string {
+  let out = "";
+  let i = 0;
+  while (i < body.length) {
+    const idx = body.indexOf("{", i);
+    if (idx === -1) {
+      out += body.slice(i);
+      break;
+    }
+    out += body.slice(i, idx);
+    let depth = 1;
+    let k = idx + 1;
+    while (k < body.length && depth > 0) {
+      if (body[k] === "{") depth++;
+      else if (body[k] === "}") depth--;
+      k++;
+    }
+    i = k;
+  }
+  return out;
+}
+
+// Keeps only the comma-separated selector parts that are a single simple
+// selector, dropping the rest. Returns null if none of the parts qualify.
+function filterSimpleSelectorParts(selectorText: string): string | null {
+  const parts = selectorText
+    .split(",")
+    .map((part) => part.trim())
+    .filter(Boolean);
+  const kept = parts.filter((part) => isSimpleSelector(part));
+  if (kept.length === 0) return null;
+  return kept.join(", ");
+}
+
+/**
+ * Parses a stylesheet at the top level (assumes @media/@keyframes/@font-face
+ * blocks have already been stripped) and drops any rule whose selector isn't
+ * a single simple type/class/ID selector, and any nested block inside a
+ * rule's body (native CSS nesting).
+ */
+function filterUnsupportedSelectors(css: string): string {
+  let out = "";
+  let i = 0;
+  while (i < css.length) {
+    const braceIdx = css.indexOf("{", i);
+    if (braceIdx === -1) {
+      out += css.slice(i);
+      break;
+    }
+    const selectorText = css.slice(i, braceIdx).trim();
+    let depth = 1;
+    let k = braceIdx + 1;
+    while (k < css.length && depth > 0) {
+      if (css[k] === "{") depth++;
+      else if (css[k] === "}") depth--;
+      k++;
+    }
+    const bodyFull = css.slice(braceIdx + 1, k - 1);
+    if (selectorText.length > 0) {
+      const flatBody = stripNestedBlocks(bodyFull);
+      const keptSelector = filterSimpleSelectorParts(selectorText);
+      if (keptSelector) {
+        out += `${keptSelector}{${flatBody}}`;
+      }
+    }
+    i = k;
+  }
+  return out;
+}
+
+function inputTypeOf(el: import("node-html-parser").HTMLElement): string {
+  return (el.getAttribute("type") ?? "text").toLowerCase();
+}
+
+/**
+ * Real form controls behave very differently from their native widgets in
+ * Outlook: `<button>`/submit/reset lose their box styling entirely (submit/
+ * reset become bracket-notation text, plain `<button>` becomes bare text),
+ * checkbox/radio become bracket/paren placeholders, `<textarea>` disappears
+ * completely, `<select>` becomes bracket-notation text, and a plain
+ * `<input type="text">` shows its literal value as plain text with no box.
+ */
+function simulateFormControls(root: import("node-html-parser").HTMLElement): void {
+  root.querySelectorAll("button").forEach((el) => {
+    el.replaceWith(el.text.trim());
+  });
+
+  root.querySelectorAll("input").forEach((el) => {
+    const type = inputTypeOf(el);
+    if (type === "hidden") return;
+    const value = el.getAttribute("value") ?? "";
+    if (type === "submit") {
+      el.replaceWith(`[${value || "Submit"}]`);
+    } else if (type === "reset") {
+      el.replaceWith(`[${value || "Reset"}]`);
+    } else if (type === "checkbox") {
+      el.replaceWith(el.hasAttribute("checked") ? "[X]" : "[ ]");
+    } else if (type === "radio") {
+      el.replaceWith(el.hasAttribute("checked") ? "(X)" : "( )");
+    } else {
+      el.replaceWith(value);
+    }
+  });
+
+  root.querySelectorAll("textarea").forEach((el) => el.remove());
+
+  root.querySelectorAll("select").forEach((el) => {
+    const selected = el.querySelector("option[selected]") ?? el.querySelector("option");
+    const label = selected ? selected.text.trim() : "";
+    el.replaceWith(`[${label} \u2228]`);
+  });
+}
+
 class OutlookClassicV1 implements SeamailEnvironment {
   readonly metadata: EnvironmentMetadata = {
     client: "outlook",
@@ -257,32 +501,55 @@ class OutlookClassicV1 implements SeamailEnvironment {
     root.querySelectorAll("script").forEach((el) => el.remove());
     root.querySelectorAll('link[rel="stylesheet"]').forEach((el) => el.remove());
 
-    // Word does not render inline SVG - replace with a visible placeholder.
-    root.querySelectorAll("svg").forEach((el) => {
-      const placeholder = parse(
-        '<div style="border:1px dashed #999;background:#eee;color:#999;' +
-          "display:inline-block;text-align:center;font-family:'Times New Roman',serif;" +
-          'font-size:11px;width:100px;height:60px;line-height:60px;">[svg unsupported]</div>',
-      );
-      el.replaceWith(placeholder);
-    });
+    // The HTML5 boolean `hidden` attribute is completely ignored by Word.
+    root.querySelectorAll("[hidden]").forEach((el) => el.removeAttribute("hidden"));
 
-    // Rewrite <style> blocks to strip modern layout/visual CSS and media queries.
+    // Word leaves NO visual trace of inline SVG at all (not even a
+    // placeholder box) - just remove the element entirely.
+    root.querySelectorAll("svg").forEach((el) => el.remove());
+
+    simulateFormControls(root);
+
+    // Rewrite <style> blocks to strip modern layout/visual CSS, media
+    // queries, and any rule using a selector Word's primitive CSS parser
+    // doesn't support.
     root.querySelectorAll("style").forEach((styleEl) => {
       let css = styleEl.textContent;
       css = stripAtMediaBlocks(css);
+      css = stripAtKeyframesBlocks(css);
       css = stripFontFaceBlocks(css);
+      css = filterUnsupportedSelectors(css);
       css = stripProperties(css);
       styleEl.set_content(css);
     });
+
+    // HTML5 semantic sectioning elements don't get default block display in
+    // Word - force them inline unless the fixture's own inline CSS already
+    // sets a display value.
+    for (const tag of SEMANTIC_BLOCK_ELEMENTS) {
+      root.querySelectorAll(tag).forEach((el) => {
+        const style = el.getAttribute("style") ?? "";
+        if (!/display\s*:/i.test(style)) {
+          el.setAttribute("style", `${style};display:inline;`);
+        }
+      });
+    }
 
     // Rewrite inline styles similarly, except elements the VML
     // approximation generated - their background-image/border-radius ARE
     // how Outlook really renders VML, unlike ordinary author CSS.
     root.querySelectorAll("[style]").forEach((el) => {
       if (el.getAttribute("data-seamail-vml")) return;
-      let inline = el.getAttribute("style") ?? "";
-      inline = stripProperties(inline);
+      const original = el.getAttribute("style") ?? "";
+      // display:flex/inline-flex or position:absolute/relative drop the
+      // ENTIRE inline style attribute in real Outlook, not just that one
+      // declaration.
+      if (WHOLE_STYLE_DROP_TRIGGER_RE.test(original)) {
+        el.removeAttribute("style");
+        return;
+      }
+      let inline = stripProperties(original);
+      inline = stripSizingOnNonTableElements(inline, el.tagName ?? "");
       el.setAttribute("style", inline);
     });
 

@@ -8,14 +8,32 @@
  */
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
+import { FIXTURE_TEMPLATES } from "./fixture-templates.mjs";
 
 const GIMMICKS_PATH = fileURLToPath(new URL("./gimmicks.json", import.meta.url));
 const FIXTURES_DIR = fileURLToPath(new URL("./fixtures/", import.meta.url));
+
+// Many gimmick titles are literally formatted like "<abbr> element" - since
+// this text gets interpolated into real HTML (not just a comment), it must
+// be escaped or a raw "<abbr>" gets parsed as actual markup instead of
+// plain text, corrupting the page (e.g. leaking a stray " element" text
+// node) and defeating the whole point of the title being human-readable.
+function escapeHtml(value) {
+  return value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
 
 function renderFixture(gimmick) {
   const versions = Object.entries(gimmick.outlookWindows)
     .map(([version, code]) => `${version}: ${code}`)
     .join(", ");
+
+  const safeTitle = escapeHtml(gimmick.title);
+
+  const template = FIXTURE_TEMPLATES[gimmick.slug] || {
+    body: `<div style="background:#f1f5f9;padding:12px;border:1px solid #cbd5e1;font-weight:bold;">Isolated test fixture for ${safeTitle} (${gimmick.slug})</div>`
+  };
+
+  const headAdditions = template.head ? `\n    ${template.head}` : "";
 
   return `<!doctype html>
 <!--
@@ -24,18 +42,14 @@ function renderFixture(gimmick) {
   Outlook Windows support by version: ${versions}
   Reference: ${gimmick.url}
   ${gimmick.notes ? `Notes: ${gimmick.notes}` : ""}
-
-  TODO: replace the placeholder below with the minimal markup/CSS needed to
-  exercise this specific feature in isolation, then run capture.ps1 on a
-  Windows machine with Outlook installed to get a ground-truth screenshot.
 -->
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>${gimmick.title}</title>
+    <title>${safeTitle}</title>${headAdditions}
   </head>
   <body style="margin:0;padding:20px;font-family:'Times New Roman',serif;">
-    <!-- TODO: minimal isolated markup for "${gimmick.title}" goes here -->
+    ${template.body}
   </body>
 </html>
 `;

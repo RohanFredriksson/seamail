@@ -36,14 +36,25 @@ Two things feed it:
    which are not part of the MIT-licensed data).
 3. On a **Windows machine with Outlook desktop installed**: run
    `capture.ps1` (PowerShell). For each fixture under `fixtures/`, it creates
-   an Outlook `MailItem`, sets its `HTMLBody`, displays it, and saves a
-   screenshot of the reading pane to `captures/<slug>.png` (gitignored —
-   these are derived from licensed software and are specific to whatever
-   Outlook build produced them; don't commit or redistribute them).
+   an Outlook `MailItem`, sets its `HTMLBody`, displays it, locates the
+   message body editor via UI Automation, and saves a screenshot cropped to
+   just that region to `captures/<slug>.png` (gitignored — these are derived
+   from licensed software and are specific to whatever Outlook build
+   produced them; don't commit or redistribute them). If the body control
+   can't be located, it falls back to a full-screen capture and prints a
+   warning — if you see that fallback used, run `node crop-captures.mjs`
+   afterwards (see below) or fix the capture instead of comparing chrome
+   pixels.
 4. Manually compare each `captures/<slug>.png` against what
-   `outlook-classic@v1` produces for the same fixture (e.g. via
-   `seamail test -u` + `seamail open` against a matching local fixture under
-   the main [fixtures/](../../fixtures/) directory). Use discrepancies to
+   `outlook-classic@v1` produces for the same fixture. Run
+   `node ../../bin/seamail.mjs test -u --config seamail.config.ts` from this
+   directory (a config scoped to this tool, separate from the repo root's
+   demo `seamail.config.ts`) to render every fixture under `fixtures/`
+   through `outlook-classic@v1` and write one PNG per gimmick to
+   `renders/snapshots/<slug>__outlook-classic@v1__light.png` (gitignored,
+   regenerate on demand - `-u` always overwrites rather than diffing against
+   a prior run, since there's nothing to regress against here). Compare each
+   against the matching file in `captures/` by name. Use discrepancies to
    refine `STRIPPED_DECLARATIONS`, the VML approximation, or the capability
    map in `environments/outlook-classic/v1/index.ts`.
 
@@ -55,5 +66,14 @@ Two things feed it:
 - Fixtures are deterministic, disposable output of `generate-fixtures.mjs` —
   regenerate rather than version them.
 - What's tracked instead: `fetch-gimmicks.mjs`, `generate-fixtures.mjs`,
-  `capture.ps1`, this README, and `gimmicks.json` (a reviewable data
-  snapshot, not a build artefact).
+  `capture.ps1`, `seamail.config.ts`, this README, and `gimmicks.json` (a
+  reviewable data snapshot, not a build artefact).
+
+## Fixing existing full-screen captures
+
+Older captures taken before `capture.ps1` cropped to the message body itself
+include the ribbon, headers, and taskbar. `node crop-captures.mjs` crops
+every PNG under `captures/` in place to the reading-pane region measured
+from that batch (fixed pixel offsets, valid only because every capture in a
+given batch shares the same window layout/DPI). Prefer re-running
+`capture.ps1` for a fresh batch over relying on this script long-term.

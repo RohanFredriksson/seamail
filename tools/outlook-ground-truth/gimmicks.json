@@ -1,0 +1,4446 @@
+{
+  "source": "https://www.caniemail.com/api/data.json",
+  "fetchedAt": "2026-09-03T06:58:18.721Z",
+  "count": 236,
+  "gimmicks": [
+    {
+      "slug": "css-accent-color",
+      "title": "accent-color",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-accent-color/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Supports `accent-color` but rendering depends on browser support."
+      }
+    },
+    {
+      "slug": "css-align-items",
+      "title": "align-items",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-align-items/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Supported. But a default style of `margin:auto` is applied on every element and can prevent the expected result."
+      }
+    },
+    {
+      "slug": "css-animation",
+      "title": "animation",
+      "description": "Tests for the shorthand `animation` property and its longhand equivalents.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-animation/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Buggy. Animation properties are supported but `@keyframes` are incorrectly prefixed.",
+        "2": "Partial. Only supports from and to keyframes. Does not support % keyframes"
+      }
+    },
+    {
+      "slug": "css-aspect-ratio",
+      "title": "aspect-ratio",
+      "description": "Sets a preferred aspect ratio for the element",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-aspect-ratio/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Requires iOS 15."
+      }
+    },
+    {
+      "slug": "css-at-font-face",
+      "title": "@font-face",
+      "description": "`@font-face` in CSS allows to include your own fonts inside an email.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-at-font-face/",
+      "outlookWindows": {
+        "2003": "a",
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only supported through a `<link>` tag.",
+        "2": "Partial. Only supported directly through a `<style>` tag.",
+        "3": "Buggy. Support depends on the version of IE installed.",
+        "4": "Partial. The declaration is supported but distant fonts are ignored.",
+        "5": "Buggy. Elements using a font declared with `@font-face` ignore the font stack and fall back to Times New Roman. Use `mso-generic-font-family` and `mso-font-alt` to control the fallback.",
+        "6": "Not supported. Roboto and Google Sans can be used, but only because they're embedded with the webmail's own styles.",
+        "7": "Not supported. The `@font-face` declaration is kept but the `src` property is removed.",
+        "8": "Not supported when using a Microsoft email address; outlook, live, hotmail, etc."
+      }
+    },
+    {
+      "slug": "css-at-keyframes",
+      "title": "@keyframes",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-at-keyframes/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Not supported. The `@keyframes` declaration is kept but values are incorrectly prefixed.",
+        "2": "Partial. Only supports from and to keyframes. Does not support % keyframes"
+      }
+    },
+    {
+      "slug": "css-at-media",
+      "title": "@media",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-at-media/",
+      "outlookWindows": {
+        "2003": "a",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Does not support nested media queries.",
+        "2": "Partial. Only supports `screen`, `min-width`, `max-width`, `min-height` and `max-height` based media queries.",
+        "3": "Buggy. Requires a double `<head>` hack to work.",
+        "4": "Partial. Does not support simple `@media {}` declarations.",
+        "5": "Buggy. The first rule inside a media query is not prefixed.",
+        "6": "Partial. Not supported with non Google accounts.",
+        "7": "Partial. Does not support height based media queries.",
+        "8": "Partial. Does not support landscape media query.",
+        "9": "Partial. Not supported with Hotmail/Outlook accounts.",
+        "10": "Partial. Nested media queries are removed."
+      }
+    },
+    {
+      "slug": "css-at-media-device-pixel-ratio",
+      "title": "@media (-webkit-device-pixel-ratio)",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-at-media-device-pixel-ratio/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Buggy. The first rule inside a media query is not prefixed."
+      }
+    },
+    {
+      "slug": "css-at-media-hover",
+      "title": "@media (hover), @media (any-hover)",
+      "description": "This media query tests whether the user's input device[s] (i.e mouse, trackpad etc.) can hover over elements",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-at-media-hover/",
+      "outlookWindows": {
+        "2022-08": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-at-media-orientation",
+      "title": "@media (orientation)",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-at-media-orientation/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Buggy. The first rule inside a media query is not prefixed.",
+        "2": "Partial. `orientation:portrait` is not supported."
+      }
+    },
+    {
+      "slug": "css-at-media-prefers-color-scheme",
+      "title": "@media (prefers-color-scheme)",
+      "description": "This media query allows to theme for system light and dark mode.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-at-media-prefers-color-scheme/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Not supported. `@media (prefers-color-scheme)` is transformed into `@media ( _filtered_a )`.",
+        "2": "Not supported. `@media (prefers-color-scheme:dark)` is transformed into `@media none`.",
+        "3": "Additional custom `data` attributes (`data-ogsc`, `data-ogac`, `data-ogsb`, `data-ogab`) are added when viewing an email in dark mode. See [this article](https://www.hteumeuleu.com/2021/emails-react-outlook-com-dark-mode/) for examples.",
+        "4": "`@media (prefers-color-scheme:dark)` is transformed into `@media all` at run time if it applies.",
+        "5": "Not supported. `@media (prefers-color-scheme:dark)` is transformed into `@media (false)`",
+        "6": "Not supported. `@media (prefers-color-scheme:dark)` is transformed into `@media ()`"
+      }
+    },
+    {
+      "slug": "css-at-media-prefers-reduced-motion",
+      "title": "@media (prefers-reduced-motion)",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-at-media-prefers-reduced-motion/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Not supported. `@media (prefers-reduced-motion:reduce)` is transformed into `@media none`.",
+        "2": "Partially supported. Not supported on `picture`."
+      }
+    },
+    {
+      "slug": "css-at-supports",
+      "title": "@supports",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-at-supports/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Properties not supported by the client are replaced by `_filtered_a` inside the parenthesis.",
+        "2": "Not supported. `@supports` is transformed into `@media not all`."
+      }
+    },
+    {
+      "slug": "css-backdrop-filter",
+      "title": "backdrop-filter",
+      "description": "Lets you apply graphical effects such as blurring or color shifting to the area behind an element.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-backdrop-filter/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Works with prefix `-webkit`"
+      }
+    },
+    {
+      "slug": "css-background",
+      "title": "background",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-background/",
+      "outlookWindows": {
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Does not support multiple values. The comma between two values is removed.",
+        "2": "Partial. Does not support the `/ value` shorthand for `background-size`. But it can be used in the `background-size` property instead.",
+        "3": "Partial. Only `background-color` values are supported.",
+        "4": "Partial. Images URL must be between quotes.",
+        "5": "Partial. Does not support multiple values. The entire property is removed if so.",
+        "6": "Partial. Does not support the `/ value` shorthand for `background-size`.",
+        "7": "Partial and buggy. Removes the entire `style` attribute or `<style>` tag when a `url()` function with a valid image URL is present. See [Gmail rolling out changes that strip CSS with background images](https://freshinbox.com/blog/gmail-rolling-out-changes-that-strip-background-image-css/) and [Gmail and background images](https://parcel.io/blog/gmail-and-background-images)."
+      }
+    },
+    {
+      "slug": "css-background-blend-mode",
+      "title": "background-blend-mode",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-background-blend-mode/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts."
+      }
+    },
+    {
+      "slug": "css-background-clip",
+      "title": "background-clip",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-background-clip/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts. But it can be used in the `background` shorthand property instead."
+      }
+    },
+    {
+      "slug": "css-background-image",
+      "title": "background-image",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-background-image/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts.",
+        "2": "Buggy. Requires at least one `<img>` element in the email to download all images.",
+        "3": "Partial. Does not support multiple values. The comma between two values is removed.",
+        "4": "Partial. Images URL must be between quotes.",
+        "5": "Background images can be used in VML. See [backgrounds.cm](https://backgrounds.cm/) and [VML documentation](https://docs.microsoft.com/en-us/windows/win32/vml/web-workshop---how-to-use-vml-on-web-pages-----fill--element).",
+        "6": "Partial and buggy. Removes the entire `style` attribute or `<style>` tag when a `url()` function with a valid image URL is present. See [Gmail rolling out changes that strip CSS with background images](https://freshinbox.com/blog/gmail-rolling-out-changes-that-strip-background-image-css/) and [Gmail and background images](https://parcel.io/blog/gmail-and-background-images)."
+      }
+    },
+    {
+      "slug": "css-background-origin",
+      "title": "background-origin",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-background-origin/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Background images origin can be used in VML with the `origin` attribute. See [VML documentation](https://docs.microsoft.com/en-us/windows/win32/vml/origin-attribute--fill--vml)."
+      }
+    },
+    {
+      "slug": "css-background-position",
+      "title": "background-position",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-background-position/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Does not support multiple values. The comma between two values is removed.",
+        "2": "Background images position can be used in VML with the `position` attribute. See [VML documentation](https://docs.microsoft.com/en-us/windows/win32/vml/position-attribute--fill--vml)."
+      }
+    },
+    {
+      "slug": "css-background-repeat",
+      "title": "background-repeat",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-background-repeat/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Does not support multiple values. The comma between two values is removed.",
+        "2": "Background images repetition can be used in VML with the `type=\"tile\"` or `type=\"frame\"` attribute. See [VML documentation](https://docs.microsoft.com/en-us/windows/win32/vml/type-attribute--fill--vml)."
+      }
+    },
+    {
+      "slug": "css-background-size",
+      "title": "background-size",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-background-size/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts. But it can be used in the `background` shorthand property instead.",
+        "2": "Partial. Does not support multiple values. The comma between two values is removed.",
+        "3": "Background images size can be used in VML with the `size` attribute. See [VML documentation](https://docs.microsoft.com/en-us/windows/win32/vml/size-attribute--fill--vml)."
+      }
+    },
+    {
+      "slug": "css-block-inline-size",
+      "title": "block-size & inline-size",
+      "description": "Defines the horizontal or vertical size of an element's block, depending on its writing mode.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-block-inline-size/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2022": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-border",
+      "title": "border",
+      "description": "The `border` properties set an element's border. This page accounts for all `border` longhands and shorthands.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-border/",
+      "outlookWindows": {
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": "This pages reports support for all CSS properties related to `border`: `border`, `border-width`, `border-style`, `border-color`, `border-top`, `border-bottom`, `border-left`, `border-right`, `border-top-width`, `border-top-style`, `border-top-color`, `border-bottom-width`, `border-bottom-style`, `border-bottom-color`, `border-left-width`, `border-left-style`, `border-left-color`, `border-right-width`, `border-right-style`, `border-right-color`.",
+      "notesByNum": {
+        "1": "Partial. A border can not be bigger than 8px.",
+        "2": "Buggy. Unreliable if used on a `<p>` or a `<div>`."
+      }
+    },
+    {
+      "slug": "css-border-image",
+      "title": "border-image",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-border-image/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-border-inline-block",
+      "title": "border-inline & border-block",
+      "description": "Support for the `border-inline` and `border-block` shorthand properties.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-border-inline-block/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-border-inline-block-individual",
+      "title": "border-inline & border-block individual logical properties",
+      "description": "Support for `border-inline` & `border-block` individual logical properties.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-border-inline-block-individual/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. `border-<inline/block>-color` and `border-<inline/block>-width` does not work."
+      }
+    },
+    {
+      "slug": "css-border-inline-block-longhand",
+      "title": "border-inline & border-block longhand properties",
+      "description": "Support for `border-inline` & `border-block` longhand properties.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-border-inline-block-longhand/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-border-radius",
+      "title": "border-radius",
+      "description": "The `border-radius` CSS property rounds the corners of an element's outer border edge.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-border-radius/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Round corners can be used in VML with the `RoundRect` element. See [buttons.cm](https://buttons.cm/) and [VML documentation](https://docs.microsoft.com/en-us/windows/win32/vml/msdn-online-vml-roundrect-element).",
+        "2": "Partial support. Shorthand for setting elliptical borders with the slash `/` notation is not supported e.g. `border-radius: 27% 73% 70% 30% / 30% 34% 66% 70%;`."
+      }
+    },
+    {
+      "slug": "css-border-radius-logical",
+      "title": "border-radius logical properties",
+      "description": "Support for border radius logical properties",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-border-radius-logical/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-border-spacing",
+      "title": "border-spacing",
+      "description": "Sets the distance between the borders of adjacent cells in a `<table>`.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-border-spacing/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-box-shadow",
+      "title": "box-shadow",
+      "description": "Adds shadow effects around an element's frame.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-box-shadow/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only supported with non Google accounts."
+      }
+    },
+    {
+      "slug": "css-box-sizing",
+      "title": "box-sizing",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-box-sizing/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-caption-side",
+      "title": "caption-side",
+      "description": "The `caption-side` CSS property puts the content of a table's `<caption>` on the specified side.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-caption-side/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "The `caption-side` property in CSS is supported but the `<caption>` HTML element is not."
+      }
+    },
+    {
+      "slug": "css-clear",
+      "title": "clear",
+      "description": "Sets whether an element must be moved below (cleared) floating elements that precede it.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-clear/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Logical property values `inline-start` and `inline-end` are not supported."
+      }
+    },
+    {
+      "slug": "css-clip-path",
+      "title": "clip-path",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-clip-path/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. `path()` is not supported.",
+        "2": "Partial. [Embedded SVG](/features/html-svg/) is not supported. Referencing an embedded SVG's `<clipPath>` with `url()` does not work.",
+        "3": "Partial. Referencing an external SVG's `<clipPath>` with `url()` does not work."
+      }
+    },
+    {
+      "slug": "css-color-scheme",
+      "title": "color-scheme CSS property",
+      "description": "Changes the default colors of HTML elements. Useful for when you want an email to display only in a dark color scheme or only a light scheme, regardless of user settings",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-color-scheme/",
+      "outlookWindows": {
+        "2003": "u",
+        "2007": "u",
+        "2010": "u",
+        "2013": "u",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Works only the html/root element",
+        "2": "Buggy. The property is supported but does not work due to a prefix added by the webmail on the rule selector."
+      }
+    },
+    {
+      "slug": "css-column-count",
+      "title": "column-count",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-column-count/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-column-layout-properties",
+      "title": "css column properties",
+      "description": "Support for the `columns` shorthand and longhand properties.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-column-layout-properties/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-conic-gradient",
+      "title": "conic-gradient()",
+      "description": "Creates an image consisting of a gradient with color transitions rotated around a center point (rather than radiating from the center).",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-conic-gradient/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with Hotmail/Outlook accounts."
+      }
+    },
+    {
+      "slug": "css-display",
+      "title": "display",
+      "description": "Sets whether an element is treated as a block or inline element and the layout used for its children.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-display/",
+      "outlookWindows": {
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. `flex`, `grid`, `flow-root`, `contents`, `inline flow-root`, `inline flex`, `inline grid`, `initial`, `revert`, `unset` are not supported with non Google accounts.",
+        "2": "Partial. `inline-flex`, `inline-grid`, `flex`, `grid`, `flow-root`, `contents`, `inline flow-root`, `inline flex`, `inline grid`, `initial`, `revert`, `unset` values are not supported.",
+        "3": "Buggy. Only the first value is kept with the two-value syntax.",
+        "4": "Buggy. `display:none` does not inherit to inner tables.",
+        "5": "Partial. Only supports `display:none` (but not on `<img>`).",
+        "6": "Partial. `flow-root`, `inline-flex`, `inline-grid`, `inline flow`, `contents`, `revert` are not supported.",
+        "7": "Partial. Two-value syntax are combined into a single one with a dash."
+      }
+    },
+    {
+      "slug": "css-display-flex",
+      "title": "display:flex",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-display-flex/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Not supported with non Google accounts.",
+        "2": "`display:inline-flex` is not supported."
+      }
+    },
+    {
+      "slug": "css-display-grid",
+      "title": "display:grid",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-display-grid/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Not supported with non Google accounts."
+      }
+    },
+    {
+      "slug": "css-display-none",
+      "title": "display:none",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-display-none/",
+      "outlookWindows": {
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Does not inherit onto nested `<table>` elements.",
+        "2": "Partial. Does not work when applied directly to an `<img>` element."
+      }
+    },
+    {
+      "slug": "css-empty-cells",
+      "title": "empty-cells",
+      "description": "Sets whether borders and backgrounds appear around `<table>` cells that have no visible content.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-empty-cells/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-filter",
+      "title": "filter",
+      "description": "Tests with values `blur`, `brightness`, `grayscale`, `hue-rotate`, `invert`, `opacity`, `saturate`, `sepia` and `shadow`.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-filter/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Multiple values don't work."
+      }
+    },
+    {
+      "slug": "css-flex-direction",
+      "title": "flex-direction:column",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-flex-direction/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-flex-wrap",
+      "title": "flex-wrap: wrap",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-flex-wrap/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-float",
+      "title": "float",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-float/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Not supported. `table` and `img` elements can use an `align` attribute to get a similar effect.",
+        "2": "Partial. Logical property values `inline-start` and `inline-end` are not supported."
+      }
+    },
+    {
+      "slug": "css-font-kerning",
+      "title": "font-kerning",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-font-kerning/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-font-size",
+      "title": "font-size",
+      "description": "Sets the size of the font.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-font-size/",
+      "outlookWindows": {
+        "2013": "a",
+        "2016": "a",
+        "2019": "a",
+        "2021": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial support. `rem` values are not supported.",
+        "2": "Partial support. `relative` and `percentage` size values not supported."
+      }
+    },
+    {
+      "slug": "css-font-size-adjust",
+      "title": "font-size-adjust",
+      "description": "Adjusts the size of lowercase letters relative to the size of uppercase letters.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-font-size-adjust/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n",
+        "2024": "n"
+      },
+      "notes": "Rendering may depend on browser and OS support, Also applies to mobile client apps.",
+      "notesByNum": {
+        "1": "Partial support. Supports one numerical value, 2-value font-metric syntax unsuported (ex-height, cap-height, ch-width, ic-width, ic-height).",
+        "2": "Not supported with non Google accounts.",
+        "3": "2-value syntax is supported, but the first value (font-metric) is ignored."
+      }
+    },
+    {
+      "slug": "css-font-stretch",
+      "title": "font-stretch",
+      "description": "Selecting different font widths (e.g. condensed, expanded)",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-font-stretch/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Depends on the browser. There is currently a bug in Chrome/Edge where font-stretch does not work for variable fonts."
+      }
+    },
+    {
+      "slug": "css-font-weight",
+      "title": "font-weight",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-font-weight/",
+      "outlookWindows": {
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial support. `<number>` values are not supported as per CSS Fonts Level 4 where any `<number>` value between 1 and 1000 (inclusive) is a valid value. Only the following numeric values are supported: 100, 200, 300, 400, 500, 600, 700, 800, and 900.",
+        "2": "Partial support. `<number>` values between 0 and 599 are set as normal font weight. `<number>` values between 600 and 1000 are set as bold font weight."
+      }
+    },
+    {
+      "slug": "css-function-clamp",
+      "title": "clamp()",
+      "description": "Support for the CSS `clamp()` function.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-function-clamp/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts.",
+        "2": "Partial. Not supported with Microsoft accounts."
+      }
+    },
+    {
+      "slug": "css-function-light-dark",
+      "title": "light-dark()",
+      "description": "Enables setting two colors (one for light and the other for dark mode) for a property.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-function-light-dark/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Only supported if you’ve updated your OS with Safari 17.5 or later.",
+        "2": "Buggy. The function is supported but the color stays light even in dark mode.",
+        "3": "Partial. Not supported with Hotmail/Outlook accounts."
+      }
+    },
+    {
+      "slug": "css-function-max",
+      "title": "max()",
+      "description": "Support for the CSS `max()` function.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-function-max/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts.",
+        "2": "Partial. Not supported with Microsoft accounts."
+      }
+    },
+    {
+      "slug": "css-function-min",
+      "title": "min()",
+      "description": "Support for the CSS `min()` function.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-function-min/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts.",
+        "2": "Partial. Not supported with Microsoft accounts."
+      }
+    },
+    {
+      "slug": "css-gap",
+      "title": "gap, column-gap, row-gap",
+      "description": "Properties for adding spacing between grid items, flex items and columns",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-gap/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Supports column-gap for flexbox.",
+        "2": "Partial. Supports gap and column-gap for flexbox. Supports gap for multi-column layout (i.e. in conjunction with CSS column-count property)"
+      }
+    },
+    {
+      "slug": "css-grid-template",
+      "title": "grid-template-* properties",
+      "description": "This page reflects support for `grid-template`, `grid-template-areas`, `grid-template-columns`, `grid-template-rows`.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-grid-template/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-height",
+      "title": "height property",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-height/",
+      "outlookWindows": {
+        "2003": "y",
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Buggy. Replaces `height` by `min-height`.",
+        "2": "Partial. Not supported on `<body>`, `<span>`, `<div>` or `<p>` elements."
+      }
+    },
+    {
+      "slug": "css-hyphenate-character",
+      "title": "hyphenate-character",
+      "description": "Sets the character (or string) used at the end of a line before a hyphenation break.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-hyphenate-character/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Does not support encoded character values"
+      }
+    },
+    {
+      "slug": "css-hyphenate-limit-chars",
+      "title": "hyphenate-limit-chars",
+      "description": "Specifies the minimum word length to allow hyphenation of words as well as the minimum number of characters before and after the hyphen.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-hyphenate-limit-chars/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-hyphens",
+      "title": "hyphens",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-hyphens/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Applies an equivalent behaviour of `word-wrap: break-word` for mobile."
+      }
+    },
+    {
+      "slug": "css-important",
+      "title": "!important keyword",
+      "description": "An `!important` declaration takes precedence over a normal declaration.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-important/",
+      "outlookWindows": {
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only supported in lowercase. (See [email-bugs#13](https://github.com/hteumeuleu/email-bugs/issues/13))",
+        "2": "Partial. Only supported inline when using a Non Gmail Account due to the lack of `<style>` support.",
+        "3": "Not supported. The entire declaration is removed if there is no space before `!important`.",
+        "4": "Partial. Only supported with a space before.",
+        "5": "Partial. Not supported inline. (See [email-bugs#31](https://github.com/hteumeuleu/email-bugs/issues/31))",
+        "6": "Partial. Only supported inline due to the lack of `<style>` support.",
+        "7": "Partial. Removed if there is no space before when used with a `background-image` property. (See [email-bugs#16](https://github.com/hteumeuleu/email-bugs/issues/16))",
+        "8": "Partial. Only supported in lowercase.",
+        "9": "Partial. Only supported if not written in lowercase."
+      }
+    },
+    {
+      "slug": "css-inert-attribute",
+      "title": "inert",
+      "description": "This attribute should render elements inactive",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-inert-attribute/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n",
+        "2024": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Works except on form tag"
+      }
+    },
+    {
+      "slug": "css-inline-size",
+      "title": "inline-size ",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-inline-size/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-inset",
+      "title": "inset",
+      "description": "Shorthand that corresponds to the `top`, `right`, `bottom`, and/or `left` properties",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-inset/",
+      "outlookWindows": {
+        "2024-05": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Buggy. Almost all values are replaced by `unset`."
+      }
+    },
+    {
+      "slug": "css-intrinsic-size",
+      "title": "fit-content, min-content, max-content",
+      "description": "Sets the height or width relative to its content.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-intrinsic-size/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Supports `min-content` and `fit-content` only.",
+        "2": "Buggy. `width: min-content` acts as if `word-break: break-all` had been set on the element.",
+        "3": "Partial. Not supported with non Google accounts."
+      }
+    },
+    {
+      "slug": "css-justify-content",
+      "title": "justify-content",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-justify-content/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {}
+    },
+    {
+      "slug": "css-left-right-top-bottom",
+      "title": "left, right, top, bottom",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-left-right-top-bottom/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. `left` and `top` are not supported.",
+        "2": "Partial. Percentages values are not supported."
+      }
+    },
+    {
+      "slug": "css-letter-spacing",
+      "title": "letter-spacing",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-letter-spacing/",
+      "outlookWindows": {
+        "2003": "y",
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Big negative values are rendered differently from CSS standards.",
+        "2": "Buggy. Values set in `em` are smaller than the expected render in CSS. See [#192](https://github.com/hteumeuleu/caniemail/issues/192)."
+      }
+    },
+    {
+      "slug": "css-line-height",
+      "title": "line-height",
+      "description": "Sets the height of a line box. Or, basically, the height of a line of text.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-line-height/",
+      "outlookWindows": {
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Buggy. `em` and `px` units behave weirdly. Use `mso-line-height-rule:exactly`.",
+        "2": "Partial. `normal` value is not supported."
+      }
+    },
+    {
+      "slug": "css-linear-gradient",
+      "title": "linear-gradient()",
+      "description": "Creates an image consisting of a progressive transition between two or more colors along a straight line.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-linear-gradient/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Gradients can be created in VML using `type=\"gradient\"` on a `<v:fill>`. See [VML documentation](https://docs.microsoft.com/en-us/windows/win32/vml/web-workshop---how-to-use-vml-on-web-pages-----fill--element#gradient-fill).",
+        "2": "Partial. Not supported with Hotmail/Outlook accounts.",
+        "3": "Buggy. Does not work inline in the `background-image` property. (See [email-bugs#135](https://github.com/hteumeuleu/email-bugs/issues/135))"
+      }
+    },
+    {
+      "slug": "css-list-style",
+      "title": "list-style",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-list-style/",
+      "outlookWindows": {
+        "2003": "y",
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": "Tests and support are based on the CSS Level 2 specification. `<custom-ident>`, `symbols()` and `<string>` values are not tested here.",
+      "notesByNum": {
+        "1": "`list-style-image` values are not supported. The entire `list-style` property is removed if present.",
+        "2": "Only `list-style-type` values are supported.",
+        "3": "`list-style-image` values are not supported but the rest of the `list-style` property is kept.",
+        "4": "`url()` is transformed into `proton-url()` for `list-style-type` values, invalidating the entire property."
+      }
+    },
+    {
+      "slug": "css-list-style-image",
+      "title": "list-style-image",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-list-style-image/",
+      "outlookWindows": {
+        "2003": "y",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Not supported, but the proprietary `mso-bullet-image` property can be used instead on `<li>`. Outlook 2007 and 2010 only support `.ico` and `.gif` file formats.",
+        "2": "Not supported, but image values are supported through the `list-style` shorthand property.",
+        "3": "`url()` is transformed into `proton-url()`."
+      }
+    },
+    {
+      "slug": "css-list-style-position",
+      "title": "list-style-position",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-list-style-position/",
+      "outlookWindows": {
+        "2003": "y",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Not supported, but the proprietary `mso-text-indent-alt` property can be used instead."
+      }
+    },
+    {
+      "slug": "css-margin",
+      "title": "margin",
+      "description": "Support for the `margin` shorthand property and the `margin-left`, `margin-right`, `margin-top`, `margin-bottom` properties.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-margin/",
+      "outlookWindows": {
+        "2003": "y",
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Negative values are not supported.",
+        "2": "Partial. Not supported on `<span>` and `<body>` elements.",
+        "3": "Buggy. `background-color` is included inside the `margin`.",
+        "4": "Partial. `auto` value is not supported."
+      }
+    },
+    {
+      "slug": "css-margin-block-start-end",
+      "title": "margin-block-start & margin-block-end",
+      "description": "Support for the `margin-block-start` and `margin-block-end` css properties.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-margin-block-start-end/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-margin-inline-block",
+      "title": "margin-inline & margin-block",
+      "description": "Support for the `margin-inline` and `margin-block` shorthand properties.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-margin-inline-block/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-margin-inline-start-end",
+      "title": "margin-inline-start & margin-inline-end",
+      "description": "Support for the `margin-inline-start` and `margin-inline-end` css properties.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-margin-inline-start-end/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-mask-image",
+      "title": "mask-image",
+      "description": "Sets the image that is used as mask layer for an element",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-mask-image/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n",
+        "2024": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Notation using `url` is not supported."
+      }
+    },
+    {
+      "slug": "css-max-block-size",
+      "title": "max-block-size",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-max-block-size/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-max-height",
+      "title": "max-height property",
+      "description": "Sets the maximum height of an element.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-max-height/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-max-inline-size",
+      "title": "max-inline-size",
+      "description": "Defines the horizontal or vertical maximum size of an element's block, depending on its writing mode",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-max-inline-size/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-max-width",
+      "title": "max-width",
+      "description": "This is the description of the `max-width` property.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-max-width/",
+      "outlookWindows": {
+        "2003": "a",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only works on `<table>` elements.",
+        "2": "Partial. Doesn't work on `<table>` elements, as per [CSS 2.1 specification](https://www.w3.org/TR/CSS2/visudet.html#min-max-widths)."
+      }
+    },
+    {
+      "slug": "css-min-block-size",
+      "title": "min-block-size",
+      "description": "Defines the minimum horizontal or vertical size of an element's block, depending on its writing mode",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-min-block-size/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-min-height",
+      "title": "min-height property",
+      "description": "Sets the minimum height of an element.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-min-height/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-min-inline-size",
+      "title": "min-inline-size",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-min-inline-size/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-min-width",
+      "title": "min-width property",
+      "description": "Sets the minimum width of an element.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-min-width/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-mix-blend-mode",
+      "title": "mix-blend-mode",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-mix-blend-mode/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts."
+      }
+    },
+    {
+      "slug": "css-modern-color",
+      "title": "lch(), oklch(), lab(), oklab()",
+      "description": "Modern color values: lch, lab, oklch and oklab",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-modern-color/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Depends on browser support.",
+        "2": "Using this syntax for an inline style will remove all inline styles applied to that element."
+      }
+    },
+    {
+      "slug": "css-nesting",
+      "title": "CSS Nesting",
+      "description": "A syntax for nesting selectors, providing the ability to nest one style rule inside another.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-nesting/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. `E { F {}}` doesn’t work, but `E { & F {}}` does. Full support was added in macOS 14.2.",
+        "2": "Buggy. The syntax is supported, but nested selectors are prefixed by the webmail, which might invalidate the selector.",
+        "3": "Not supported. The nested selectors are removed, making the nested properties apply to the parent selector.",
+        "4": "Partial. Not supported with Hotmail/Outlook accounts.",
+        "5": "Partial. `@media` is not fully supported, and `& & &` syntax not supported"
+      }
+    },
+    {
+      "slug": "css-object-fit",
+      "title": "object-fit",
+      "description": "The `object-fit` CSS property sets how the content of a replaced element, such as an `<img>` or `<video>`, should be resized to fit its container.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-object-fit/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts."
+      }
+    },
+    {
+      "slug": "css-object-position",
+      "title": "object-position",
+      "description": "The `object-position` CSS property specifies the alignment of the selected replaced element's contents within the element's box. Areas of the box which aren't covered by the replaced element's object will show the element's background.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-object-position/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts."
+      }
+    },
+    {
+      "slug": "css-opacity",
+      "title": "opacity",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-opacity/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-orphans",
+      "title": "orphans",
+      "description": "Sets the minimum number of lines in a block container split on an old page, region or column.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-orphans/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Buggy. `columns` property is stripped which is required for `orphans` to work",
+        "2": "Buggy. `orphans` property value is replaced by `auto`",
+        "3": "Not supported, but Gmail's default styles on the email message container includes the `orphans` property. These values are inherited by children elements",
+        "4": "Webmail rendering depends on browser support"
+      }
+    },
+    {
+      "slug": "css-outline",
+      "title": "outline",
+      "description": "Sets a line outside of the element's border.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-outline/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "WebKit renders square outline even when using `border-radius`.",
+      "notesByNum": null
+    },
+    {
+      "slug": "css-outline-offset",
+      "title": "outline-offset",
+      "description": "Controls the position of an outline.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-outline-offset/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": null
+    },
+    {
+      "slug": "css-overflow",
+      "title": "overflow",
+      "description": "Sets the desired behavior when content does not fit in the element's padding box",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-overflow/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n",
+        "2024": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Buggy. Cannot scroll through to hidden content.",
+        "2": "Not supported. `overflow` is replaced by `java-script`.",
+        "3": "Partial. Support for `overflow-block` & `overflow-inline` depends on browser support.",
+        "4": "Partial. `overflow-block` & `overflow-inline` not supported."
+      }
+    },
+    {
+      "slug": "css-overflow-wrap",
+      "title": "overflow-wrap",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-overflow-wrap/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Buggy. Requires `word-break:normal` to reset Apple Mail default style (See [issue#394](https://github.com/hteumeuleu/caniemail/issues/394).)"
+      }
+    },
+    {
+      "slug": "css-padding",
+      "title": "padding",
+      "description": "This test includes support for the `padding` shorthand property as well as for `padding-left`, `padding-right`, `padding-top` and `padding-bottom`.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-padding/",
+      "outlookWindows": {
+        "2003": "y",
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only supported on table cells.",
+        "2": "Buggy. Vertical padding will be the same for all cells of a same row, adopting the biggest value."
+      }
+    },
+    {
+      "slug": "css-padding-block-start-end",
+      "title": "padding-block-start & padding-block-end",
+      "description": "Support for the `padding-block-start` and `padding-block-end` css properties.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-padding-block-start-end/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-padding-inline-block",
+      "title": "padding-inline & padding-block",
+      "description": "Support for the `padding-inline` and `padding-block` shorthand properties.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-padding-inline-block/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-padding-inline-start-end",
+      "title": "padding-inline-start & padding-inline-end",
+      "description": "Support for the `padding-inline-start` and `padding-inline-end` css properties.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-padding-inline-start-end/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-position",
+      "title": "position",
+      "description": "Tests for CSS positioning include `relative`, `absolute`, `fixed` and `sticky`.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-position/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Supports `relative`, `absolute` but not `sticky` and `fixed`.",
+        "2": "Partial. Supports `sticky` but not `relative`, `absolute` and `fixed`.",
+        "3": "Partial. Supports `relative` but not  `absolute`, `sticky` and `fixed`.",
+        "4": "Partial. Supports `relative` and `sticky` but not `absolute` and `fixed`.",
+        "5": "Buggy. `fixed` elements scroll with page.",
+        "6": "Buggy. `fixed` is replaced by `absolute`."
+      }
+    },
+    {
+      "slug": "css-pseudo-class-active",
+      "title": ":active",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-class-active/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only supported on type selectors.",
+        "2": "Partial. Supported with mouse clicks. Not supported with keyboard input."
+      }
+    },
+    {
+      "slug": "css-pseudo-class-checked",
+      "title": ":checked",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-class-checked/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only supported on type selectors.",
+        "2": "Not supported. `<input>` elements are transformed into `<noinput>`."
+      }
+    },
+    {
+      "slug": "css-pseudo-class-default",
+      "title": ":default",
+      "description": "Selects form elements that are the default in a group of related elements.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-class-default/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2024": "n"
+      },
+      "notes": "Depends on device/browser support. Some devices/browsers do not support styling on &lt;option&gt;.",
+      "notesByNum": {
+        "1": "Works on input[radio] and input[checkbox] only."
+      }
+    },
+    {
+      "slug": "css-pseudo-class-first-child",
+      "title": ":first-child",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-class-first-child/",
+      "outlookWindows": {
+        "2003": "y",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only supported on type selectors."
+      }
+    },
+    {
+      "slug": "css-pseudo-class-first-of-type",
+      "title": ":first-of-type",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-class-first-of-type/",
+      "outlookWindows": {
+        "2003": "y",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only supported on type selectors."
+      }
+    },
+    {
+      "slug": "css-pseudo-class-focus",
+      "title": ":focus",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-class-focus/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only supported on type selectors."
+      }
+    },
+    {
+      "slug": "css-pseudo-class-focus-visible",
+      "title": ":focus-visible",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-class-focus-visible/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n",
+        "2024": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only supported on type selectors.",
+        "2": "Input with type text is not focusable at all",
+        "3": "Button is not focusable on tab"
+      }
+    },
+    {
+      "slug": "css-pseudo-class-focus-within",
+      "title": ":focus-within",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-class-focus-within/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n",
+        "2024": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only supported on type selectors."
+      }
+    },
+    {
+      "slug": "css-pseudo-class-has",
+      "title": ":has()",
+      "description": "Represents an element if any of the selectors passed as parameters match at least one element.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-class-has/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "As of december 2021, `:has()` is only supported in [Safari Technology Preview 137](https://webkit.org/blog/12156/release-notes-for-safari-technology-preview-137/). As of march 2022, it is supported in Safari 15.4.",
+      "notesByNum": {
+        "1": "Not supported. `:has(…)` is replaced by `:has`.",
+        "2": "Not supported. But the pseudo-class seems interpreted and computed server side."
+      }
+    },
+    {
+      "slug": "css-pseudo-class-hover",
+      "title": ":hover",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-class-hover/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts.",
+        "2": "Partial. Only supported on type selectors."
+      }
+    },
+    {
+      "slug": "css-pseudo-class-lang",
+      "title": "lang()",
+      "description": "Matches elements based on the language they are determined to be in.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-class-lang/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-pseudo-class-last-child",
+      "title": ":last-child",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-class-last-child/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only supported on type selectors."
+      }
+    },
+    {
+      "slug": "css-pseudo-class-last-of-type",
+      "title": ":last-of-type",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-class-last-of-type/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only supported on type selectors."
+      }
+    },
+    {
+      "slug": "css-pseudo-class-not",
+      "title": ":not",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-class-not/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-pseudo-class-nth-child",
+      "title": ":nth-child",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-class-nth-child/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only supported on type selectors.",
+        "2": "Not supported. Removes the parenthesis part."
+      }
+    },
+    {
+      "slug": "css-pseudo-class-nth-last-child",
+      "title": ":nth-last-child",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-class-nth-last-child/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only supported on type selectors.",
+        "2": "Not supported. Removes the parenthesis part."
+      }
+    },
+    {
+      "slug": "css-pseudo-class-nth-last-of-type",
+      "title": ":nth-last-of-type",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-class-nth-last-of-type/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only supported on type selectors.",
+        "2": "Not supported. Removes the parenthesis part."
+      }
+    },
+    {
+      "slug": "css-pseudo-class-nth-of-type",
+      "title": ":nth-of-type",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-class-nth-of-type/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only supported on type selectors.",
+        "2": "Not supported. Removes the parenthesis part."
+      }
+    },
+    {
+      "slug": "css-pseudo-class-only-child",
+      "title": ":only-child",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-class-only-child/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only supported on type selectors."
+      }
+    },
+    {
+      "slug": "css-pseudo-class-only-of-type",
+      "title": ":only-of-type",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-class-only-of-type/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only supported on type selectors."
+      }
+    },
+    {
+      "slug": "css-pseudo-class-target",
+      "title": ":target",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-class-target/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only supported on type selectors.",
+        "2": "Buggy. Not filtered but doesn't work."
+      }
+    },
+    {
+      "slug": "css-pseudo-class-visited",
+      "title": ":visited",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-class-visited/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only supported on type selectors."
+      }
+    },
+    {
+      "slug": "css-pseudo-element-after",
+      "title": "::after",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-element-after/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Not supported with non Outlook accounts.",
+        "2": "The pseudo-element is supported but the `content` property is not.",
+        "3": "Partial. Only supported on type selectors."
+      }
+    },
+    {
+      "slug": "css-pseudo-element-before",
+      "title": "::before",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-element-before/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Not supported with non Outlook accounts.",
+        "2": "The pseudo-element is supported but the `content` property is not.",
+        "3": "Partial. Only supported on type selectors."
+      }
+    },
+    {
+      "slug": "css-pseudo-element-first-letter",
+      "title": "::first-letter",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-element-first-letter/",
+      "outlookWindows": {
+        "2003": "y",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Not supported with non Outlook accounts.",
+        "2": "Partial. Only supported on type selectors."
+      }
+    },
+    {
+      "slug": "css-pseudo-element-first-line",
+      "title": "::first-line",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-element-first-line/",
+      "outlookWindows": {
+        "2003": "y",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Not supported with non Outlook accounts.",
+        "2": "Partial. Only supported on type selectors."
+      }
+    },
+    {
+      "slug": "css-pseudo-element-marker",
+      "title": "::marker",
+      "description": "Selects the marker box of a list item (typically a bullet or number).",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-element-marker/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Not supported. But `@list` declarations can achieve the same thing."
+      }
+    },
+    {
+      "slug": "css-pseudo-element-placeholder",
+      "title": "::placeholder",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-pseudo-element-placeholder/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Not supported with non Outlook accounts.",
+        "2": "The pseudo-element is supported but `<input>` elements are not.",
+        "3": "Partial. Only supported on type selectors."
+      }
+    },
+    {
+      "slug": "css-radial-gradient",
+      "title": "radial-gradient()",
+      "description": "Creates an image consisting of a progressive transition between two or more colors that radiate from an origin.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-radial-gradient/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Gradients can be created in VML using `type=\"gradientRadial\"` on a `<v:fill>`. See [VML documentation](https://docs.microsoft.com/en-us/windows/win32/vml/web-workshop---how-to-use-vml-on-web-pages-----fill--element#gradient-fill).",
+        "2": "Buggy. Does not work inline in the `background-image` property. (See [email-bugs#135](https://github.com/hteumeuleu/email-bugs/issues/135))"
+      }
+    },
+    {
+      "slug": "css-resize",
+      "title": "resize",
+      "description": "Sets whether an element is resizable, and in which directions.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-resize/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "`resize` property is stripped from style tag",
+        "2": "Does not support `inline` and `block` values",
+        "3": "Supported but depends of browser support",
+        "4": "Supported but barely usable, system gesture management often take priority"
+      }
+    },
+    {
+      "slug": "css-rgb",
+      "title": "rgb()",
+      "description": "RGB functional notation (`rgb()`)",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-rgb/",
+      "outlookWindows": {
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Whitespace syntax is not supported (`rgb(0 128 0 / 1)`).",
+        "2": "Alpha value is not supported (`rgb(0, 128, 0, 0.5)`).",
+        "3": "whitespace syntax (`rgb(0 128 0)`): when used in the `style` attribute of an element, the whole attribute is stripped. When used inside `<style>`, the whole `<style>` block is stripped."
+      }
+    },
+    {
+      "slug": "css-rgba",
+      "title": "rgba()",
+      "description": "RGB functional notation with alpha-channel transparency value (`rgba()`)",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-rgba/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Whitespace syntax is not supported (`rgb(0 128 0 / 1)`).",
+        "2": "whitespace syntax (`rgba(0 128 0 / 1)`): when used in the `style` attribute of an element, the whole attribute is stripped. When used inside `<style>`, the whole `<style>` block is stripped."
+      }
+    },
+    {
+      "slug": "css-scroll-snap",
+      "title": "scroll-snap",
+      "description": "Controls panning and scrolling behaviour with snap positions.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-scroll-snap/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-selector-adjacent-sibling",
+      "title": "Adjacent sibling combinator",
+      "description": "The adjacent sibling combinator (`h1 + p`) allows to target an element that is directly after another.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-selector-adjacent-sibling/",
+      "outlookWindows": {
+        "2003": "y",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts.",
+        "2": "Partial. Only when used as class or ID selectors"
+      }
+    },
+    {
+      "slug": "css-selector-attribute",
+      "title": "Attribute selector",
+      "description": "The attribute selector (`[attr]`) targets elements with this specific attribute.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-selector-attribute/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "This page reflects support for different syntaxes: `[attr]`, `[attr=\"value\"]`, `[attr~=\"value\"]`, `[attr|=\"value\"]`, `[attr^=\"value\"]`, `[attr$=\"value\"]`, `[attr*=\"value\"]`.",
+      "notesByNum": {
+        "1": "Partial. Can not be used with a class selector (`.test[class]`). Must be used solo (`[class]`) or with an element selector (`td[class]`).",
+        "2": "Partial. Only supports `[attr]`, `[attr=value]`, `[attr~=value]`, `[attr|=value]` syntaxes.",
+        "3": "Buggy. A `class=\"test\"` in the HTML is prefixed `class=\"x_test\"`, but an attribute selector stays unprefixed `[class=\"test\"]`.",
+        "4": "Partial. Only supports `[attr=value]` syntax.",
+        "5": "Partial. Only supports `[attr~=value]` syntax. Only `class` as an attribute name is known to be supported.",
+        "6": "Partial. Doesn't work with non Google accounts."
+      }
+    },
+    {
+      "slug": "css-selector-chaining",
+      "title": "Chaining selectors",
+      "description": "Chaining selectors (`.foo.bar`) allows to apply styles to elements matching all the corresponding selectors.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-selector-chaining/",
+      "outlookWindows": {
+        "2003": "y",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts.",
+        "2": "Buggy. The first `<head>` in the HTML is removed, so `<style>` elements need to be in a second `<head>` element.",
+        "3": "Buggy. Styles will be applied to the first selector of the chain.",
+        "4": "Buggy. Only the first selector of the chain is prefixed in the styles, but all classes are prefixed in the HTML.",
+        "5": "Partial. Only when used as class or ID selectors"
+      }
+    },
+    {
+      "slug": "css-selector-child",
+      "title": "Child combinator",
+      "description": "The child combinator is represented by a superior sign (`>`) between two selectors and matches the second selector if it is a direct child of the first selector.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-selector-child/",
+      "outlookWindows": {
+        "2003": "y",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts.",
+        "2": "Buggy. The first `<head>` in the HTML is removed, so `<style>` elements need to be in a second `<head>` element."
+      }
+    },
+    {
+      "slug": "css-selector-general-sibling",
+      "title": "General sibling combinator",
+      "description": "The general sibling combinator (`img ~ p`) allows to target any element that after another (directly or indirectly).",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-selector-general-sibling/",
+      "outlookWindows": {
+        "2003": "y",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts."
+      }
+    },
+    {
+      "slug": "css-selector-universal",
+      "title": "Universal selector *",
+      "description": "The universal selector (`*`) allows to apply styles to every elements.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-selector-universal/",
+      "outlookWindows": {
+        "2003": "y",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts.",
+        "2": "Buggy. The first `<head>` in the HTML is removed, so `<style>` elements need to be in a second `<head>` element.",
+        "3": "Not supported. The selector is removed and left prefixed with the outer most parent element."
+      }
+    },
+    {
+      "slug": "css-shape-margin",
+      "title": "shape-margin",
+      "description": "Sets a margin for a CSS shape created using `shape-outside`",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-shape-margin/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-shape-outside",
+      "title": "shape-outside",
+      "description": "Defines a shape, which may be non-rectangular, around which adjacent inline content should wrap.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-shape-outside/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-sytem-ui",
+      "title": "system-ui, ui-serif, ui-sans-serif, ui-rounded, ui-monospace",
+      "description": "CSS keywords for specifying system fonts for `font-family`.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-sytem-ui/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Supports `system-ui` only.",
+        "2": "Partial. Depends on browser support. `system-ui` works in all browsers. `ui-serif`, `ui-sans-serif`, `ui-rounded` and `ui-monospace` are supported on all browsers on iOS and Safari on MacOS."
+      }
+    },
+    {
+      "slug": "css-tab-size",
+      "title": "tab-size",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-tab-size/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Supports `tab-size` but doesn't support `white-space`. Therefore, `tab-size` is not effectively visible",
+        "2": "Supports `tab-size` but strips the tab character `&#0009;`"
+      }
+    },
+    {
+      "slug": "css-table-layout",
+      "title": "table-layout",
+      "description": "The table-layout property defines the algorithm used to lay out table cells, rows, and columns.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-table-layout/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Not supported. All tables are forced to `table-layout:fixed`."
+      }
+    },
+    {
+      "slug": "css-text-align",
+      "title": "text-align",
+      "description": "Sets the horizontal alignment of the content.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-text-align/",
+      "outlookWindows": {
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Flow-relative values `start` and `end` are not supported.",
+        "2": "Partial. Flow-relative values `start` and `end` are not supported with non Gmail account.",
+        "3": "Partial. Doesn't support the `match-parent` value.",
+        "4": "Support of the `match-parent` value depends on browser support.",
+        "5": "Supports the vendor prefixed value `-webkit-match-parent`."
+      }
+    },
+    {
+      "slug": "css-text-align-last",
+      "title": "text-align-last",
+      "description": "The `text-align-last` CSS property sets how the last line of a block or a line right before a forced line break is aligned.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-text-align-last/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-text-decoration",
+      "title": "text-decoration",
+      "description": "Tested with the values `overline`, `underline` and `line-through`.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-text-decoration/",
+      "outlookWindows": {
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts.",
+        "2": "Partial. Not supported with multiple values.",
+        "3": "Partial. `overline` is not supported.",
+        "4": "Partial. Only supports the line property, not style, color or thickness.",
+        "5": "Partial. Only supports style, color or thickness when written with long hand selectors."
+      }
+    },
+    {
+      "slug": "css-text-decoration-color",
+      "title": "text-decoration-color",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-text-decoration-color/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "`text-decoration-color` is not supported in Internet Explorer.",
+      "notesByNum": {
+        "1": "Supported with prefix `-webkit-`.",
+        "2": "Not supported, but the proprietary `text-underline-color` property can be used instead.",
+        "3": "Partial. Not supported with non Google accounts."
+      }
+    },
+    {
+      "slug": "css-text-decoration-line",
+      "title": "text-decoration-line",
+      "description": "Sets the kind of decoration that is used on text in an element, such as an underline or overline.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-text-decoration-line/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-text-decoration-skip-ink",
+      "title": "text-decoration-skip-ink",
+      "description": "Specifies how overlines and underlines are drawn when they pass over glyph ascenders and descenders.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-text-decoration-skip-ink/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-text-decoration-style",
+      "title": "text-decoration-style",
+      "description": "Sets the style of the lines specified by text-decoration-line.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-text-decoration-style/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-text-decoration-thickness",
+      "title": "text-decoration-thickness",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-text-decoration-thickness/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Supported with prefix `-webkit-`.",
+        "2": "Not supported, but the proprietary `text-underline-style` property can be used instead with the keyword value `thick`."
+      }
+    },
+    {
+      "slug": "css-text-emphasis",
+      "title": "text-emphasis",
+      "description": "Applies emphasis marks to text commonly used in East Asian languages. Tests with text-emphasis, text-emphasis-color & text-emphasis-style properties.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-text-emphasis/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-text-emphasis-position",
+      "title": "text-emphasis-position",
+      "description": "Determines the position of the emphasis mark.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-text-emphasis-position/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-text-justify",
+      "title": "text-justify",
+      "description": "Sets what type of justification should be applied to text when `text-align: justify;` is set on an element.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-text-justify/",
+      "outlookWindows": {
+        "2013": "a",
+        "2016": "a",
+        "2019": "a",
+        "2021": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Buggy. `text-justify` is stripped",
+        "2": "Partial. Depends on browser support",
+        "3": "Partial. `text-justify` is stripped except when the value is `inter-character`",
+        "4": "Partial. `text-justify` is stripped except when the value is `inter-word` or `distribute`",
+        "5": "Buggy. `text-justify` values `none`, `inter-word` and `distribute` are replaced with `inter-ideograph`"
+      }
+    },
+    {
+      "slug": "css-text-orientation",
+      "title": "text-orientation",
+      "description": "Sets the orientation of the text characters in vertical mode.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-text-orientation/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. `sideways` is not supported"
+      }
+    },
+    {
+      "slug": "css-text-overflow",
+      "title": "text-overflow",
+      "description": "Tested with the value `ellipsis`.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-text-overflow/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts.",
+        "2": "Not supported. `overflow` is replaced by `java-script`."
+      }
+    },
+    {
+      "slug": "css-text-shadow",
+      "title": "text-shadow",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-text-shadow/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-text-transform",
+      "title": "text-transform",
+      "description": "Each of the six `text-transform` values defined by MDN (`capitalize`, `uppercase`, `lowercase`, `none`, `full-width`, `full-size-kana`).",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-text-transform/",
+      "outlookWindows": {
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": "Currently, only Firefox supports the `full-width` and `full-size-kana` property values. Web clients on Firefox will support these properties.",
+      "notesByNum": {
+        "1": "Partial. `lowercase` value is not supported."
+      }
+    },
+    {
+      "slug": "css-text-underline-offset",
+      "title": "text-underline-offset",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-text-underline-offset/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-text-underline-position",
+      "title": "text-underline-position",
+      "description": "Specifies the position of the underline which is set using the `text-decoration property`'s underline value.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-text-underline-position/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Supports `under` but not `right` and `left`"
+      }
+    },
+    {
+      "slug": "css-text-wrap",
+      "title": "text-wrap",
+      "description": "Controls how text inside an element is wrapped",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-text-wrap/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "css-transform",
+      "title": "transform",
+      "description": "Tested with values `matrix`, `translate`, `scale`, `rotate`, `skew`, `scale translate`.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-transform/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. `scale translate` is not supported."
+      }
+    },
+    {
+      "slug": "css-transition",
+      "title": "transition",
+      "description": "Creates a visual transition when changing CSS properties.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-transition/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "This page accounts for the shorthand `transition` property and the longhand properties `transition-delay`, `transition-duration`, `transition-property` and `transition-timing-function`.",
+      "notesByNum": {
+        "1": "Partial. Longhand properties are not supported.",
+        "2": "Buggy. The `all` keyword is not supported.",
+        "3": "Buggy. `transition-duration` is forced to `0` on a global reset style.",
+        "4": "Transition properties are supported but pseudo-classes like `:hover` are not.",
+        "5": "Partial. Not supported with Outlook accounts."
+      }
+    },
+    {
+      "slug": "css-unit-calc",
+      "title": "CSS calc() function",
+      "description": "Support for CSS calc function.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-unit-calc/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts."
+      }
+    },
+    {
+      "slug": "css-unit-ch",
+      "title": "ch unit",
+      "description": "Support for ch unit, relative to the width of a '0'.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-unit-ch/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {}
+    },
+    {
+      "slug": "css-unit-initial",
+      "title": "initial unit",
+      "description": "Support for initial keyword value.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-unit-initial/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {
+        "1": "Partial. Webmail rendering doesn't work in IE.",
+        "2": "Partial. Not supported with non Google accounts."
+      }
+    },
+    {
+      "slug": "css-unit-rem",
+      "title": "rem unit",
+      "description": "Support for rem unit, relative to the root font-size.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-unit-rem/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {}
+    },
+    {
+      "slug": "css-unit-vh",
+      "title": "vh unit",
+      "description": "Support for viewport height unit.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-unit-vh/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {
+        "1": "Buggy. Can affect the preview window size, meaning content can get lost.",
+        "2": "Buggy. Value resolves to zero"
+      }
+    },
+    {
+      "slug": "css-unit-vmax",
+      "title": "vmax unit",
+      "description": "Support for viewport maximum unit.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-unit-vmax/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {
+        "1": "Buggy. VH values can affect the preview window size, meaning content can get lost.",
+        "2": "Buggy. VH values resolves to zero"
+      }
+    },
+    {
+      "slug": "css-unit-vmin",
+      "title": "vmin unit",
+      "description": "Support for viewport minimum unit.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-unit-vmin/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {
+        "1": "Buggy. VH values can affect the preview window size, meaning content can get lost.",
+        "2": "Buggy. VH values resolves to zero"
+      }
+    },
+    {
+      "slug": "css-unit-vw",
+      "title": "vw unit",
+      "description": "Support for viewport width unit.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-unit-vw/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {
+        "1": "The HTML of the email message is embedded directly on the webmail (not in an <iframe>) and may not fill the full viewport's width. In this case, the vw values are relevant to the viewport (browser window) not the email message."
+      }
+    },
+    {
+      "slug": "css-user-select",
+      "title": "user-select",
+      "description": "Controls whether the user can select text.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-user-select/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Works with `-webkit` prefix",
+        "2": "`all` value does not work",
+        "3": "Property is stripped from style tag",
+        "4": "`none` value does not work, client allow to select text anyway"
+      }
+    },
+    {
+      "slug": "css-variables",
+      "title": "CSS Variables (Custom Properties)",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-variables/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. The `var()` function is supported, but not the variable declaration.",
+        "2": "Partial. Not supported with non Google accounts."
+      }
+    },
+    {
+      "slug": "css-visibility",
+      "title": "visibility",
+      "description": "Tested for values `hidden` and `collapse`.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-visibility/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Buggy. `visibility:collapse` applied to a `<tr>` only hides content and does not \"remove\" it from layout.",
+        "2": "Partially supported. `visibility:collapse` is not supported."
+      }
+    },
+    {
+      "slug": "css-white-space",
+      "title": "white-space",
+      "description": "Tested with the values `nowrap` and `pre`.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-white-space/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts.",
+        "2": "Partial. `pre` value is not supported."
+      }
+    },
+    {
+      "slug": "css-white-space-collapse",
+      "title": "white-space-collapse",
+      "description": "Controls how white space inside an element is collapsed.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-white-space-collapse/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. `preserve-spaces` value works only on Firefox."
+      }
+    },
+    {
+      "slug": "css-widows",
+      "title": "widows",
+      "description": "Sets the minimum number of lines in a block container split on a new page, region or column.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-widows/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Buggy. `columns` property is stripped which is required for `widows` to work",
+        "2": "Buggy. `widows` property value is replaced by `auto`",
+        "3": "Not supported, but Gmail's default styles on the email message container includes the `widows` property. These values are inherited by children elements",
+        "4": "Webmail rendering depends on browser support"
+      }
+    },
+    {
+      "slug": "css-width",
+      "title": "width property",
+      "description": null,
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-width/",
+      "outlookWindows": {
+        "2003": "y",
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported on `<body>`, `<span>`, `<div>`, `<p>` or `<img>` elements.",
+        "2": "Buggy. The webmail has a generic style that sets `table { width:inherit; }`."
+      }
+    },
+    {
+      "slug": "css-word-spacing",
+      "title": "word-spacing",
+      "description": "Sets the length of space between words and between tags.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-word-spacing/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Does not support `rem` and `ch` values."
+      }
+    },
+    {
+      "slug": "css-word-wrap",
+      "title": "word-wrap",
+      "description": "The word-wrap CSS property (now standardized as overflow-wrap) controls whether the browser should break words to prevent them from overflowing their container. When set to break-word, it forces otherwise unbreakable strings to wrap onto the next line to avoid layout issues.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-word-wrap/",
+      "outlookWindows": {
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Applies `word-wrap: break-word` to all items.",
+        "2": "Does not honor any wrapping, including `word-wrap`, `overflow-wrap`, and `word-break`. Using an equivalent MSO breakdown (`-ms-word-break: break-all` and `mso-hyphenate: none` together) does not work.",
+        "3": "Supports both `word-wrap` and equivalent MSO breakdown (`-ms-word-break: break-all` and `mso-hyphenate: none` together)",
+        "4": "`word-wrap` is correctly supported, however `word-break` seems to break for all values"
+      }
+    },
+    {
+      "slug": "css-writing-mode",
+      "title": "writing-mode",
+      "description": "Sets whether lines of text are laid out horizontally or vertically.",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-writing-mode/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts."
+      }
+    },
+    {
+      "slug": "css-z-index",
+      "title": "z-index",
+      "description": "",
+      "category": "css",
+      "url": "https://www.caniemail.com/features/css-z-index/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "html-abbr",
+      "title": "<abbr> element",
+      "description": "Represents an abbreviation or acronym.",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-abbr/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Buggy. Element's content are still kept."
+      }
+    },
+    {
+      "slug": "html-acronym",
+      "title": "<acronym> element",
+      "description": "Represents an abbreviation or acronym.",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-acronym/",
+      "outlookWindows": {
+        "2013": "n",
+        "2016": "n",
+        "2019": "n",
+        "2021": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Buggy. `title` attribute is removed but keeps `<acronym>` tag."
+      }
+    },
+    {
+      "slug": "html-aria-describedby",
+      "title": "aria-describedby attribute",
+      "description": "",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-aria-describedby/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Buggy. `id` prefix mismatched. The `id` value is prefixed but not the `aria-describedby` value."
+      }
+    },
+    {
+      "slug": "html-aria-labelledby",
+      "title": "aria-labelledby attribute",
+      "description": "",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-aria-labelledby/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Buggy. `id` is removed.",
+        "2": "Buggy. `id` prefix mismatched. The `id` value is prefixed but not the `aria-labelledby` value."
+      }
+    },
+    {
+      "slug": "html-aria-live",
+      "title": "aria-live attribute",
+      "description": "",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-aria-live/",
+      "outlookWindows": {
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Unable to trigger live change to test.",
+        "2": "Code isn't stripped but can't trigger a live change."
+      }
+    },
+    {
+      "slug": "html-audio",
+      "title": "<audio> element",
+      "description": "This is the description of the `<audio>` element.",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-audio/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Does not play.",
+        "2": "The `src` attribute is transformed into `proton-src`.",
+        "3": "The `<audio>` element is supported but can not be played.",
+        "4": "The `<audio>` element is supported, but the video can not play due to a strict Content Security Policy.",
+        "5": "Not supported. The `<audio>` element and all its content is removed.",
+        "6": "Not supported. The `src` attribute is replaced by `data-src`."
+      }
+    },
+    {
+      "slug": "html-background",
+      "title": "background attribute",
+      "description": "The HTML `background` attribute can only be used on `<body>`, `<table>`, `<td>` and `<th>` elements.",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-background/",
+      "outlookWindows": {
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts.",
+        "2": "Partial. Only supported on the `<body>` element."
+      }
+    },
+    {
+      "slug": "html-bdi",
+      "title": "<bdi> element",
+      "description": "",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-bdi/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "html-button-reset",
+      "title": "<button type=\"reset\"> element",
+      "description": "HTML button type reset",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-button-reset/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts.",
+        "2": "Buggy. Interacting with the element submits the form it belongs in.",
+        "3": "Partial. The element is present but is not interactive."
+      }
+    },
+    {
+      "slug": "html-button-submit",
+      "title": "<button type=\"submit\"> element",
+      "description": "HTML button type submit",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-button-submit/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts.",
+        "2": "Partial. The element is present but is not interactive."
+      }
+    },
+    {
+      "slug": "html-command-attribute",
+      "title": "command and commandfor attributes",
+      "description": "Attributes used to manage popover and dialog open states. Replacing popovertarget/popovertargetaction",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-command-attribute/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with Microsoft (Hotmail/Outlook) accounts.",
+        "2": "Buggy. Webmail styles set dialog to display:block so we need to revert with display:revert"
+      }
+    },
+    {
+      "slug": "html-dfn",
+      "title": "<dfn> element",
+      "description": "It is used to identify a term that is going to be described within the content.",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-dfn/",
+      "outlookWindows": {
+        "2013": "a",
+        "2016": "a",
+        "2019": "a",
+        "2021": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. The `title` attribute is removed."
+      }
+    },
+    {
+      "slug": "html-dialog",
+      "title": "<dialog> element",
+      "description": "",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-dialog/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": null
+    },
+    {
+      "slug": "html-dir",
+      "title": "dir attribute",
+      "description": "Indicates the directionality of the element's text.",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-dir/",
+      "outlookWindows": {
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Buggy. The client applies an `rtl` direction to the entire email if it contains text in a `rtl` language.",
+        "2": "Partial. Removed from `<table>` and `<td>` elements.",
+        "3": "Buggy on anchor `<a>` tags.",
+        "4": "Buggy. LTR text in `[dir=rtl]` (and vice versa) is rendered with reversed word order."
+      }
+    },
+    {
+      "slug": "html-doctype",
+      "title": "HTML5 doctype",
+      "description": null,
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-doctype/",
+      "outlookWindows": {
+        "2003": "a",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Buggy. Renders as if there was no doctype with an Outlook email, and in HTML5 otherwise.",
+        "2": "Not supported. The HTML5 doctype has no impact here.",
+        "3": "Partial support. Depends on the version of Internet Explorer installed."
+      }
+    },
+    {
+      "slug": "html-form",
+      "title": "<form> element",
+      "description": "The ability to submit an HTML form via email, this requires support of at least one form element, at least one form method and either input submit or button submit to pass data to an end point.",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-form/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {
+        "1": "Does not submit in iOS with non Google accounts.",
+        "2": "On submit name values are prefixed with `x_`.",
+        "3": "Does not submit in preview pane, but does when the email is opened in a new window.",
+        "4": "Not supported. `<form>` is transformed into `<noform>`.",
+        "5": "Not supported. The `<form>` and its entire content is removed.",
+        "6": "Not supported. The `<form>` is there but values are not submitted."
+      }
+    },
+    {
+      "slug": "html-height",
+      "title": "height attribute",
+      "description": null,
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-height/",
+      "outlookWindows": {
+        "2003": "y",
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Buggy. Percentage width on `<img>` elements are based on the physical file's width, not on the parent element's width.",
+        "2": "Buggy. Sizes set in attributes don't scale in 120 dpi mode."
+      }
+    },
+    {
+      "slug": "html-hidden",
+      "title": "hidden attribute",
+      "description": "The global HTML `hidden` attribute",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-hidden/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Does not support the unquoted attribute value syntax `<div hidden></div>`"
+      }
+    },
+    {
+      "slug": "html-input-checkbox",
+      "title": "<input type=\"checkbox\"> element",
+      "description": "HTML input type checkbox",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-input-checkbox/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {
+        "1": "Not supported. `<input>` is transformed into `<noinput>`.",
+        "2": "Buggy. Interacting with the element submits the form it belongs in."
+      }
+    },
+    {
+      "slug": "html-input-hidden",
+      "title": "<input type=\"hidden\"> element",
+      "description": "HTML input type hidden",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-input-hidden/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {
+        "1": "Not supported. `<input>` is transformed into `<noinput>`.",
+        "2": "Buggy. Interacting with the element submits the form it belongs in."
+      }
+    },
+    {
+      "slug": "html-input-radio",
+      "title": "<input type=\"radio\"> element",
+      "description": "HTML input type radio",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-input-radio/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {
+        "1": "Not supported. `<input>` is transformed into `<noinput>`.",
+        "2": "Buggy. Interacting with the element submits the form it belongs in."
+      }
+    },
+    {
+      "slug": "html-input-reset",
+      "title": "<input type=\"reset\"> element",
+      "description": "HTML input type reset",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-input-reset/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts.",
+        "2": "Not supported. `<input>` is transformed into `<noinput>`.",
+        "3": "Buggy. Interacting with the element submits the form it belongs in."
+      }
+    },
+    {
+      "slug": "html-input-submit",
+      "title": "<input type=\"submit\"> element",
+      "description": "HTML input type submit",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-input-submit/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {
+        "1": "Partial. Not supported with non Google accounts.",
+        "2": "Not supported. `<input>` is transformed into `<noinput>`."
+      }
+    },
+    {
+      "slug": "html-input-text",
+      "title": "<input type=\"text\"> element",
+      "description": "HTML input type text",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-input-text/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {
+        "1": "Buggy. Email scrolls to the end when space bar is pressed.  This can be fixed by wrapping the `<input>` in `<ul role=\"presentation\">`.",
+        "2": "Buggy. Screen jumps when input is in focus.",
+        "3": "Buggy. A number of Android clients will not show the keyboard when the input is clicked. Copy and pasting text works.",
+        "4": "Not supported. `<input>` is transformed into `<noinput>`.",
+        "5": "Buggy. Interacting with the element submits the form it belongs in."
+      }
+    },
+    {
+      "slug": "html-lists",
+      "title": "<ul>, <ol> and <dl>",
+      "description": "Support for lists in HTML: `<ul>`, `<ol>`, `<li>`, `<dl>`, `<dt>` and `<dd>` elements.",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-lists/",
+      "outlookWindows": {
+        "2003": "a",
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. The `reversed` attribute on `<ol>` is not supported.",
+        "2": "Partial. Setting the `value` attribute to an `<li>` within an `<ol>` results in a different behaviour in comparison to browsers. The `<ol>` tag is closed before the `<li value=\"\">`. A new `<ol>` is added with the `start` attribute on it set to the value of the `value` attribute of the `<li>`."
+      }
+    },
+    {
+      "slug": "html-loading-attribute",
+      "title": "loading attribute",
+      "description": "The `loading` attribute on `img` indicates how the browser should load the image.",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-loading-attribute/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "The `loading` attribute is supported, but not confirmed whether it works according to spec.",
+        "2": "The `loading` attribute is supported by the email client, but not by the browser engine.",
+        "3": "Not supported. The webmail adds `loading=\"lazy\"` to all images."
+      }
+    },
+    {
+      "slug": "html-marquee",
+      "title": "<marquee> element",
+      "description": "This is the description of the `<marquee>` element.",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-marquee/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "The `<marquee>` element is supported but the animation doesn't play in Internet Explorer or Firefox.",
+        "2": "The `behavior` attribute is not supported.",
+        "3": "The `<marquee>` element is supported but not the `behavior` or `direction` attributes."
+      }
+    },
+    {
+      "slug": "html-meta-color-scheme",
+      "title": "color-scheme meta tag",
+      "description": "Changes the default colors of HTML elements. Useful for when you want an email to display only in a dark color scheme or only a light scheme, regardless of user settings. Equivalent to setting the color-scheme CSS property on the root element",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-meta-color-scheme/",
+      "outlookWindows": {
+        "2003": "u",
+        "2007": "u",
+        "2010": "u",
+        "2013": "u",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": null
+    },
+    {
+      "slug": "html-meter",
+      "title": "<meter> element",
+      "description": "",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-meter/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Supported with non Google accounts only."
+      }
+    },
+    {
+      "slug": "html-object",
+      "title": "<object> element",
+      "description": null,
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-object/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial support. Does not support Videos resources.",
+        "2": "Partial support. Does not support PDF resources.",
+        "3": "Not supported. `<object>` is turned into `<noobject>`.",
+        "4": "Not supported. The `<object>` element and all its content is removed."
+      }
+    },
+    {
+      "slug": "html-picture",
+      "title": "<picture> element",
+      "description": "This is the description of the `<picture>` element.",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-picture/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {
+        "1": "`<picture>` and `<source>` tags are replaced by `<u></u>` tags.",
+        "2": "`<picture>` tag is stripped in some cases (like having too few content or no background-color)."
+      }
+    },
+    {
+      "slug": "html-popover",
+      "title": "popover attribute",
+      "description": "Show and hide things",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-popover/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Not supported with Hotmail/Outlook accounts.",
+        "2": "Partial. The `popovertarget` attribute is supported, but the `popover` attribute and the `dialog` element are not.",
+        "3": "Buggy. A button with just an image inside will trigger an image zoom rather than the popover.",
+        "4": "Partial. Does not work with command/commandfor attributes only with popovertarget/popovertargetaction"
+      }
+    },
+    {
+      "slug": "html-progress",
+      "title": "<progress> element",
+      "description": "",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-progress/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Supported with non Google accounts only."
+      }
+    },
+    {
+      "slug": "html-required",
+      "title": "required attribute",
+      "description": "Required attribute on form elements",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-required/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {
+        "1": "Partial. Only supported with non Google accounts.",
+        "2": "Partial. The `required` attribute is supported, but form elements are not."
+      }
+    },
+    {
+      "slug": "html-rp",
+      "title": "<rp> element",
+      "description": "",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-rp/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Supported with non Google accounts only."
+      }
+    },
+    {
+      "slug": "html-rt",
+      "title": "<rt> element",
+      "description": "",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-rt/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Supported with non Google accounts only."
+      }
+    },
+    {
+      "slug": "html-ruby",
+      "title": "<ruby> element",
+      "description": "",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-ruby/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Supported with non Google accounts only."
+      }
+    },
+    {
+      "slug": "html-select",
+      "title": "<select> element",
+      "description": "HTML select menu",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-select/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {
+        "1": "Buggy. Works if the email is shorter than the viewport. Otherwise the screen goes blank when the `<select>` is in focus.",
+        "2": "Not supported. `<select>` is transformed into `<noselect>`.",
+        "3": "Buggy. Interacting with the element submits the form it belongs in."
+      }
+    },
+    {
+      "slug": "html-semantics",
+      "title": "HTML5 semantics",
+      "description": "This includes support for `<article>`, `<aside>`, `<details>`, `<figcaption>`, `<figure>`, `<footer>`, `<header>`, `<main>`, `<mark>`, `<nav>`, `<section>`, `<summary>`, `<time>` elements.",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-semantics/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Only `<time>` is supported.",
+        "2": "Partial. `<details>`, `<main>`, `<nav>` and `<summary>` are not supported. Opening and closing tags are replaced by `<u></u>`.",
+        "3": "Partial. `<article>` is not supported.",
+        "4": "Unsupported opening and closing tags are stripped.",
+        "5": "Partial. `<article>`, `<aside>`, `<header>`, `<main>` `<nav>`, `<section>`, `<summary>` are not supported."
+      }
+    },
+    {
+      "slug": "html-srcset",
+      "title": "srcset and sizes attributes",
+      "description": "This is the description of the `srcset` and `sizes` attributes.",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-srcset/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {
+        "1": "`<picture>` and `<source>` tags are replaced by `<u></u>` tags.",
+        "2": "The `sizes` attribute is supported but not `srcset`."
+      }
+    },
+    {
+      "slug": "html-style",
+      "title": "<style> element",
+      "description": "An HTML element to contain style information, in CSS, for a document or part of a document.",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-style/",
+      "outlookWindows": {
+        "2003": "y",
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": "",
+      "notesByNum": {
+        "1": "Partial. Not supported inside the `<body>`.",
+        "2": "Partial. Not supported with non Google accounts.",
+        "3": "Buggy. The first `<head>` in the HTML is removed, so `<style>` elements need to be in a second `<head>` element.",
+        "4": "Buggy. `<style>` elements need to be declared before their rules are used.",
+        "5": "A CSS rule following a CSS comment is ignored. (See [email-bugs#25](https://github.com/hteumeuleu/email-bugs/issues/25).)",
+        "6": "The size of the `<style>` tag [is limited to 16 KB](https://github.com/hteumeuleu/email-bugs/issues/90)"
+      }
+    },
+    {
+      "slug": "html-svg",
+      "title": "Embedded <svg> image",
+      "description": "Support for embedded `<svg>` images. See [SVG html](/features/image-svg) for linked external SVG support.",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-svg/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {
+        "1": "Buggy. Requires a background on the `<body>`. Can be any type of background, image or a color, can be set as attribute, inline style or in `<style>` block",
+        "2": "Not supported. Element is removed along with any fallback content."
+      }
+    },
+    {
+      "slug": "html-target",
+      "title": "target attribute",
+      "description": "Where to display the linked URL on `<a>` elements.",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-target/",
+      "outlookWindows": {
+        "2007": "u",
+        "2010": "u",
+        "2013": "u",
+        "2016": "u",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Not supported. `target=\"_blank\"` is forced on all links.",
+        "2": "Supported. But `target=\"_blank\"` is forced if the attribute is missing.",
+        "3": "The attribute is supported but links always open in a new window anyway."
+      }
+    },
+    {
+      "slug": "html-textarea",
+      "title": "<textarea> element",
+      "description": "HTML input type text",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-textarea/",
+      "outlookWindows": {
+        "2003": "n",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": "",
+      "notesByNum": {
+        "1": "Buggy. Email scrolls to the end when space bar is pressed.  This can be fixed by wrapping the `<input>` in `<ul role=\"presentation\">`.",
+        "2": "Buggy. Screen jumps when input is in focus.",
+        "3": "Buggy. A number of android clients will not show the keyboard when the input is clicked.  Copy and pasting text works.",
+        "4": "Not supported. `<textarea>` is transformed into `<notextarea>`.",
+        "5": "Buggy. Interacting with the element submits the form it belongs in."
+      }
+    },
+    {
+      "slug": "html-video",
+      "title": "<video> element",
+      "description": null,
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-video/",
+      "outlookWindows": {
+        "2003": "y",
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "The `<video>` element is supported, but not the inner `<source>` element so no video can play.",
+        "2": "`<video>`, `<source>` and `<track>` tags are replaced by `<u></u>` tags.",
+        "3": "Buggy. Support depends on the version of Internet Explorer installed.",
+        "4": "`<video>`, `<source>` and `<track>` tags are stripped. The fallback content is shown instead.",
+        "5": "Partial support. Requires the `controls` attribute to play.",
+        "6": "Partial support. `autoplay` is not supported.",
+        "7": "The `<video>` element is supported and the `poster` image is visible, but the video can not play due to a strict Content Security Policy.",
+        "8": "The `<video>` element is supported, but the video can not play due to a strict Content Security Policy.",
+        "9": "Not supported. The `<video>` element and all its content is removed.",
+        "10": "Not supported. The `src` attribute is replaced by `data-src`.",
+        "11": "Partial support. The video can be played by doing a right click and play. But `autoplay` and `controls` are not supported."
+      }
+    },
+    {
+      "slug": "html-wbr",
+      "title": "<wbr> element",
+      "description": "",
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-wbr/",
+      "outlookWindows": {
+        "2007": "n",
+        "2010": "n",
+        "2013": "n",
+        "2016": "n",
+        "2019": "n"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Partial. Supported with non Google accounts only."
+      }
+    },
+    {
+      "slug": "html-width",
+      "title": "width attribute",
+      "description": null,
+      "category": "html",
+      "url": "https://www.caniemail.com/features/html-width/",
+      "outlookWindows": {
+        "2003": "y",
+        "2007": "a",
+        "2010": "a",
+        "2013": "a",
+        "2016": "a",
+        "2019": "a"
+      },
+      "notes": null,
+      "notesByNum": {
+        "1": "Buggy. Percentage width on `<img>` elements are based on the physical file's width, not on the parent element's width.",
+        "2": "Buggy. Sizes set in attributes don't scale in 120 dpi mode.",
+        "3": "The `width` attribute is ignored on CID embedded images. See [#171](https://github.com/hteumeuleu/caniemail/issues/171)."
+      }
+    }
+  ]
+}

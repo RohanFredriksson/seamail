@@ -8,6 +8,8 @@ seamail/report.html
 # versioned. Scripts, README and the cached gimmicks.json dataset ARE tracked.
 tools/outlook-ground-truth/fixtures/
 tools/outlook-ground-truth/captures/
+tools/outlook-ground-truth/renders/
+tools/outlook-ground-truth/seamail.lock
 
 # logs
 npm-debug.log*
