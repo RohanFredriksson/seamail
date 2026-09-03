@@ -46,6 +46,19 @@ CI-compatible exit codes, basic reporting, docs. Not 1.0.
 - [x] Registry resolves `name@version` -> implementation (`src/registry.ts`)
 - [ ] Compatibility rules documented as data (not just code) per environment — currently implicit in `process()` implementations, not separately declared/testable metadata
 
+## Milestone 3.5 — Outlook classic fidelity (simulated → high)
+
+- [ ] `tools/outlook-ground-truth/` scaffolded: `fetch-gimmicks.mjs` (pulls
+      the MIT-licensed Can I Email dataset, filters to CSS/HTML features
+      Outlook Windows renders as unsupported/partial), `generate-fixtures.mjs`
+      (one isolated fixture skeleton per gimmick), `capture.ps1` (Windows +
+      real Outlook desktop via COM automation, produces ground-truth
+      screenshots). Manual/local only - not in CI (see tool's README for why).
+- [ ] Fill in the generated fixture skeletons with minimal markup per gimmick
+- [ ] Run `capture.ps1` on a Windows box with Outlook installed, diff against
+      `outlook-classic@v1` output, feed findings back into
+      `STRIPPED_DECLARATIONS`/VML approximation/capability map
+
 ## Milestone 3 — Stabilize the 3 PoC environments + fixtures
 
 - [x] `gmail-desktop@v1`, `apple-mail-macos@v1`, `outlook-classic@v1` implemented and tested

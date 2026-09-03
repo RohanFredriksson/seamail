@@ -3,6 +3,12 @@ dist/
 seamail/results/
 seamail/report.html
 
+# Outlook ground-truth tooling: generated fixtures and real-Outlook
+# screenshots are machine/Outlook-version-specific and not meant to be
+# versioned. Scripts, README and the cached gimmicks.json dataset ARE tracked.
+tools/outlook-ground-truth/fixtures/
+tools/outlook-ground-truth/captures/
+
 # logs
 npm-debug.log*
 *.log
