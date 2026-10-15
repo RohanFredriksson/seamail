@@ -38,8 +38,9 @@ cp "$WORK/usr/lib/x86_64-linux-gnu/libicuuc.so.74.2" "$SHIM_DIR/libicuuc.so.74"
 cp "$WORK/usr/lib/x86_64-linux-gnu/libjpeg.so.8.2.2" "$SHIM_DIR/libjpeg.so.8"
 
 for wrapper in "$WEBKIT_DIR/minibrowser-gtk/MiniBrowser" "$WEBKIT_DIR/minibrowser-wpe/MiniBrowser"; do
-  if [[ -f "$wrapper" ]] && ! grep -q "$SHIM_DIR" "$wrapper"; then
-    sed -i "s|^export LD_LIBRARY_PATH=\"\${MYDIR}/lib:\${MYDIR}/sys/lib\"\$|export LD_LIBRARY_PATH=\"\${MYDIR}/lib:\${MYDIR}/sys/lib:$SHIM_DIR\"|" "$wrapper"
+  if [[ -f "$wrapper" ]] && ! grep -qF "$SHIM_DIR" "$wrapper"; then
+    # Drop any stale shim path (e.g. from the pre-rename "cmail" cache dir), then append ours.
+    sed -i -E "s|:[^:\"]*webkit-libshim||; s|^(export LD_LIBRARY_PATH=\"[^\"]*)\"\$|\1:$SHIM_DIR\"|" "$wrapper"
   fi
 done
 

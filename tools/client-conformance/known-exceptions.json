@@ -1,0 +1,15 @@
+{
+  "gmail-desktop": {
+    "css-display-flex": "fixture also uses justify-content, which Gmail drops (css-justify-content: n)",
+    "css-display-grid": "fixture also uses grid-template-columns, which Gmail drops (css-grid-template: n)"
+  },
+  "apple-mail-macos": {
+    "css-pseudo-class-active": "state-dependent pseudo-class never matches in a static render",
+    "css-pseudo-class-focus": "state-dependent pseudo-class never matches in a static render",
+    "css-pseudo-class-target": "state-dependent pseudo-class never matches in a static render",
+    "css-pseudo-class-visited": "state-dependent pseudo-class never matches in a static render",
+    "css-border-inline-block": "dataset result is macOS 10.15 WebKit; modelled WebKit supports it",
+    "css-border-radius-logical": "dataset result is macOS 10.15 WebKit; modelled WebKit supports it",
+    "css-inline-size": "dataset result is macOS 12.4 WebKit; modelled WebKit supports it"
+  }
+}

@@ -3,6 +3,9 @@
  * environments. Environments never launch their own browsers directly - they
  * borrow pages from here, so the runner controls process lifecycle centrally.
  */
+import { existsSync } from "node:fs";
+import { homedir } from "node:os";
+import path from "node:path";
 import { createRequire } from "node:module";
 import { chromium, webkit, type Browser, type Page } from "playwright";
 import { SeamailError } from "./errors.js";
@@ -14,7 +17,19 @@ const PLAYWRIGHT_VERSION: string = (require("playwright/package.json") as { vers
 let chromiumBrowser: Browser | null = null;
 let webkitBrowser: Browser | null = null;
 
+// Playwright's host-dependency check can't see the library shim installed by
+// scripts/fix-webkit-linux-deps.sh, so it refuses to launch WebKit even though
+// the patched launcher works. Skip that check when the shim is present.
+function allowWebkitLibShim(): void {
+  const shim =
+    process.env.SEAMAIL_WEBKIT_LIBSHIM ?? path.join(homedir(), ".cache/seamail/webkit-libshim");
+  if (process.platform === "linux" && existsSync(shim)) {
+    process.env.PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS ??= "1";
+  }
+}
+
 async function launch(engine: "chromium" | "webkit"): Promise<Browser> {
+  if (engine === "webkit") allowWebkitLibShim();
   try {
     return await (engine === "chromium" ? chromium : webkit).launch({ headless: true });
   } catch (err) {
