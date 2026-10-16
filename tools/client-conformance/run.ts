@@ -26,6 +26,8 @@ import { DEFAULT_CONDITIONS } from "../../src/types.js";
 
 interface Template {
   head?: string;
+  /** Inline style for <body> itself (only for fixtures that test body handling). */
+  bodyStyle?: string;
   body: string;
 }
 interface Feature {
@@ -44,8 +46,10 @@ function buildFixture(slug: string, title: string, t: Template): string {
     <meta charset="utf-8" />
     <title>${title.replace(/</g, "&lt;")}</title>${t.head ? `\n    ${t.head}` : ""}
   </head>
-  <body style="margin:0;padding:20px;font-family:'Times New Roman',serif;">
+  <body${t.bodyStyle ? ` style="${t.bodyStyle}"` : ""}>
+    <div style="padding:20px;font-family:'Times New Roman',serif;">
     ${t.body}
+    </div>
   </body>
 </html>
 `;
@@ -55,11 +59,24 @@ function buildFixture(slug: string, title: string, t: Template): string {
  * Canonical form for "did processing change anything?". Sanitisers re-emit
  * CSS with their own whitespace/semicolons, which is not a behavioural change.
  */
+const tokens = (html: string) =>
+  new Set(
+    normalize(html)
+      .split(/[;{}<>]/)
+      .filter(Boolean),
+  );
+function removedTokens(before: string, after: string): string[] {
+  const kept = tokens(after);
+  return [...tokens(before)].filter((t) => !kept.has(t)).slice(0, 6);
+}
+
 const normalize = (html: string) =>
   parse(html)
     .toString()
+    .replace(/\/\*[\s\S]*?\*\//g, "")
     .replace(/\s+/g, " ")
-    .replace(/\s*\/?>/g, ">")
+    .replace(/\s*\/?>\s*/g, ">")
+    .replace(/\s*</g, "<")
     .replace(/\s*([:;{},])\s*/g, "$1")
     .replace(/;(?=["'}])/g, "")
     .trim();
@@ -79,6 +96,8 @@ interface Row {
   htmlChanged: boolean;
   pixelsChanged: number;
   verdict: Verdict;
+  /** Tokens present before processing but missing after (and vice versa), for diagnosis. */
+  removed: string[];
 }
 
 const args = process.argv.slice(2);
@@ -90,7 +109,9 @@ const onlyEnv = argVal("--env");
 const jsonOut = argVal("--json");
 const onlySlug = argVal("--slug");
 
-const { features } = JSON.parse(await readFile(path.join(HERE, "support.json"), "utf-8")) as {
+const { features } = JSON.parse(
+  await readFile(path.join(HERE, "../../src/data/caniemail-support.json"), "utf-8"),
+) as {
   features: Feature[];
 };
 
@@ -120,6 +141,7 @@ try {
         const out = await env.render(processed, DEFAULT_CONDITIONS);
         return {
           htmlChanged: normalize(html) !== normalize(processed),
+          removed: removedTokens(html, processed),
           pixelsChanged: pixelsDiffer(raw.screenshot, out.screenshot),
         };
       };
@@ -131,7 +153,7 @@ try {
         await env.prepare();
         result = await attempt();
       }
-      const { htmlChanged, pixelsChanged } = result;
+      const { htmlChanged, pixelsChanged, removed } = result;
       const changed = htmlChanged || pixelsChanged > 0;
       let verdict: Verdict = "info";
       if (exp.code === "y") verdict = changed ? "over-stripped" : "pass";
@@ -151,6 +173,7 @@ try {
         htmlChanged,
         pixelsChanged: Number.isFinite(pixelsChanged) ? pixelsChanged : -1,
         verdict,
+        removed,
       });
     }
     await env.dispose();
@@ -170,7 +193,9 @@ for (const ref of refs) {
   for (const r of mine.filter(
     (r) => r.verdict === "over-stripped" || r.verdict === "not-stripped",
   )) {
-    console.log(`  ${r.verdict.padEnd(13)} ${r.slug}  (client says: ${r.expected})`);
+    console.log(
+      `  ${r.verdict.padEnd(13)} ${r.slug}  (client says: ${r.expected})${r.removed.length ? `  dropped: ${r.removed.join(" | ")}` : ""}`,
+    );
   }
 }
 if (jsonOut) {

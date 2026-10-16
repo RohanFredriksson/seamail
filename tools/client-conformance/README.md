@@ -3,7 +3,7 @@
 Automated feedback loop for the non-Outlook environments. It needs no
 Windows box, no real client and no screenshots of third-party software - the
 ground truth is [Can I Email](https://www.caniemail.com)'s per-feature support
-data (MIT), cached in `support.json`.
+data (MIT), cached in `src/data/caniemail-support.json`.
 
 ```bash
 npm run conformance                         # all non-Outlook envs
@@ -29,9 +29,17 @@ pseudo-classes (`:active`...), and dataset rows that describe much older
 engines than the one we render with are listed with a reason in
 `known-exceptions.json` and reported as `excused`.
 
-The rules being scored live next to each environment
-(`environments/*/v1/rules.ts`) as data, evaluated by `src/emailCss.ts`.
-Workflow: run, read the failures, adjust the rules, re-run.
+Gmail, Yahoo, Outlook.com, Proton and Fastmail are all built by
+`src/webmailEnvironment.ts` from the dataset: every feature a client marks
+`n` is looked up in the catalog `src/featureRules.ts` (slug -> the CSS/HTML
+constructs to strip). Adding a client means adding a target to
+`fetch-support.mjs`, a 10-line `environments/<name>/v1/index.ts`, and a
+registry entry. `tests/environments/webmail.test.ts` fails if the dataset
+marks something unsupported that the catalog has no rule for. Apple Mail is
+the permissive exception and keeps its tiny hand-written rule list.
+
+Workflow: run, read the failures (each lists the declarations that were
+dropped), fix the catalog or add a documented exception, re-run.
 
 Limits: this checks that the *sanitisation* matches the client, not that
 every pixel of Gmail's own chrome/typography matches. It cannot see

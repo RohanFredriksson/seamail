@@ -13,6 +13,8 @@ export interface CssPolicy {
   dropDeclaration?(prop: string, value: string): boolean;
   /** Return true to drop the entire rule (CSS invalidates a whole selector list). */
   dropSelector?(selector: string): boolean;
+  /** Like dropSelector, but sees the whole comma-separated list (e.g. for "grouping"). */
+  dropSelectorList?(selectors: string[]): boolean;
   /** Return true to drop an at-rule (and everything inside it). `name` excludes "@". */
   dropAtRule?(name: string, prelude: string, body: string | null): boolean;
   /** Remove nested rules (CSS nesting) from style rule bodies, keeping their declarations. */
@@ -139,6 +141,7 @@ function sanitizeBlocks(blocks: Block[], policy: CssPolicy): string {
     if (body === null) continue;
     const selectors = splitTopLevel(prelude, ",").map((s) => s.trim());
     if (policy.dropSelector && selectors.some((s) => policy.dropSelector!(s))) continue;
+    if (policy.dropSelectorList?.(selectors)) continue;
     let declBody = body;
     if (body.includes("{")) {
       // Nested rules: split them from the declarations that precede/surround them.

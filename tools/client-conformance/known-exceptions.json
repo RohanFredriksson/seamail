@@ -11,5 +11,51 @@
     "css-border-inline-block": "dataset result is macOS 10.15 WebKit; modelled WebKit supports it",
     "css-border-radius-logical": "dataset result is macOS 10.15 WebKit; modelled WebKit supports it",
     "css-inline-size": "dataset result is macOS 12.4 WebKit; modelled WebKit supports it"
+  },
+  "outlook-com": {
+    "css-background-blend-mode": "fixture also uses linear-gradient (css-linear-gradient: n), which this client drops",
+    "css-display-grid": "fixture also uses grid-template-columns (css-grid-template: n), which this client drops",
+    "html-aria-describedby": "fixture also uses an untyped <button> (html-button-submit: n), which this client drops"
+  },
+  "yahoo-desktop": {
+    "css-at-keyframes": "fixture also uses animation (css-animation: n), which this client drops",
+    "css-background-position": "fixture also uses height (css-height: n), which this client drops",
+    "css-background-repeat": "fixture also uses height (css-height: n), which this client drops",
+    "css-background-size": "fixture also uses height (css-height: n), which this client drops",
+    "css-display-flex": "fixture also uses justify-content (css-justify-content: n), which this client drops",
+    "css-display-grid": "fixture also uses grid-template-columns and gap (n), which this client drops",
+    "css-unit-vh": "fixture also uses height (css-height: n), which this client drops",
+    "css-vertical-align": "fixture also uses height (css-height: n), which this client drops",
+    "css-z-index": "fixture also uses position / top / left (n), which this client drops",
+    "html-wbr": "fixture also uses word-break (css-word-break: n), which this client drops"
+  },
+  "protonmail-desktop": {
+    "css-at-media-hover": "dataset (2020-03) marks every selector type unsupported, i.e. <style> rules are dropped, so this 'supported' feature cannot render from a <style> block",
+    "css-comments": "dataset (2020-03) marks every selector type unsupported, i.e. <style> rules are dropped, so this 'supported' feature cannot render from a <style> block",
+    "css-nesting": "dataset (2020-03) marks every selector type unsupported, i.e. <style> rules are dropped, so this 'supported' feature cannot render from a <style> block",
+    "css-pseudo-class-active": "dataset (2020-03) marks every selector type unsupported, i.e. <style> rules are dropped, so this 'supported' feature cannot render from a <style> block",
+    "css-pseudo-class-focus": "dataset (2020-03) marks every selector type unsupported, i.e. <style> rules are dropped, so this 'supported' feature cannot render from a <style> block",
+    "css-pseudo-class-focus-visible": "dataset (2020-03) marks every selector type unsupported, i.e. <style> rules are dropped, so this 'supported' feature cannot render from a <style> block",
+    "css-pseudo-class-focus-within": "dataset (2020-03) marks every selector type unsupported, i.e. <style> rules are dropped, so this 'supported' feature cannot render from a <style> block",
+    "css-pseudo-class-has": "dataset (2020-03) marks every selector type unsupported, i.e. <style> rules are dropped, so this 'supported' feature cannot render from a <style> block",
+    "css-pseudo-class-hover": "dataset (2020-03) marks every selector type unsupported, i.e. <style> rules are dropped, so this 'supported' feature cannot render from a <style> block",
+    "css-pseudo-class-lang": "dataset (2020-03) marks every selector type unsupported, i.e. <style> rules are dropped, so this 'supported' feature cannot render from a <style> block",
+    "css-pseudo-element-marker": "dataset (2020-03) marks every selector type unsupported, i.e. <style> rules are dropped, so this 'supported' feature cannot render from a <style> block",
+    "css-scroll-snap": "dataset (2020-03) marks every selector type unsupported, i.e. <style> rules are dropped, so this 'supported' feature cannot render from a <style> block",
+    "css-transition": "dataset (2020-03) marks every selector type unsupported, i.e. <style> rules are dropped, so this 'supported' feature cannot render from a <style> block",
+    "css-variables": "dataset (2020-03) marks every selector type unsupported, i.e. <style> rules are dropped, so this 'supported' feature cannot render from a <style> block",
+    "html-button-reset": "fixture also uses <form> (html-form: n)",
+    "html-button-submit": "fixture also uses <form> (html-form: n)",
+    "html-style": "dataset (2020-03) marks every selector type unsupported, i.e. <style> rules are dropped, so this 'supported' feature cannot render from a <style> block"
+  },
+  "fastmail-desktop": {
+    "css-block-inline-size": "fixture also uses inline-size (css-inline-size: n)",
+    "css-display-grid": "fixture also uses grid-template-columns (css-grid-template: n)",
+    "html-button-reset": "fixture also uses <form> (html-form: n)",
+    "html-button-submit": "fixture also uses <form> (html-form: n)",
+    "html-input-hidden": "fixture also uses <form> (html-form: n)",
+    "html-input-reset": "fixture also uses <form> (html-form: n)",
+    "html-input-submit": "fixture also uses <form> (html-form: n)",
+    "html-required": "fixture also uses <form> (html-form: n)"
   }
 }

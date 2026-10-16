@@ -4,20 +4,29 @@
  * and extracts the latest reported support code per feature for the real
  * clients that seamail's non-Outlook environments model:
  *
- *   gmail-desktop@v1      <- gmail / desktop-webmail
- *   apple-mail-macos@v1   <- apple-mail / macos
+ *   gmail-desktop@v1        <- gmail / desktop-webmail
+ *   apple-mail-macos@v1     <- apple-mail / macos
+ *   yahoo-desktop@v1        <- yahoo / desktop-webmail
+ *   outlook-com@v1          <- outlook / outlook-com
+ *   protonmail-desktop@v1   <- protonmail / desktop-webmail
+ *   fastmail-desktop@v1     <- fastmail / desktop-webmail
  *
- * Output: support.json (checked in so the oracle is reviewable and stable).
+ * Output: src/data/caniemail-support.json (checked in so the oracle and the
+ * environments that are derived from it are reviewable and stable).
  */
 import { writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 
 const DATA_URL = "https://www.caniemail.com/api/data.json";
-const OUT_PATH = fileURLToPath(new URL("./support.json", import.meta.url));
+const OUT_PATH = fileURLToPath(new URL("../../src/data/caniemail-support.json", import.meta.url));
 
 const TARGETS = {
   "gmail-desktop": ["gmail", "desktop-webmail"],
   "apple-mail-macos": ["apple-mail", "macos"],
+  "yahoo-desktop": ["yahoo", "desktop-webmail"],
+  "outlook-com": ["outlook", "outlook-com"],
+  "protonmail-desktop": ["protonmail", "desktop-webmail"],
+  "fastmail-desktop": ["fastmail", "desktop-webmail"],
 };
 
 const baseCode = (code) => code.trim().split(/\s/)[0];

@@ -1,6 +1,6 @@
 {
   "source": "https://www.caniemail.com/api/data.json",
-  "fetchedAt": "2026-10-15T22:53:09.320Z",
+  "fetchedAt": "2026-10-15T23:52:19.161Z",
   "features": [
     {
       "slug": "css-accent-color",
@@ -17,6 +17,26 @@
           "version": "21",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": {
@@ -38,6 +58,26 @@
           "version": "13",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2020-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -57,6 +97,26 @@
         },
         "apple-mail-macos": {
           "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2021-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2021-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -81,6 +141,26 @@
           "version": "15.0",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-10",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2021-11",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-11",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": {
@@ -102,6 +182,26 @@
           "version": "12.2",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": {
@@ -130,6 +230,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": null
@@ -147,6 +267,26 @@
         },
         "apple-mail-macos": {
           "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2021-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2021-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -169,6 +309,26 @@
         },
         "apple-mail-macos": {
           "version": "10.3",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-01",
+          "code": "a",
+          "raw": "a #2"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "a",
+          "raw": "a #1 #10"
+        },
+        "protonmail-desktop": {
+          "version": "2023-05",
+          "code": "a",
+          "raw": "a #8"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -201,6 +361,26 @@
           "version": "10.3",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-08",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2019-08",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -222,6 +402,26 @@
           "version": "2022-08",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-08",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2022-08",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2022-08",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-08",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -239,6 +439,26 @@
         },
         "apple-mail-macos": {
           "version": "10.3",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-08",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2019-08",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -263,6 +483,26 @@
           "version": "16.0",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-12",
+          "code": "n",
+          "raw": "n #6"
+        },
+        "outlook-com": {
+          "version": "2022-12",
+          "code": "y",
+          "raw": "y #3"
+        },
+        "protonmail-desktop": {
+          "version": "2022-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2022-12",
+          "code": "y",
+          "raw": "y #4"
         }
       },
       "notesByNum": {
@@ -289,6 +529,26 @@
           "version": "13",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2020-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-02",
+          "code": "a",
+          "raw": "a #2"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n #1"
         }
       },
       "notesByNum": {
@@ -311,6 +571,26 @@
           "version": "13",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-05",
+          "code": "y",
+          "raw": "y #1"
+        },
+        "outlook-com": {
+          "version": "2020-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n #2"
         }
       },
       "notesByNum": {
@@ -333,6 +613,26 @@
           "version": "13",
           "code": "y",
           "raw": "y #1"
+        },
+        "yahoo-desktop": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2024-01",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -352,6 +652,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-10",
+          "code": "a",
+          "raw": "a #1 #2"
+        },
+        "outlook-com": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -381,6 +701,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -400,6 +740,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -423,6 +783,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -442,6 +822,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-10",
+          "code": "a",
+          "raw": "a #3"
+        },
+        "outlook-com": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -470,6 +870,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -489,6 +909,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y #1"
+        },
+        "outlook-com": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -513,6 +953,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y #1"
+        },
+        "outlook-com": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -533,6 +993,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y #2"
+        },
+        "outlook-com": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -558,6 +1038,26 @@
           "version": "10.15",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2022-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -575,6 +1075,26 @@
         },
         "apple-mail-macos": {
           "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -599,6 +1119,26 @@
           "version": "2023-12",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2023-12",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -616,6 +1156,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -637,6 +1197,26 @@
           "version": "10.15",
           "code": "n",
           "raw": "n"
+        },
+        "yahoo-desktop": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2022-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-07",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -656,6 +1236,26 @@
           "version": "10.15",
           "code": "a",
           "raw": "a #1"
+        },
+        "yahoo-desktop": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2022-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-07",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -677,6 +1277,26 @@
           "version": "10.15",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2022-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-07",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -694,6 +1314,26 @@
         },
         "apple-mail-macos": {
           "version": "10.3",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-02",
+          "code": "a",
+          "raw": "a #2"
+        },
+        "outlook-com": {
+          "version": "2019-08",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -718,6 +1358,26 @@
           "version": "10.15",
           "code": "n",
           "raw": "n"
+        },
+        "yahoo-desktop": {
+          "version": "2022-08",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2022-08",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2022-08",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-08",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -737,6 +1397,26 @@
           "version": "2023-12",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2023-12",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -754,6 +1434,26 @@
         },
         "apple-mail-macos": {
           "version": "16.0",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -777,6 +1477,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -794,6 +1514,26 @@
         },
         "apple-mail-macos": {
           "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2021-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -817,6 +1557,26 @@
           "version": "12",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-09",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "outlook-com": {
+          "version": "2024-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2024-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2024-09",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -836,6 +1596,26 @@
         },
         "apple-mail-macos": {
           "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2021-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2021-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -861,6 +1641,26 @@
           "version": "16.0",
           "code": "y",
           "raw": "y #1"
+        },
+        "yahoo-desktop": {
+          "version": "2023-09",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2023-09",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2023-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2023-09",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": {
@@ -883,6 +1683,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -900,6 +1720,26 @@
         },
         "apple-mail-macos": {
           "version": "15",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2022-08",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2023-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2023-01",
           "code": "y",
           "raw": "y"
         }
@@ -921,6 +1761,26 @@
           "version": "2024-04",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2024-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2024-04",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -947,6 +1807,26 @@
           "version": "12",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2022-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-12",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -968,6 +1848,26 @@
           "version": "15",
           "code": "a",
           "raw": "a #1"
+        },
+        "yahoo-desktop": {
+          "version": "2025-07",
+          "code": "a",
+          "raw": "a #4"
+        },
+        "outlook-com": {
+          "version": "2025-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2025-07",
+          "code": "a",
+          "raw": "a #5"
+        },
+        "fastmail-desktop": {
+          "version": "2025-07",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -994,6 +1894,26 @@
           "version": "14",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2021-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-10",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -1015,6 +1935,26 @@
           "version": "15",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-12",
+          "code": "a",
+          "raw": "a #6"
+        },
+        "outlook-com": {
+          "version": "2021-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-12",
+          "code": "a",
+          "raw": "a #7"
         }
       },
       "notesByNum": {
@@ -1042,6 +1982,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-11",
+          "code": "y",
+          "raw": "y #2"
+        },
+        "outlook-com": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -1064,6 +2024,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2026-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -1083,6 +2063,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -1107,6 +2107,26 @@
           "version": "2024-08",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-08",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-08",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2024-08",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2024-08",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -1126,6 +2146,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": {
@@ -1147,6 +2187,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2023-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -1166,6 +2226,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2023-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -1183,6 +2263,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-05",
+          "code": "a",
+          "raw": "a #2"
+        },
+        "outlook-com": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -1207,6 +2307,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -1228,6 +2348,21 @@
           "version": "15",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2022-08",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -1247,6 +2382,26 @@
           "version": "15",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-02",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "outlook-com": {
+          "version": "2024-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2024-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2024-02",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -1269,6 +2424,26 @@
           "version": "26",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2026-04",
+          "code": "a",
+          "raw": "a #3"
+        },
+        "outlook-com": {
+          "version": "2026-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2026-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2026-04",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -1292,6 +2467,21 @@
           "version": "16",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-09",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2023-09",
+          "code": "y",
+          "raw": "y #1"
+        },
+        "protonmail-desktop": {
+          "version": "2023-09",
+          "code": "y",
+          "raw": "y #1"
         }
       },
       "notesByNum": {
@@ -1311,6 +2501,26 @@
         },
         "apple-mail-macos": {
           "version": "15",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-01",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "outlook-com": {
+          "version": "2021-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -1335,6 +2545,26 @@
           "version": "14.0",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2021-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": {
@@ -1357,6 +2587,26 @@
           "version": "16.0",
           "code": "y",
           "raw": "y #1"
+        },
+        "yahoo-desktop": {
+          "version": "2024-08",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-08",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2024-08",
+          "code": "a",
+          "raw": "a #2"
+        },
+        "fastmail-desktop": {
+          "version": "2024-08",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -1380,6 +2630,26 @@
           "version": "14.0",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2021-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": {
@@ -1402,6 +2672,26 @@
           "version": "14.0",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2021-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": {
@@ -1424,6 +2714,26 @@
           "version": "13.1",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "protonmail-desktop": {
+          "version": "2022-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-12",
+          "code": "a",
+          "raw": "a #2"
         }
       },
       "notesByNum": {
@@ -1446,6 +2756,26 @@
           "version": "13.1",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2023-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2023-01",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": null
@@ -1463,6 +2793,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-09",
+          "code": "n",
+          "raw": "n #1"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -1487,6 +2837,26 @@
           "version": "23",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-06",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-06",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2024-06",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2024-06",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -1508,6 +2878,26 @@
           "version": "2024-08",
           "code": "n",
           "raw": "n"
+        },
+        "yahoo-desktop": {
+          "version": "2024-08",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-08",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2024-08",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2024-08",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -1527,6 +2917,26 @@
           "version": "21",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-08",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2022-08",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-08",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -1546,6 +2956,26 @@
         },
         "apple-mail-macos": {
           "version": "15",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-11",
+          "code": "a",
+          "raw": "a #7"
+        },
+        "outlook-com": {
+          "version": "2021-11",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-11",
+          "code": "a",
+          "raw": "a #8"
+        },
+        "fastmail-desktop": {
+          "version": "2021-11",
           "code": "y",
           "raw": "y"
         }
@@ -1577,6 +3007,26 @@
           "version": "2026-04",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2026-04",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2026-04",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2026-04",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "fastmail-desktop": {
+          "version": "2026-04",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -1598,6 +3048,26 @@
           "version": "12.4",
           "code": "n",
           "raw": "n"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": null
@@ -1617,6 +3087,26 @@
           "version": "11.7",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2024-05",
+          "code": "n",
+          "raw": "n #1"
+        },
+        "fastmail-desktop": {
+          "version": "2024-05",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -1638,6 +3128,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y #2"
+        },
+        "yahoo-desktop": {
+          "version": "2022-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2022-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-12",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -1661,6 +3171,26 @@
           "version": "13",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {}
@@ -1678,6 +3208,26 @@
         },
         "apple-mail-macos": {
           "version": "14",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -1702,6 +3252,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -1722,6 +3292,26 @@
         },
         "apple-mail-macos": {
           "version": "14",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2021-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-10",
           "code": "y",
           "raw": "y"
         }
@@ -1746,6 +3336,26 @@
           "version": "15",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2021-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-12",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -1767,6 +3377,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-04",
+          "code": "a",
+          "raw": "a #3"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-04",
+          "code": "a",
+          "raw": "a #4"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -1793,6 +3423,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-04",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "n",
+          "raw": "n #2"
+        },
+        "protonmail-desktop": {
+          "version": "2020-04",
+          "code": "n",
+          "raw": "n #3"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -1816,6 +3466,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -1837,6 +3507,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {}
@@ -1854,6 +3544,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-10",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -1880,6 +3590,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2022-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-07",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -1897,6 +3627,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2022-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-07",
           "code": "y",
           "raw": "y"
         }
@@ -1918,6 +3668,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2022-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-07",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -1937,6 +3707,26 @@
           "version": "15",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-11",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-11",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2024-11",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "fastmail-desktop": {
+          "version": "2024-11",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -1958,6 +3748,26 @@
           "version": "21",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2022-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-07",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -1975,6 +3785,26 @@
         },
         "apple-mail-macos": {
           "version": "15",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-11",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-11",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-11",
           "code": "y",
           "raw": "y"
         }
@@ -1996,6 +3826,26 @@
           "version": "2024-05",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2024-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2024-05",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -2013,6 +3863,26 @@
         },
         "apple-mail-macos": {
           "version": "10.3",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-08",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -2037,6 +3907,26 @@
           "version": "2024-05",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2024-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2024-05",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -2054,6 +3944,26 @@
         },
         "apple-mail-macos": {
           "version": "15",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-11",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-11",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-11",
           "code": "y",
           "raw": "y"
         }
@@ -2075,6 +3985,26 @@
           "version": "21",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2022-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-07",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -2092,6 +4022,26 @@
         },
         "apple-mail-macos": {
           "version": "15",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-11",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-11",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-11",
           "code": "y",
           "raw": "y"
         }
@@ -2113,6 +4063,26 @@
           "version": "13",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": {
@@ -2134,6 +4104,26 @@
           "version": "13.1",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2023-01",
+          "code": "y",
+          "raw": "y #1"
+        },
+        "fastmail-desktop": {
+          "version": "2023-01",
+          "code": "y",
+          "raw": "y #1"
         }
       },
       "notesByNum": {
@@ -2156,6 +4146,26 @@
           "version": "16.0",
           "code": "a",
           "raw": "a #1"
+        },
+        "yahoo-desktop": {
+          "version": "2023-08",
+          "code": "n",
+          "raw": "n #3"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2023-08",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2023-08",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -2181,6 +4191,26 @@
           "version": "14",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -2200,6 +4230,26 @@
         },
         "apple-mail-macos": {
           "version": "14",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -2223,6 +4273,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2025-06",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -2242,6 +4312,26 @@
           "version": "2024-05",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2024-05",
+          "code": "y",
+          "raw": "y #4"
+        },
+        "fastmail-desktop": {
+          "version": "2024-05",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -2266,6 +4356,26 @@
           "version": "16.0",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2022-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-03",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -2283,6 +4393,26 @@
         },
         "apple-mail-macos": {
           "version": "16.0",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2022-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-12",
           "code": "y",
           "raw": "y"
         }
@@ -2304,6 +4434,26 @@
           "version": "2024-10",
           "code": "a",
           "raw": "a #4"
+        },
+        "yahoo-desktop": {
+          "version": "2025-05",
+          "code": "a",
+          "raw": "a #4"
+        },
+        "outlook-com": {
+          "version": "2025-05",
+          "code": "a",
+          "raw": "a #4"
+        },
+        "protonmail-desktop": {
+          "version": "2025-07",
+          "code": "a",
+          "raw": "a #3"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -2328,6 +4478,26 @@
           "version": "16.0",
           "code": "a",
           "raw": "a #1"
+        },
+        "yahoo-desktop": {
+          "version": "2022-08",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2022-08",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-08",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -2347,6 +4517,26 @@
         },
         "apple-mail-macos": {
           "version": "10.3",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -2371,6 +4561,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2022-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-07",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -2390,6 +4600,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2022-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-07",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -2409,6 +4639,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2022-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-07",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -2428,6 +4678,26 @@
           "version": "14",
           "code": "a",
           "raw": "a #1"
+        },
+        "yahoo-desktop": {
+          "version": "2021-05",
+          "code": "a",
+          "raw": "a #3"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "a",
+          "raw": "a #2"
+        },
+        "protonmail-desktop": {
+          "version": "2021-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "a",
+          "raw": "a #1 #6"
         }
       },
       "notesByNum": {
@@ -2454,6 +4724,26 @@
           "version": "12.4",
           "code": "n",
           "raw": "n"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -2474,6 +4764,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -2498,6 +4808,26 @@
           "version": "26",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2026-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2026-02",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "protonmail-desktop": {
+          "version": "2026-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2026-02",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -2517,6 +4847,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -2540,6 +4890,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -2561,6 +4931,26 @@
           "version": "12.4",
           "code": "n",
           "raw": "n"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -2582,6 +4972,26 @@
           "version": "2026-04",
           "code": "y",
           "raw": "y #3"
+        },
+        "yahoo-desktop": {
+          "version": "2026-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2026-04",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "protonmail-desktop": {
+          "version": "2026-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2026-04",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -2605,6 +5015,26 @@
           "version": "2026-04",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2026-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2026-04",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2026-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2026-04",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -2624,6 +5054,26 @@
         },
         "apple-mail-macos": {
           "version": "16.0",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-09",
+          "code": "n",
+          "raw": "n #1"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2023-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2023-09",
           "code": "y",
           "raw": "y"
         }
@@ -2648,6 +5098,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #2"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -2670,6 +5140,26 @@
           "version": "15",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2022-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-07",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -2687,6 +5177,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -2710,6 +5220,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -2731,6 +5261,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -2750,6 +5300,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-10",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -2767,6 +5337,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-10",
+          "code": "n",
+          "raw": "n #2"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -2791,6 +5381,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-10",
+          "code": "n",
+          "raw": "n #2"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -2811,6 +5421,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-10",
+          "code": "n",
+          "raw": "n #2"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -2835,6 +5465,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-10",
+          "code": "n",
+          "raw": "n #2"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -2855,6 +5505,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -2878,6 +5548,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -2899,6 +5589,26 @@
           "version": "12.4",
           "code": "n",
           "raw": "n"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #1 #2"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n #2"
         }
       },
       "notesByNum": {
@@ -2921,6 +5631,26 @@
           "version": "12.4",
           "code": "n",
           "raw": "n"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -2940,6 +5670,26 @@
         },
         "apple-mail-macos": {
           "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #3"
+        },
+        "protonmail-desktop": {
+          "version": "2020-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -2965,6 +5715,26 @@
           "version": "13",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #3"
+        },
+        "protonmail-desktop": {
+          "version": "2020-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -2986,6 +5756,26 @@
         },
         "apple-mail-macos": {
           "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #2"
+        },
+        "protonmail-desktop": {
+          "version": "2020-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -3010,6 +5800,26 @@
           "version": "13",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #2"
+        },
+        "protonmail-desktop": {
+          "version": "2020-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -3032,6 +5842,26 @@
           "version": "13",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2022-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-12",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -3051,6 +5881,26 @@
         },
         "apple-mail-macos": {
           "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #2"
+        },
+        "protonmail-desktop": {
+          "version": "2020-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -3076,6 +5926,26 @@
           "version": "15",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2021-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-12",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -3098,6 +5968,26 @@
           "version": "2024-01",
           "code": "a",
           "raw": "a #2"
+        },
+        "yahoo-desktop": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n #1"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n #1"
+        },
+        "protonmail-desktop": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #3"
+        },
+        "fastmail-desktop": {
+          "version": "2024-01",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -3120,6 +6010,26 @@
         },
         "apple-mail-macos": {
           "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-01",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -3145,6 +6055,26 @@
           "version": "13",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-01",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -3167,6 +6097,26 @@
           "version": "16",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2023-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2023-04",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": null
@@ -3184,6 +6134,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -3206,6 +6176,26 @@
         },
         "apple-mail-macos": {
           "version": "14.0",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-12",
+          "code": "a",
+          "raw": "a #4"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #1 #2 #3"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -3234,6 +6224,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n #4"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -3259,6 +6269,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -3281,6 +6311,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -3301,6 +6351,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -3326,6 +6396,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -3345,6 +6435,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -3370,6 +6480,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -3392,6 +6522,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -3412,6 +6562,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -3437,6 +6607,26 @@
           "version": "2024-03",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2024-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2024-03",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -3456,6 +6646,26 @@
           "version": "15",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2024-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2024-02",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -3475,6 +6685,26 @@
           "version": "13.1",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-12",
+          "code": "y",
+          "raw": "y #2"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y #2"
+        },
+        "protonmail-desktop": {
+          "version": "2022-12",
+          "code": "y",
+          "raw": "y #2"
+        },
+        "fastmail-desktop": {
+          "version": "2022-12",
+          "code": "y",
+          "raw": "y #2"
         }
       },
       "notesByNum": {
@@ -3497,6 +6727,26 @@
           "version": "21",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y #2"
+        },
+        "protonmail-desktop": {
+          "version": "2022-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-07",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -3519,6 +6769,26 @@
           "version": "21",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2022-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-07",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -3538,6 +6808,26 @@
         },
         "apple-mail-macos": {
           "version": "2025-11",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2025-11",
+          "code": "a",
+          "raw": "a #1 #3"
+        },
+        "outlook-com": {
+          "version": "2025-11",
+          "code": "y",
+          "raw": "y #4"
+        },
+        "protonmail-desktop": {
+          "version": "2021-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -3565,6 +6855,21 @@
           "version": "2022-10",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2022-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -3582,6 +6887,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -3609,6 +6934,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -3632,6 +6977,26 @@
           "version": "2023-12",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2023-12",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -3649,6 +7014,26 @@
         },
         "apple-mail-macos": {
           "version": "13.6",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2023-12",
           "code": "y",
           "raw": "y"
         }
@@ -3670,6 +7055,26 @@
           "version": "2023-12",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2023-12",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -3687,6 +7092,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-04",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -3711,6 +7136,26 @@
           "version": "2022-07",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2022-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-07",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -3730,6 +7175,26 @@
           "version": "2022-07",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2022-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-07",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -3747,6 +7212,26 @@
         },
         "apple-mail-macos": {
           "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-01",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-01",
+          "code": "a",
+          "raw": "a #2"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -3771,6 +7256,26 @@
           "version": "2024-04",
           "code": "n",
           "raw": "n #1"
+        },
+        "yahoo-desktop": {
+          "version": "2024-04",
+          "code": "a",
+          "raw": "a #2 #4"
+        },
+        "outlook-com": {
+          "version": "2024-04",
+          "code": "a",
+          "raw": "a #2"
+        },
+        "protonmail-desktop": {
+          "version": "2024-04",
+          "code": "a",
+          "raw": "a #2"
+        },
+        "fastmail-desktop": {
+          "version": "2024-04",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -3796,6 +7301,26 @@
           "version": "14.1",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2023-12",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -3815,6 +7340,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -3839,6 +7384,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -3856,6 +7421,26 @@
         },
         "apple-mail-macos": {
           "version": "12",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-08",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-09",
           "code": "y",
           "raw": "y"
         }
@@ -3879,6 +7464,26 @@
           "version": "14.0",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2021-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -3898,6 +7503,26 @@
           "version": "2023-12",
           "code": "a",
           "raw": "a #1"
+        },
+        "yahoo-desktop": {
+          "version": "2023-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2023-12",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -3919,6 +7544,26 @@
           "version": "2024-04",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-04",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2024-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2024-04",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -3936,6 +7581,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -3959,6 +7624,26 @@
           "version": "16.0",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-03",
+          "code": "a",
+          "raw": "a #1 #2"
+        },
+        "outlook-com": {
+          "version": "2024-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2024-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2024-03",
+          "code": "y",
+          "raw": "y #4"
         }
       },
       "notesByNum": {
@@ -3984,6 +7669,26 @@
           "version": "13",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -4005,6 +7710,26 @@
           "version": "13",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {}
@@ -4022,6 +7747,26 @@
         },
         "apple-mail-macos": {
           "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -4043,6 +7788,26 @@
           "version": "13",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {}
@@ -4060,6 +7825,26 @@
         },
         "apple-mail-macos": {
           "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -4081,6 +7866,26 @@
           "version": "13",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {}
@@ -4098,6 +7903,26 @@
         },
         "apple-mail-macos": {
           "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -4122,6 +7947,26 @@
           "version": "13",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {}
@@ -4139,6 +7984,26 @@
         },
         "apple-mail-macos": {
           "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -4160,6 +8025,26 @@
           "version": "13",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {}
@@ -4177,6 +8062,26 @@
         },
         "apple-mail-macos": {
           "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -4198,6 +8103,26 @@
           "version": "13",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {}
@@ -4215,6 +8140,26 @@
         },
         "apple-mail-macos": {
           "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -4236,6 +8181,26 @@
           "version": "13",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": {
@@ -4256,6 +8221,26 @@
         },
         "apple-mail-macos": {
           "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -4280,6 +8265,26 @@
           "version": "13",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -4302,6 +8307,26 @@
           "version": "13",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y #1"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y #1"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": {
@@ -4323,6 +8348,26 @@
           "version": "2024-02",
           "code": "y",
           "raw": "y #1"
+        },
+        "yahoo-desktop": {
+          "version": "2024-02",
+          "code": "n",
+          "raw": "n #3"
+        },
+        "outlook-com": {
+          "version": "2024-02",
+          "code": "n",
+          "raw": "n #3"
+        },
+        "protonmail-desktop": {
+          "version": "2024-02",
+          "code": "a",
+          "raw": "a #2 #4"
+        },
+        "fastmail-desktop": {
+          "version": "2024-02",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -4347,6 +8392,26 @@
           "version": "10.3",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n #1"
         }
       },
       "notesByNum": {
@@ -4369,6 +8434,26 @@
           "version": "13",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -4388,6 +8473,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y #1"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -4408,6 +8513,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -4432,6 +8557,26 @@
           "version": "14",
           "code": "y",
           "raw": "y #1"
+        },
+        "yahoo-desktop": {
+          "version": "2024-09",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-09",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2024-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2024-09",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -4453,6 +8598,26 @@
           "version": "2024-05",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2024-05",
+          "code": "y",
+          "raw": "y #4"
+        },
+        "fastmail-desktop": {
+          "version": "2024-05",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -4477,6 +8642,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -4499,6 +8684,26 @@
           "version": "15",
           "code": "a",
           "raw": "a #2"
+        },
+        "yahoo-desktop": {
+          "version": "2022-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #2"
+        },
+        "protonmail-desktop": {
+          "version": "2022-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-02",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -4523,6 +8728,26 @@
           "version": "2024-03",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-03",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "outlook-com": {
+          "version": "2024-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2024-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2024-03",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -4542,6 +8767,21 @@
         },
         "apple-mail-macos": {
           "version": "16",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2025-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2022-05",
+          "code": "y",
+          "raw": "y #3"
+        },
+        "protonmail-desktop": {
+          "version": "2025-05",
           "code": "y",
           "raw": "y"
         }
@@ -4568,6 +8808,26 @@
           "version": "15",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2022-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2022-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2022-05",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": {
@@ -4589,6 +8849,26 @@
           "version": "14",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -4606,6 +8886,26 @@
         },
         "apple-mail-macos": {
           "version": "2023-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-09",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2023-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2023-10",
           "code": "y",
           "raw": "y"
         }
@@ -4629,6 +8929,26 @@
           "version": "2024-01",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2024-01",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -4650,6 +8970,26 @@
           "version": "13",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -4669,6 +9009,26 @@
         },
         "apple-mail-macos": {
           "version": "15",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-11",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-11",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "fastmail-desktop": {
+          "version": "2021-11",
           "code": "y",
           "raw": "y"
         }
@@ -4694,6 +9054,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y #6"
+        },
+        "yahoo-desktop": {
+          "version": "2019-08",
+          "code": "a",
+          "raw": "a #7"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -4723,6 +9103,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n #1"
         }
       },
       "notesByNum": {
@@ -4744,6 +9144,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -4761,6 +9181,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -4782,6 +9222,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-02",
+          "code": "n",
+          "raw": "n #2"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n #2"
         }
       },
       "notesByNum": {
@@ -4802,6 +9262,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -4826,6 +9306,26 @@
           "version": "10.15",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-04",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n #4"
+        },
+        "protonmail-desktop": {
+          "version": "2020-04",
+          "code": "n",
+          "raw": "n #2"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n #5"
         }
       },
       "notesByNum": {
@@ -4852,6 +9352,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -4874,6 +9394,26 @@
           "version": "15",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-12",
+          "code": "a",
+          "raw": "a #1 #3 #4"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "protonmail-desktop": {
+          "version": "2021-12",
+          "code": "a",
+          "raw": "a"
+        },
+        "fastmail-desktop": {
+          "version": "2021-12",
+          "code": "a",
+          "raw": "a #1 #4"
         }
       },
       "notesByNum": {
@@ -4898,6 +9438,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -4915,6 +9475,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -4938,6 +9518,26 @@
           "version": "15",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-11",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "protonmail-desktop": {
+          "version": "2021-11",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-11",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": {
@@ -4957,6 +9557,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-09",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -4982,6 +9602,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -5004,6 +9644,26 @@
           "version": "2024-05",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2024-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2024-05",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -5023,6 +9683,26 @@
           "version": "2024-05",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2024-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2024-05",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -5040,6 +9720,26 @@
         },
         "apple-mail-macos": {
           "version": "2023-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2023-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2023-05",
           "code": "y",
           "raw": "y"
         }
@@ -5063,6 +9763,26 @@
           "version": "16",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2026-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2026-07",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2026-07",
+          "code": "a",
+          "raw": "a #2"
+        },
+        "fastmail-desktop": {
+          "version": "2026-07",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -5085,6 +9805,26 @@
           "version": "2024-04",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2024-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2024-04",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -5102,6 +9842,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -5125,6 +9885,26 @@
           "version": "2023-09",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2023-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2023-09",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -5146,6 +9926,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": null
@@ -5163,6 +9963,26 @@
         },
         "apple-mail-macos": {
           "version": "14",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-10",
           "code": "y",
           "raw": "y"
         }
@@ -5189,6 +10009,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -5206,6 +10046,26 @@
         },
         "apple-mail-macos": {
           "version": "10.3",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -5231,6 +10091,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #6"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": {
@@ -5257,6 +10137,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -5276,6 +10176,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -5300,6 +10220,26 @@
           "version": "23",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2024-01",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": {
@@ -5321,6 +10261,26 @@
           "version": "2023-09",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2023-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2023-09",
+          "code": "u",
+          "raw": "u"
         }
       },
       "notesByNum": null
@@ -5338,6 +10298,26 @@
         },
         "apple-mail-macos": {
           "version": "14.0",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -5359,6 +10339,26 @@
           "version": "2023-09",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2023-12",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -5376,6 +10376,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -5400,6 +10420,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -5422,6 +10462,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -5442,6 +10502,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -5467,6 +10547,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -5489,6 +10589,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y #1"
+        },
+        "yahoo-desktop": {
+          "version": "2019-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -5514,6 +10634,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-10",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-10",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -5535,6 +10675,26 @@
           "version": "16.0",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2023-12",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": null
@@ -5552,6 +10712,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2024-02",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "outlook-com": {
+          "version": "2024-02",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "protonmail-desktop": {
+          "version": "2020-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -5576,6 +10756,26 @@
           "version": "2021-10",
           "code": "y",
           "raw": "y #1"
+        },
+        "yahoo-desktop": {
+          "version": "2021-10",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2021-11",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": {
@@ -5597,6 +10797,26 @@
         },
         "apple-mail-macos": {
           "version": "14",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -5622,6 +10842,26 @@
           "version": "10.15",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-04",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #3"
+        },
+        "protonmail-desktop": {
+          "version": "2020-04",
+          "code": "a",
+          "raw": "a #2"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": {
@@ -5645,6 +10885,26 @@
           "version": "16",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-09",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2023-09",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2023-09",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": {
@@ -5664,6 +10924,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -5687,6 +10967,26 @@
           "version": "14.0",
           "code": "a",
           "raw": "a #1"
+        },
+        "yahoo-desktop": {
+          "version": "2020-10",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-10",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n #4"
         }
       },
       "notesByNum": {
@@ -5711,6 +11011,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -5730,6 +11050,26 @@
           "version": "14.4",
           "code": "a",
           "raw": "a #2"
+        },
+        "yahoo-desktop": {
+          "version": "2019-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": {
@@ -5752,6 +11092,26 @@
           "version": "16",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-09",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2026-07",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2023-09",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": {
@@ -5776,6 +11136,26 @@
           "version": "2023-04",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-04",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2023-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2023-04",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -5793,6 +11173,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -5814,6 +11214,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-09",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "a",
+          "raw": "a #2"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -5838,6 +11258,26 @@
           "version": "10.3",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "a",
+          "raw": "a #2"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -5858,6 +11298,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -5881,6 +11341,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -5900,6 +11380,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -5923,6 +11423,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -5944,6 +11464,26 @@
         },
         "apple-mail-macos": {
           "version": "10.3",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-07",
+          "code": "n",
+          "raw": "n #4"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "a",
+          "raw": "a #1 #4"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -5971,6 +11511,26 @@
           "version": "2021-11",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-11",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2021-11",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-11",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {}
@@ -5988,6 +11548,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -6009,6 +11589,26 @@
           "version": "10.3",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n #2"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n #2"
         }
       },
       "notesByNum": {
@@ -6029,6 +11629,26 @@
         },
         "apple-mail-macos": {
           "version": "12.4",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -6052,6 +11672,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-05",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -6069,6 +11709,26 @@
         },
         "apple-mail-macos": {
           "version": "16.0",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2023-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2023-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
           "code": "y",
           "raw": "y"
         }
@@ -6097,6 +11757,26 @@
           "version": "13",
           "code": "a",
           "raw": "a #1"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
         }
       },
       "notesByNum": {
@@ -6119,6 +11799,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": null
@@ -6138,6 +11838,26 @@
           "version": "15",
           "code": "a",
           "raw": "a #3"
+        },
+        "yahoo-desktop": {
+          "version": "2021-12",
+          "code": "n",
+          "raw": "n #1"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n #1"
+        },
+        "protonmail-desktop": {
+          "version": "2021-12",
+          "code": "n",
+          "raw": "n #1"
+        },
+        "fastmail-desktop": {
+          "version": "2021-12",
+          "code": "n",
+          "raw": "n #1"
         }
       },
       "notesByNum": {
@@ -6161,6 +11881,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y #1"
+        },
+        "yahoo-desktop": {
+          "version": "2019-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -6186,6 +11926,26 @@
           "version": "13",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-12",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -6207,6 +11967,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-09",
+          "code": "n",
+          "raw": "n #4"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n #8"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n #7"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n #9"
         }
       },
       "notesByNum": {
@@ -6238,6 +12018,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2019-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
@@ -6259,6 +12059,26 @@
           "version": "12.4",
           "code": "y",
           "raw": "y #3"
+        },
+        "yahoo-desktop": {
+          "version": "2019-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
         }
       },
       "notesByNum": {
