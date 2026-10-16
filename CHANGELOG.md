@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.3.0](https://github.com/RohanFredriksson/seamail/compare/seamail-v0.2.0...seamail-v0.3.0) (2026-10-16)
+
+
+### Features
+
+* Can I Email conformance oracle, dataset-derived webmail environments ([4f263f5](https://github.com/RohanFredriksson/seamail/commit/4f263f5153501789770235cc0991891dc8b2c442))
+* **conformance:** cover image formats ([f182003](https://github.com/RohanFredriksson/seamail/commit/f182003aae067b921e87c44828f5204d207135e7))
+* **conformance:** score gmail/apple-mail against Can I Email and align their sanitisation ([ba4ac73](https://github.com/RohanFredriksson/seamail/commit/ba4ac7305bef2953e83b5559b55d7248547b7e87))
+* **environments:** add Yahoo, Outlook.com, Proton and Fastmail webmail environments ([42be50a](https://github.com/RohanFredriksson/seamail/commit/42be50a22deeb6ad94406fb17564185149096d69))
+
+
+### Bug Fixes
+
+* **outlook:** capture email body via native window surface ([ed5feb0](https://github.com/RohanFredriksson/seamail/commit/ed5feb0326ce5c493e4e6eb5d86d79b993799388))
+
 ## [0.2.0](https://github.com/RohanFredriksson/seamail/compare/seamail-v0.1.0...seamail-v0.2.0) (2026-09-03)
 
 
