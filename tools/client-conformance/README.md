@@ -45,3 +45,8 @@ Limits: this checks that the *sanitisation* matches the client, not that
 every pixel of Gmail's own chrome/typography matches. It cannot see
 features whose fixture has no visual effect and which the environment does
 not touch in HTML either.
+
+Image formats (`image-*`) are scored too, using URL-referenced `<img>` fixtures
+(plus one real base64 PNG): the oracle checks which formats a client drops,
+not whether the engine can decode them. Gmail's partial rows (SVG, WebP...)
+are not stripped.

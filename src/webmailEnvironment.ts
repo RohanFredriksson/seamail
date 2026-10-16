@@ -9,7 +9,7 @@ import type { Browser, Page } from "playwright";
 import { getChromium, newSecurePage } from "./browserManager.js";
 import { deriveCapabilities, unsupportedFeatures } from "./clientSupport.js";
 import { sanitizeInlineStyle, sanitizeStylesheet } from "./emailCss.js";
-import { buildClientPolicy } from "./featureRules.js";
+import { buildClientPolicy, removeUnsupportedImages } from "./featureRules.js";
 import type {
   CapabilityMap,
   DeviceConfig,
@@ -65,6 +65,7 @@ class WebmailEnvironment implements SeamailEnvironment {
     for (const selector of ops.removeElements) {
       root.querySelectorAll(selector).forEach((el) => el.remove());
     }
+    removeUnsupportedImages(root, ops.images);
     for (const tag of ops.unwrapElements) {
       root.querySelectorAll(tag).forEach((el) => el.replaceWith(el.innerHTML));
     }

@@ -14,3 +14,14 @@ describe("apple-mail-macos@v1 process() - Can I Email derived rules", () => {
     expect(out).toContain("position: absolute");
   });
 });
+
+describe("apple-mail-macos@v1 image formats", () => {
+  it("drops .hdr images only", async () => {
+    const out = await create().process(
+      '<img src="https://x.test/a.hdr"><img src="https://x.test/a.webp">',
+      conditions,
+    );
+    expect(out).not.toContain("a.hdr");
+    expect(out).toContain("a.webp");
+  });
+});

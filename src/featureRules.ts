@@ -14,7 +14,38 @@ interface Matcher {
   test(selector: string): boolean;
 }
 
+/** Identifies an image format by file extension, MIME type, or "any data: URI". */
+export interface ImageSpec {
+  extensions?: string[];
+  mimeTypes?: string[];
+  dataUri?: boolean;
+}
+
+export function matchesImage(src: string, spec: ImageSpec): boolean {
+  const value = src.trim().toLowerCase();
+  if (value.startsWith("data:")) {
+    if (spec.dataUri) return true;
+    return (spec.mimeTypes ?? []).some((m) => value.startsWith(`data:${m}`));
+  }
+  const path = value.split(/[?#]/)[0];
+  return (spec.extensions ?? []).some((ext) => path.endsWith(`.${ext}`));
+}
+
+/** Removes <img> elements whose source is in one of the given unsupported formats. */
+export function removeUnsupportedImages(
+  root: import("node-html-parser").HTMLElement,
+  specs: ImageSpec[],
+): void {
+  if (specs.length === 0) return;
+  root.querySelectorAll("img").forEach((img) => {
+    const src = img.getAttribute("src") ?? "";
+    if (specs.some((spec) => matchesImage(src, spec))) img.remove();
+  });
+}
+
 export interface FeatureRule {
+  /** Image formats the client does not display; matching <img> elements are removed. */
+  images?: ImageSpec[];
   /** CSS property names (vendor prefix ignored) to drop. */
   properties?: RegExp[];
   /** Declarations whose value matches are dropped, whatever the property. */
@@ -50,6 +81,7 @@ const removeInput = (type: string): FeatureRule => ({
   removeElements: [`input[type="${type}"]`],
 });
 const unwrap = (...tags: string[]): FeatureRule => ({ unwrapElements: tags });
+const image = (spec: ImageSpec): FeatureRule => ({ images: [spec] });
 const attr = (...names: string[]): FeatureRule => ({ attributes: names });
 
 /** Splits a selector on combinators outside brackets/parens, for the combinator tests below. */
@@ -279,6 +311,28 @@ export const FEATURE_RULES: Record<string, FeatureRule> = {
   "html-svg": { removeElements: ["svg"] },
   "html-target": attr("target"),
   "html-video": { removeElements: ["video"] },
+
+  // ---- image formats --------------------------------------------------
+  "image-apng": image({ extensions: ["apng"], mimeTypes: ["image/apng"] }),
+  "image-avif": image({ extensions: ["avif"], mimeTypes: ["image/avif"] }),
+  "image-base64": image({ dataUri: true }),
+  "image-bmp": image({ extensions: ["bmp"], mimeTypes: ["image/bmp"] }),
+  "image-gif": image({ extensions: ["gif"], mimeTypes: ["image/gif"] }),
+  "image-hdr": image({ extensions: ["hdr"], mimeTypes: ["image/vnd.radiance"] }),
+  "image-heif": image({
+    extensions: ["heif", "heic"],
+    mimeTypes: ["image/heif", "image/heic"],
+  }),
+  "image-ico": image({
+    extensions: ["ico"],
+    mimeTypes: ["image/x-icon", "image/vnd.microsoft.icon"],
+  }),
+  "image-jpg": image({ extensions: ["jpg", "jpeg"], mimeTypes: ["image/jpeg"] }),
+  "image-mp4": image({ extensions: ["mp4"], mimeTypes: ["video/mp4"] }),
+  "image-png": image({ extensions: ["png"], mimeTypes: ["image/png"] }),
+  "image-svg": image({ extensions: ["svg"], mimeTypes: ["image/svg+xml"] }),
+  "image-tiff": image({ extensions: ["tif", "tiff"], mimeTypes: ["image/tiff"] }),
+  "image-webp": image({ extensions: ["webp"], mimeTypes: ["image/webp"] }),
 };
 
 /** HTML-side operations aggregated from a set of feature rules. */
@@ -287,6 +341,7 @@ export interface HtmlOps {
   unwrapElements: string[];
   attributes: string[];
   bodyAttributes: string[];
+  images: ImageSpec[];
 }
 
 export interface ClientPolicy {
@@ -336,6 +391,7 @@ export function buildClientPolicy(unsupported: string[]): ClientPolicy {
       unwrapElements: all("unwrapElements") as string[],
       attributes: all("attributes") as string[],
       bodyAttributes: all("bodyAttributes") as string[],
+      images: all("images") as ImageSpec[],
     },
     unmodelled,
   };

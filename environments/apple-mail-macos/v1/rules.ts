@@ -7,9 +7,15 @@
  * conformance tool lists them in known-exceptions.json instead.
  */
 import type { CssPolicy } from "../../../src/emailCss.js";
+import type { ImageSpec } from "../../../src/featureRules.js";
 
 const STRIPPED_PROPERTIES = new Set(["hyphenate-limit-chars", "text-justify"]);
 
 export const APPLE_MAIL_CSS_POLICY: CssPolicy = {
   dropDeclaration: (prop) => STRIPPED_PROPERTIES.has(prop.replace(/^-webkit-/, "")),
 };
+
+/** Radiance HDR is the only image format Apple Mail's recent results mark unsupported. */
+export const UNSUPPORTED_IMAGES: ImageSpec[] = [
+  { extensions: ["hdr"], mimeTypes: ["image/vnd.radiance"] },
+];

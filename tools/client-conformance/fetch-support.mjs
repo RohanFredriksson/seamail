@@ -45,7 +45,7 @@ const json = await res.json();
 
 const features = [];
 for (const f of json.data) {
-  if (f.category !== "css" && f.category !== "html") continue;
+  if (!["css", "html", "image"].includes(f.category)) continue;
   const support = {};
   for (const [env, [client, platform]] of Object.entries(TARGETS)) {
     const entry = latest(f.stats?.[client]?.[platform]);

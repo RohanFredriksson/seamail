@@ -1,6 +1,6 @@
 {
   "source": "https://www.caniemail.com/api/data.json",
-  "fetchedAt": "2026-10-15T23:52:19.161Z",
+  "fetchedAt": "2026-10-16T00:30:32.350Z",
   "features": [
     {
       "slug": "css-accent-color",
@@ -12085,6 +12085,582 @@
         "1": "Buggy. Percentage width on `<img>` elements are based on the physical file's width, not on the parent element's width.",
         "2": "Buggy. Sizes set in attributes don't scale in 120 dpi mode.",
         "3": "The `width` attribute is ignored on CID embedded images. See [#171](https://github.com/hteumeuleu/caniemail/issues/171)."
+      }
+    },
+    {
+      "slug": "image-apng",
+      "title": "Animated PNG image format",
+      "category": "image",
+      "url": "https://www.caniemail.com/features/image-apng/",
+      "support": {
+        "gmail-desktop": {
+          "version": "2020-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "apple-mail-macos": {
+          "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
+        }
+      },
+      "notesByNum": {}
+    },
+    {
+      "slug": "image-avif",
+      "title": "AVIF image format",
+      "category": "image",
+      "url": "https://www.caniemail.com/features/image-avif/",
+      "support": {
+        "gmail-desktop": {
+          "version": "2023-01",
+          "code": "a",
+          "raw": "a #3"
+        },
+        "apple-mail-macos": {
+          "version": "13.3",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-01",
+          "code": "y",
+          "raw": "y #1"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y #1"
+        },
+        "protonmail-desktop": {
+          "version": "2021-01",
+          "code": "y",
+          "raw": "y #1"
+        },
+        "fastmail-desktop": {
+          "version": "2023-04",
+          "code": "n",
+          "raw": "n"
+        }
+      },
+      "notesByNum": {
+        "1": "Support depends on browser and operating system support.",
+        "2": "Does not support animated AVIF.",
+        "3": "Converts still AVIF into a jpg and animated AVIF into a gif."
+      }
+    },
+    {
+      "slug": "image-base64",
+      "title": "Base 64 image format",
+      "category": "image",
+      "url": "https://www.caniemail.com/features/image-base64/",
+      "support": {
+        "gmail-desktop": {
+          "version": "2024-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "apple-mail-macos": {
+          "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
+        }
+      },
+      "notesByNum": {
+        "1": "Partial: Does not render Base 64 gif format.",
+        "2": "Not supported. The `src` is turned into a `nosrc` attribute.",
+        "3": "Partial: Only supports Base 64 png format."
+      }
+    },
+    {
+      "slug": "image-bmp",
+      "title": "BMP image format",
+      "category": "image",
+      "url": "https://www.caniemail.com/features/image-bmp/",
+      "support": {
+        "gmail-desktop": {
+          "version": "2020-02",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "apple-mail-macos": {
+          "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
+        }
+      },
+      "notesByNum": {
+        "1": "Buggy. An image renders but the colours are incorrect."
+      }
+    },
+    {
+      "slug": "image-gif",
+      "title": "GIF image format",
+      "category": "image",
+      "url": "https://www.caniemail.com/features/image-gif/",
+      "support": {
+        "gmail-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "apple-mail-macos": {
+          "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
+        }
+      },
+      "notesByNum": {
+        "1": "Partial: Does not support animated gif images.",
+        "2": "Partial: With an Office 365 account, it plays the animation 3 times then stops and shows a play button to reactivate the animation."
+      }
+    },
+    {
+      "slug": "image-hdr",
+      "title": "HDR image format",
+      "category": "image",
+      "url": "https://www.caniemail.com/features/image-hdr/",
+      "support": {
+        "gmail-desktop": {
+          "version": "2020-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "apple-mail-macos": {
+          "version": "13",
+          "code": "n",
+          "raw": "n"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "n",
+          "raw": "n"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
+        }
+      },
+      "notesByNum": null
+    },
+    {
+      "slug": "image-heif",
+      "title": "HEIF image format",
+      "category": "image",
+      "url": "https://www.caniemail.com/features/image-heif/",
+      "support": {
+        "gmail-desktop": {
+          "version": "2024-02",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "apple-mail-macos": {
+          "version": "16",
+          "code": "y",
+          "raw": "y #2"
+        },
+        "yahoo-desktop": {
+          "version": "2024-02",
+          "code": "a",
+          "raw": "a #3"
+        },
+        "outlook-com": {
+          "version": "2024-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2024-02",
+          "code": "a",
+          "raw": "a #3"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
+        }
+      },
+      "notesByNum": {
+        "1": "Partial: Converts file to jpg.",
+        "2": "Supported on macOS 14 Sonoma.",
+        "3": "Partial. Webmail rendering depends on browser support."
+      }
+    },
+    {
+      "slug": "image-ico",
+      "title": "ICO image format",
+      "category": "image",
+      "url": "https://www.caniemail.com/features/image-ico/",
+      "support": {
+        "gmail-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "apple-mail-macos": {
+          "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
+        }
+      },
+      "notesByNum": null
+    },
+    {
+      "slug": "image-jpg",
+      "title": "JPG image format",
+      "category": "image",
+      "url": "https://www.caniemail.com/features/image-jpg/",
+      "support": {
+        "gmail-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "apple-mail-macos": {
+          "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
+        }
+      },
+      "notesByNum": null
+    },
+    {
+      "slug": "image-mp4",
+      "title": "Video as Image Assets",
+      "category": "image",
+      "url": "https://www.caniemail.com/features/image-mp4/",
+      "support": {
+        "gmail-desktop": {
+          "version": "2021-05",
+          "code": "n",
+          "raw": "n"
+        },
+        "apple-mail-macos": {
+          "version": "14",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2021-05",
+          "code": "y",
+          "raw": "y #1"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y #1"
+        },
+        "protonmail-desktop": {
+          "version": "2021-05",
+          "code": "y",
+          "raw": "y #1"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
+        }
+      },
+      "notesByNum": {
+        "1": "Only supported in Safari.",
+        "2": "A similar can be achieved using the [`dynsrc` attribute](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms533742(v=vs.85))."
+      }
+    },
+    {
+      "slug": "image-png",
+      "title": "PNG image format",
+      "category": "image",
+      "url": "https://www.caniemail.com/features/image-png/",
+      "support": {
+        "gmail-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "apple-mail-macos": {
+          "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
+        }
+      },
+      "notesByNum": null
+    },
+    {
+      "slug": "image-svg",
+      "title": "SVG image format",
+      "category": "image",
+      "url": "https://www.caniemail.com/features/image-svg/",
+      "support": {
+        "gmail-desktop": {
+          "version": "2026-09",
+          "code": "a",
+          "raw": "a #2"
+        },
+        "apple-mail-macos": {
+          "version": "14",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2026-09",
+          "code": "y",
+          "raw": "y"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
+        }
+      },
+      "notesByNum": {
+        "1": "Partially supported. Only works with non Google accounts.",
+        "2": "Partially supported. The image is rendered but rasterized in PNG."
+      }
+    },
+    {
+      "slug": "image-tiff",
+      "title": "TIFF image format",
+      "category": "image",
+      "url": "https://www.caniemail.com/features/image-tiff/",
+      "support": {
+        "gmail-desktop": {
+          "version": "2020-02",
+          "code": "a",
+          "raw": "a #1"
+        },
+        "apple-mail-macos": {
+          "version": "13",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "n",
+          "raw": "n"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "n",
+          "raw": "n"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "n",
+          "raw": "n"
+        }
+      },
+      "notesByNum": {
+        "1": "Buggy. An image renders but the colours are incorrect.",
+        "2": "Partial. Does not render with non Google accounts."
+      }
+    },
+    {
+      "slug": "image-webp",
+      "title": "webP image format",
+      "category": "image",
+      "url": "https://www.caniemail.com/features/image-webp/",
+      "support": {
+        "gmail-desktop": {
+          "version": "2020-02",
+          "code": "a",
+          "raw": "a #1 #3"
+        },
+        "apple-mail-macos": {
+          "version": "14",
+          "code": "y",
+          "raw": "y"
+        },
+        "yahoo-desktop": {
+          "version": "2020-02",
+          "code": "y",
+          "raw": "y #2"
+        },
+        "outlook-com": {
+          "version": "2024-01",
+          "code": "y",
+          "raw": "y #2"
+        },
+        "protonmail-desktop": {
+          "version": "2020-03",
+          "code": "y",
+          "raw": "y"
+        },
+        "fastmail-desktop": {
+          "version": "2021-07",
+          "code": "y",
+          "raw": "y"
+        }
+      },
+      "notesByNum": {
+        "1": "Partial: Converts file to jpg.",
+        "2": "Partial. Webmail rendering depends on browser support.",
+        "3": "Partial. Does not support animation."
       }
     }
   ]

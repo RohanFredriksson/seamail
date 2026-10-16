@@ -120,10 +120,10 @@ export const EXTRA_TEMPLATES = {
   },
   "html-hr": { body: `<p>Above</p><hr /><p>Below</p>` },
   "html-image-maps": {
-    body: `<img src="data:image/gif;base64,R0lGODlhAQABAIAAAOMeEQAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="120" height="60" usemap="#m" alt="map" /><map name="m"><area shape="rect" coords="0,0,60,60" href="https://example.com" alt="a" /></map>`,
+    body: `<img src="https://example.com/sample.png" width="120" height="60" usemap="#m" alt="map" /><map name="m"><area shape="rect" coords="0,0,60,60" href="https://example.com" alt="a" /></map>`,
   },
   "html-img": {
-    body: `<img src="data:image/gif;base64,R0lGODlhAQABAIAAAOMeEQAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="120" height="60" alt="image" style="display:block;" />`,
+    body: `<img src="https://example.com/sample.png" width="120" height="60" alt="image" style="display:block;" />`,
   },
   "html-lang": { body: `<p lang="fr">Bonjour le monde (lang attribute).</p>` },
   "html-mailto-links": { body: `<p><a href="mailto:someone@example.com">mailto link</a></p>` },
@@ -143,5 +143,50 @@ export const EXTRA_TEMPLATES = {
   },
   "html-valign": {
     body: `<table><tr><td valign="bottom" height="60" style="background:#f1f5f9;">valign=bottom</td></tr></table>`,
+  },
+
+  // ---- image formats (referenced by URL: the oracle scores which formats a client
+  // drops; decoding itself is the real engine's job and the network is blocked) ----
+  "image-apng": {
+    body: `<img src="https://example.com/sample.apng" width="120" height="60" alt="apng image" style="display:block;border:1px solid #333;" />`,
+  },
+  "image-avif": {
+    body: `<img src="https://example.com/sample.avif" width="120" height="60" alt="avif image" style="display:block;border:1px solid #333;" />`,
+  },
+  "image-bmp": {
+    body: `<img src="https://example.com/sample.bmp" width="120" height="60" alt="bmp image" style="display:block;border:1px solid #333;" />`,
+  },
+  "image-gif": {
+    body: `<img src="https://example.com/sample.gif" width="120" height="60" alt="gif image" style="display:block;border:1px solid #333;" />`,
+  },
+  "image-hdr": {
+    body: `<img src="https://example.com/sample.hdr" width="120" height="60" alt="hdr image" style="display:block;border:1px solid #333;" />`,
+  },
+  "image-heif": {
+    body: `<img src="https://example.com/sample.heic" width="120" height="60" alt="heif image" style="display:block;border:1px solid #333;" />`,
+  },
+  "image-ico": {
+    body: `<img src="https://example.com/sample.ico" width="120" height="60" alt="ico image" style="display:block;border:1px solid #333;" />`,
+  },
+  "image-jpg": {
+    body: `<img src="https://example.com/sample.jpg" width="120" height="60" alt="jpg image" style="display:block;border:1px solid #333;" />`,
+  },
+  "image-mp4": {
+    body: `<img src="https://example.com/sample.mp4" width="120" height="60" alt="mp4 image" style="display:block;border:1px solid #333;" />`,
+  },
+  "image-png": {
+    body: `<img src="https://example.com/sample.png" width="120" height="60" alt="png image" style="display:block;border:1px solid #333;" />`,
+  },
+  "image-svg": {
+    body: `<img src="https://example.com/sample.svg" width="120" height="60" alt="svg image" style="display:block;border:1px solid #333;" />`,
+  },
+  "image-tiff": {
+    body: `<img src="https://example.com/sample.tiff" width="120" height="60" alt="tiff image" style="display:block;border:1px solid #333;" />`,
+  },
+  "image-webp": {
+    body: `<img src="https://example.com/sample.webp" width="120" height="60" alt="webp image" style="display:block;border:1px solid #333;" />`,
+  },
+  "image-base64": {
+    body: `<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==" width="120" height="60" alt="base64 image" style="display:block;" />`,
   },
 };

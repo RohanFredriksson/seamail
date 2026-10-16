@@ -59,3 +59,22 @@ describe("webmail environments process()", () => {
     expect(gmail().capabilities.borderRadius).toBe("supported");
   });
 });
+
+describe("image format handling", () => {
+  const html =
+    '<img src="https://x.test/a.apng"><img src="https://x.test/a.png">' +
+    '<img src="data:image/png;base64,AAAA">';
+
+  it("Gmail drops apng and base64 images but keeps png", async () => {
+    const out = await gmail().process(html, conditions);
+    expect(out).not.toContain("a.apng");
+    expect(out).not.toContain("data:image");
+    expect(out).toContain("a.png");
+  });
+
+  it("Fastmail keeps apng and base64 images", async () => {
+    const out = await fastmail().process(html, conditions);
+    expect(out).toContain("a.apng");
+    expect(out).toContain("data:image/png");
+  });
+});
