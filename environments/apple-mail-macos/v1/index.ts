@@ -8,7 +8,11 @@
  * different rendering behaviour from the Chromium-backed environments.
  */
 import type { Browser, Page } from "playwright";
+import { parse } from "node-html-parser";
 import { getWebkit, newSecurePage } from "../../../src/browserManager.js";
+import { sanitizeInlineStyle, sanitizeStylesheet } from "../../../src/emailCss.js";
+import { removeUnsupportedImages } from "../../../src/featureRules.js";
+import { APPLE_MAIL_CSS_POLICY, UNSUPPORTED_IMAGES } from "./rules.js";
 import type {
   SeamailEnvironment,
   DeviceConfig,
@@ -17,6 +21,8 @@ import type {
   RenderResult,
   EnvironmentMetadata,
 } from "../../../src/types.js";
+
+const AFFECTED_RE = /hyphenate-limit-chars|text-justify|\.hdr\b|image\/vnd\.radiance/i;
 
 class AppleMailMacosV1 implements SeamailEnvironment {
   readonly metadata: EnvironmentMetadata = {
@@ -54,8 +60,21 @@ class AppleMailMacosV1 implements SeamailEnvironment {
   }
 
   async process(html: string): Promise<string> {
-    // Apple Mail applies effectively no sanitisation of its own for our purposes.
-    return html;
+    // Apple Mail applies almost no sanitisation; only the few declarations in
+    // rules.ts are dropped. Untouched HTML is returned byte-for-byte.
+    if (!AFFECTED_RE.test(html)) return html;
+    const root = parse(html);
+    removeUnsupportedImages(root, UNSUPPORTED_IMAGES);
+    root.querySelectorAll("style").forEach((el) => {
+      el.set_content(sanitizeStylesheet(el.textContent, APPLE_MAIL_CSS_POLICY));
+    });
+    root.querySelectorAll("[style]").forEach((el) => {
+      el.setAttribute(
+        "style",
+        sanitizeInlineStyle(el.getAttribute("style") ?? "", APPLE_MAIL_CSS_POLICY),
+      );
+    });
+    return root.toString();
   }
 
   async render(processedHtml: string, conditions: RenderConditions): Promise<RenderResult> {

@@ -16,6 +16,10 @@ const REGISTRY: Record<string, { versions: string[]; default: string }> = {
   "gmail-desktop": { versions: ["v1"], default: "v1" },
   "apple-mail-macos": { versions: ["v1"], default: "v1" },
   "outlook-classic": { versions: ["v1"], default: "v1" },
+  "yahoo-desktop": { versions: ["v1"], default: "v1" },
+  "outlook-com": { versions: ["v1"], default: "v1" },
+  "protonmail-desktop": { versions: ["v1"], default: "v1" },
+  "fastmail-desktop": { versions: ["v1"], default: "v1" },
 };
 
 export interface ResolvedEnvironmentRef {

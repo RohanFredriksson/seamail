@@ -23,7 +23,11 @@ WebKit, or a pure behavioural simulation.
 
 | Environment            | Engine          | Fidelity   | What it demonstrates |
 |-------------------------|-----------------|------------|------------------------|
-| `gmail-desktop@v1`      | Chromium        | high       | Real Blink engine + Gmail-style HTML sanitisation |
+| `gmail-desktop@v1`      | Chromium        | high       | Real Blink engine + Gmail sanitisation derived from [Can I Email](https://www.caniemail.com) data |
+| `yahoo-desktop@v1`      | Chromium        | high       | Same pipeline, Yahoo Mail's support data |
+| `outlook-com@v1`        | Chromium        | high       | Same pipeline, Outlook.com (web) support data |
+| `protonmail-desktop@v1` | Chromium        | high       | Same pipeline, Proton Mail support data (dataset is from 2020) |
+| `fastmail-desktop@v1`   | Chromium        | high       | Same pipeline, Fastmail support data |
 | `apple-mail-macos@v1`   | WebKit          | high       | A genuinely different, permissive rendering engine |
 | `outlook-classic@v1`    | simulated-dom   | simulated  | Word-engine-style CSS stripping (no grid/flexbox/border-radius/media queries), explicitly labelled as a simulation, not real Outlook |
 
@@ -194,3 +198,9 @@ environment behaviour change, and vice versa.
 No hosted service, accounts, database, remote dashboard, dozens of email
 clients, template engines (MJML/React Email/etc.), or automatic
 environment updates. See the project brief for the full list.
+
+## Client conformance
+
+The webmail environments above are generated from Can I Email's per-feature
+support data and scored against it by `npm run conformance` - see
+[tools/client-conformance](tools/client-conformance/README.md).

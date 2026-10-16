@@ -18,6 +18,8 @@
   ],
   "scripts": {
     "seamail": "node ./bin/seamail.mjs",
+    "conformance": "tsx tools/client-conformance/run.ts",
+    "conformance:fetch": "node tools/client-conformance/fetch-support.mjs",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
